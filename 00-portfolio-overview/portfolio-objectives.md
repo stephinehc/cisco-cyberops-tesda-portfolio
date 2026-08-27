@@ -65,6 +65,3 @@ By completing and documenting the portfolio, the learner should be able to demon
 - documenting timelines
 - recording lessons learned
 
-## Professional Standard
-
-The portfolio should read like a junior SOC/security analyst's work product rather than a classroom answer sheet.
