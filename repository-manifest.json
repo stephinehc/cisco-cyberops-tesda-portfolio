@@ -1,0 +1,30 @@
+{
+  "repository": "cisco-cyberops-tesda-portfolio-final",
+  "generated": "2026-08-27",
+  "phases_completed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "supplementary_labs": [
+    "SUP-01",
+    "SUP-02",
+    "SUP-03",
+    "SUP-04",
+    "SUP-05",
+    "SUP-06"
+  ],
+  "tesda_units": [
+    "ICT251312",
+    "ICT251313",
+    "ICT251314",
+    "ICT251315"
+  ]
+}
