@@ -1,0 +1,144 @@
+# 03 Network Traffic Analysis — Lab Evidence
+
+## Lab ID
+
+`LAB-XXX`
+
+## Cisco Course / Version
+
+`Cisco CyberOps Associate [version]`
+
+## Date Performed
+
+`YYYY-MM-DD`
+
+## Objective
+
+Describe what the laboratory is intended to demonstrate.
+
+## Scenario
+
+Describe the simulated environment and security problem.
+
+## Environment
+
+- Analyst system:
+- Target system:
+- Network:
+- Tools:
+- Relevant data/log source:
+
+## Tasks Performed
+
+1.
+2.
+3.
+4.
+
+## Commands / Tool Actions
+
+Record only commands and actions actually performed.
+
+```text
+TODO
+```
+
+## Evidence
+
+### Evidence 01 — Initial State
+
+`../../04-evidence/screenshots/`
+
+Describe what this evidence proves.
+
+### Evidence 02 — Detection / Observation
+
+Describe what was observed.
+
+### Evidence 03 — Investigation
+
+Describe the relevant technical evidence.
+
+### Evidence 04 — Result
+
+Describe the outcome.
+
+## Observations
+
+- 
+- 
+- 
+
+## Analysis
+
+Explain what the evidence means. Avoid simply repeating the lab instructions.
+
+## Indicators of Compromise
+
+| Type | Indicator | Source | Confidence | Relevance |
+|---|---|---|---|---|
+| IP | `TODO` | `TODO` | `TODO` | `TODO` |
+| Domain | `TODO` | `TODO` | `TODO` | `TODO` |
+| Hash | `TODO` | `TODO` | `TODO` | `TODO` |
+| File | `TODO` | `TODO` | `TODO` | `TODO` |
+
+## Findings
+
+### Finding 1
+
+**Observation:**  
+`TODO`
+
+**Interpretation:**  
+`TODO`
+
+**Impact:**  
+`TODO`
+
+### Finding 2
+
+**Observation:**  
+`TODO`
+
+**Interpretation:**  
+`TODO`
+
+**Impact:**  
+`TODO`
+
+## Response / Action
+
+Describe what was actually done in the laboratory.
+
+If no response action was performed, explicitly state:
+
+> Detection/investigation was performed, but containment or recovery was outside the scope of this laboratory.
+
+## Result
+
+`TODO`
+
+## TESDA Competency Mapping
+
+| TESDA Unit | Element | Evidence in this lab | Coverage |
+|---|---|---|---|
+| ICT251312 | `TODO` | `TODO` | Direct / Supporting / Gap |
+| ICT251313 | `TODO` | `TODO` | Direct / Supporting / Gap |
+| ICT251314 | `TODO` | `TODO` | Direct / Supporting / Gap |
+| ICT251315 | `TODO` | `TODO` | Direct / Supporting / Gap |
+
+## Skills Demonstrated
+
+- 
+- 
+- 
+
+## Lessons Learned
+
+1.
+2.
+3.
+
+## Additional Evidence Needed
+
+List any evidence required before marking the competency as complete.
