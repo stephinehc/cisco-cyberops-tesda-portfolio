@@ -14,29 +14,27 @@
 
 All activities represented in this report are limited to a **simulated, isolated, and controlled training environment** using the BOTS v2 training dataset and designated laboratory tools.
 
-The report does not document or imply monitoring, scanning, exploitation, investigation, containment, eradication, recovery, or other security activity against a live organizational production environment.
-
-The values appearing in the BOTS v2 dataset—such as usernames, email addresses, IP addresses, domains, file names and other indicators—are treated as **training-dataset/simulated investigation data**. They must not be interpreted as confidential information belonging to a real organization.
+This report does not document or imply monitoring, scanning, exploitation, investigation, containment, eradication, recovery, or other security activity against a live organizational production environment. Values appearing in the BOTS v2 dataset are treated as simulated/training data.
 
 No production data, confidential company information, real organizational credentials, private keys, or other restricted information should be added to this report.
 
-## 3. Purpose
+## 3. Purpose and Evidence Method
 
-This report documents the investigation workflow across the four BOTS v2 question series. Each section records the question, the SPL used in the reference investigation, the resulting finding, and the corresponding uploaded evidence image(s).
+This report contains the **complete 28-question BOTS v2 / Splunk 2 investigation sequence**, organized into the 100, 200, 300, and 400 Series. Each question includes a paraphrased question statement, the relevant SPL used in the referenced investigation, the resulting answer/finding, and the uploaded screenshot evidence associated with the investigation step.
 
-The explanatory text is paraphrased. SPL commands are preserved as presented in the supplied walkthrough so that the investigation procedure remains reproducible for the training scenario.
+The questions and explanatory material are paraphrased from the supplied learning reference. SPL commands are retained as shown in that reference where they were part of the investigation workflow. The report therefore serves as a structured training record rather than a reproduction of the source article.
 
-> **Portfolio note:** The supplied walkthrough is used as a study and cross-check resource. The image files linked below are the uploaded screenshots associated with the investigation steps. Where screenshots originate from reference material rather than an independently captured laboratory session, they should be treated as reference/supporting material and not represented as independently performed evidence.
+> **Evidence provenance:** Reference material is used for study and cross-checking. Uploaded screenshots should be treated as candidate evidence only when they were captured from the candidate's own authorized laboratory session. Reference screenshots must not be represented as independently performed evidence.
 
 ---
 
 # 4. 100 Series — Amber Turing Investigation
 
-## 100-Q1 — Competitor website visited by Amber
+## 100-Q1 — What competitor website domain did Amber visit while looking for executive contact information?
 
-### Investigation approach
+### Investigation
 
-The PAN traffic data is searched for Amber to identify the simulated internal IP address. The investigation then pivots to HTTP traffic and filters for beer-related sites, removes duplicate sites, and presents the remaining site in a table.
+First identify Amber's simulated internal IP from PAN traffic, then pivot to HTTP traffic and filter for beer-related sites.
 
 ### SPL
 
@@ -54,9 +52,9 @@ index="botsv2" sourcetype="stream:http" "10.0.2.101" *beer*
 | table site
 ```
 
-### Finding
+### Answer / Finding
 
-The simulated event identifies Amber's address as `10.0.2.101`. The HTTP pivot identifies **www.berkbeer.com** as the competitor website visited in the training dataset.
+**www.berkbeer.com**. The simulated PAN event identifies Amber's address as `10.0.2.101`, and the HTTP pivot identifies the competitor domain.
 
 ### Evidence
 
@@ -68,7 +66,7 @@ The simulated event identifies Amber's address as `10.0.2.101`. The HTTP pivot i
 
 ---
 
-## 100-Q2 — Executive contact image
+## 100-Q2 — Which image file on the competitor website displayed the executive's contact information?
 
 ### SPL
 
@@ -76,9 +74,9 @@ The simulated event identifies Amber's address as `10.0.2.101`. The HTTP pivot i
 index="botsv2" sourcetype="stream:http" "10.0.2.101" "www.berkbeer.com"
 ```
 
-### Finding
+### Answer / Finding
 
-The relevant URI identifies the image used to display executive contact information: **`/images/ceoberk.png`**.
+**`/images/ceoberk.png`**.
 
 ### Evidence
 
@@ -86,7 +84,7 @@ The relevant URI identifies the image used to display executive contact informat
 
 ---
 
-## 100-Q3 — CEO name
+## 100-Q3 — What is the CEO's first and last name?
 
 ### SPL
 
@@ -94,9 +92,9 @@ The relevant URI identifies the image used to display executive contact informat
 index="botsv2" sourcetype="stream:smtp" "berkbeer.com"
 ```
 
-### Finding
+### Answer / Finding
 
-The SMTP training event identifies the CEO as **Martin Berk**. The raw email content provides supporting identity information.
+**Martin Berk**. The SMTP event and its raw message provide the simulated CEO identity.
 
 ### Evidence
 
@@ -106,7 +104,7 @@ The SMTP training event identifies the CEO as **Martin Berk**. The raw email con
 
 ---
 
-## 100-Q4 — CEO email address
+## 100-Q4 — What email address belongs to the CEO?
 
 ### SPL
 
@@ -114,9 +112,9 @@ The SMTP training event identifies the CEO as **Martin Berk**. The raw email con
 index="botsv2" sourcetype="stream:smtp" "berkbeer.com"
 ```
 
-### Finding
+### Answer / Finding
 
-The training dataset identifies the CEO email address as **mberk@berkbeer.com**.
+**mberk@berkbeer.com**.
 
 ### Evidence
 
@@ -124,7 +122,7 @@ The training dataset identifies the CEO email address as **mberk@berkbeer.com**.
 
 ---
 
-## 100-Q5 — Competitor employee email address
+## 100-Q5 — After contacting the CEO, what email address belongs to the other competitor employee Amber contacted?
 
 ### SPL
 
@@ -132,9 +130,9 @@ The training dataset identifies the CEO email address as **mberk@berkbeer.com**.
 index="botsv2" sourcetype="stream:smtp" "berkbeer.com"
 ```
 
-### Finding
+### Answer / Finding
 
-The SMTP event and raw message identify the simulated employee address as **hbernhard@berkbeer.com**.
+**hbernhard@berkbeer.com**.
 
 ### Evidence
 
@@ -144,15 +142,15 @@ The SMTP event and raw message identify the simulated employee address as **hber
 
 ---
 
-## 100-Q6 — Attachment sent by Amber
+## 100-Q6 — What was the filename of the attachment Amber sent to the competitor contact?
 
-### Evidence source
+### Investigation
 
-The attachment is identified from the same SMTP event used for Q5 by examining the `attach_filename` field.
+The same SMTP event from Q5 is examined through its `attach_filename` field.
 
-### Finding
+### Answer / Finding
 
-The training artifact is **Saccharomyces_cerevisiae_patent.docx**.
+**`Saccharomyces_cerevisiae_patent.docx`**.
 
 ### Evidence
 
@@ -160,15 +158,15 @@ The training artifact is **Saccharomyces_cerevisiae_patent.docx**.
 
 ---
 
-## 100-Q7 — Amber's personal email address
+## 100-Q7 — What personal email address is associated with Amber?
 
-### Evidence source
+### Investigation
 
-The same Q5 email event contains encoded content. Decoding the relevant Base64 content exposes the training-dataset email address.
+The same email event contains Base64-encoded content. Decoding that content reveals the simulated personal email address.
 
-### Finding
+### Answer / Finding
 
-The training dataset contains **ambersthebest@yeastiebeastie.com**.
+**ambersthebest@yeastiebeastie.com**.
 
 ### Evidence
 
@@ -180,7 +178,7 @@ The training dataset contains **ambersthebest@yeastiebeastie.com**.
 
 # 5. 200 Series — Web, Vulnerability Scanning and XSS Investigation
 
-## 200-Q1 — TOR Browser version
+## 200-Q1 — What version of the TOR Browser did Amber install to obscure her web browsing?
 
 ### SPL
 
@@ -189,9 +187,9 @@ index="botsv2" "tor" "amber" "install"
 | sort -_time desc
 ```
 
-### Finding
+### Answer / Finding
 
-The simulated installation event identifies TOR Browser version **7.0.4**.
+**7.0.4**.
 
 ### Evidence
 
@@ -199,7 +197,7 @@ The simulated installation event identifies TOR Browser version **7.0.4**.
 
 ---
 
-## 200-Q2 — Public IPv4 address of www.brewertalk.com
+## 200-Q2 — What public IPv4 address belongs to the server running www.brewertalk.com?
 
 ### SPL — DNS
 
@@ -209,7 +207,7 @@ index="botsv2" source="stream:dns" "www.brewertalk.com"
 | dedup host_addr{}
 ```
 
-### SPL — HTTP destination address
+### SPL — HTTP destination
 
 ```spl
 index="botsv2" source="stream:http" "www.brewertalk.com"
@@ -217,9 +215,9 @@ index="botsv2" source="stream:http" "www.brewertalk.com"
 | dedup dest_ip
 ```
 
-### Finding
+### Answer / Finding
 
-The training dataset identifies the public IPv4 address as **52.42.208.228**. The HTTP data also exposes the private server address **172.31.4.249**, which supports subsequent correlation.
+**52.42.208.228** is the simulated public IPv4 address. The HTTP search also exposes the private address **172.31.4.249**, which is used in later correlation.
 
 ### Evidence
 
@@ -229,7 +227,7 @@ The training dataset identifies the public IPv4 address as **52.42.208.228**. Th
 
 ---
 
-## 200-Q3 — Vulnerability-scanning source IP
+## 200-Q3 — What IP address was used by the system performing the web vulnerability scan against www.brewertalk.com?
 
 ### SPL
 
@@ -238,9 +236,9 @@ index="botsv2" source="stream:http" "www.brewertalk.com"
 | stats count by src_ip
 ```
 
-### Finding
+### Answer / Finding
 
-The source address generating the unusually high request volume is **45.77.65.211**, representing the simulated vulnerability-scanning source in the dataset.
+**45.77.65.211**. The simulated source generates substantially more HTTP requests than the other sources.
 
 ### Evidence
 
@@ -248,7 +246,7 @@ The source address generating the unusually high request volume is **45.77.65.21
 
 ---
 
-## 200-Q4 — Frequently attacked URI path
+## 200-Q4 — Which URI path was most frequently targeted by the same attacking IP?
 
 ### SPL
 
@@ -257,9 +255,9 @@ index="botsv2" src_ip="45.77.65.211" dest_ip="172.31.4.249"
 | stats count by uri_path
 ```
 
-### Finding
+### Answer / Finding
 
-The most frequently targeted URI path is **`/member.php`**.
+**`/member.php`**.
 
 ### Evidence
 
@@ -267,7 +265,7 @@ The most frequently targeted URI path is **`/member.php`**.
 
 ---
 
-## 200-Q5 — Abused SQL function
+## 200-Q5 — Which SQL function was abused on the targeted URI path?
 
 ### SPL
 
@@ -275,9 +273,9 @@ The most frequently targeted URI path is **`/member.php`**.
 index="botsv2" src_ip="45.77.65.211" dest_ip="172.31.4.249" uri_path="/member.php" select
 ```
 
-### Finding
+### Answer / Finding
 
-The SQL function observed in the simulated malicious request is **`updatexml`**, indicating SQL-injection activity in the training scenario.
+**`updatexml`**, indicating SQL-injection behavior in the simulated web attack.
 
 ### Evidence
 
@@ -285,7 +283,7 @@ The SQL function observed in the simulated malicious request is **`updatexml`**,
 
 ---
 
-## 200-Q6 — Simulated browser cookie exposure
+## 200-Q6 — What numeric cookie value did Kevin's browser send to the malicious URL during the XSS attack?
 
 ### SPL
 
@@ -293,9 +291,9 @@ The SQL function observed in the simulated malicious request is **`updatexml`**,
 index="botsv2" sourcetype="stream:http" kevin "<script>"
 ```
 
-### Finding
+### Answer / Finding
 
-The XSS-related training event contains the simulated browser cookie value **1502408189**.
+**1502408189**.
 
 ### Evidence
 
@@ -303,15 +301,15 @@ The XSS-related training event contains the simulated browser cookie value **150
 
 ---
 
-## 200-Q7 — Simulated Brewertalk username
+## 200-Q7 — What username was maliciously created on brewertalk.com through the simulated spearphishing/XSS activity?
 
-### Evidence source
+### Investigation
 
-The same HTTP event used in Q6 contains account-creation information in the destination content.
+The same event used for Q6 contains account-creation information in the destination content.
 
-### Finding
+### Answer / Finding
 
-The username created through the simulated malicious action is **kIagerfield**.
+**kIagerfield**.
 
 ### Evidence
 
@@ -321,7 +319,7 @@ The username created through the simulated malicious action is **kIagerfield**.
 
 # 6. 300 Series — Ransomware, USB and Malware Investigation
 
-## 300-Q1 — Encrypted PowerPoint filename
+## 300-Q1 — What was the filename of Mallory's critical PowerPoint after ransomware encrypted it?
 
 ### SPL — identify Mallory's host
 
@@ -329,15 +327,15 @@ The username created through the simulated malicious action is **kIagerfield**.
 index="botsv2" mallory
 ```
 
-### SPL — identify PowerPoint file events
+### SPL — locate PowerPoint file events
 
 ```spl
 index="botsv2" mallory host="MACLORY-AIR13" *.ppt*
 ```
 
-### Finding
+### Answer / Finding
 
-The encrypted PowerPoint training artifact is **Frothly_marketing_campaign_Q317.pptx.crypt_**.
+**Frothly_marketing_campaign_Q317.pptx.crypt_**.
 
 ### Evidence
 
@@ -347,7 +345,7 @@ The encrypted PowerPoint training artifact is **Frothly_marketing_campaign_Q317.
 
 ---
 
-## 300-Q2 — Encrypted Game of Thrones episode
+## 300-Q2 — Which Game of Thrones season and episode corresponds to the encrypted movie file?
 
 ### SPL
 
@@ -355,9 +353,9 @@ The encrypted PowerPoint training artifact is **Frothly_marketing_campaign_Q317.
 index="botsv2" host="maclory-air13" (got OR game OR thrones) *crypt*
 ```
 
-### Finding
+### Answer / Finding
 
-The encrypted movie corresponds to **Season 7, Episode 2 (S07E02)**.
+**S07E02** — Season 7, Episode 2.
 
 ### Evidence
 
@@ -365,7 +363,7 @@ The encrypted movie corresponds to **Season 7, Episode 2 (S07E02)**.
 
 ---
 
-## 300-Q3 — USB vendor used to transfer malware
+## 300-Q3 — What vendor manufactured the USB drive likely used to transfer malware to Mallory's MacBook?
 
 ### SPL
 
@@ -375,11 +373,11 @@ index="botsv2" kutekitten usb
 
 ### Investigation
 
-The search identifies simulated USB hardware-monitoring events. The relevant event contains USB model, serial and vendor identifiers. The vendor ID can then be correlated with external hardware-vendor information.
+The event is narrowed using the USB hardware-monitoring record. Its model, serial and vendor identifiers are then used for external vendor identification.
 
-### Finding
+### Answer / Finding
 
-The vendor is **Alcor Micro Corp.**
+**Alcor Micro Corp.**
 
 ### Evidence
 
@@ -387,13 +385,13 @@ The vendor is **Alcor Micro Corp.**
 
 ![300-Q3 — Raw USB vendor information](../screenshots/25-300-q03-same_event_raw_text_USB_vendor.png)
 
-> **Evidence gap:** The reference walkthrough also shows a separate vendor-ID lookup image. No separate vendor-lookup screenshot is currently catalogued among the 42 uploaded files. The external lookup should therefore be treated as supporting/reference evidence unless an additional authorized screenshot is supplied.
+> **Evidence gap:** The reference walkthrough also contains a separate vendor-ID lookup image. That separate lookup screenshot is not among the 42 uploaded portfolio images currently catalogued. The vendor lookup should therefore be treated as reference/supporting evidence unless an additional authorized screenshot is added.
 
 ---
 
-## 300-Q4 — Malware programming language
+## 300-Q4 — What programming language is used in at least part of the malware?
 
-### SPL — correlate the user's file events
+### SPL — correlate the user and host events
 
 ```spl
 index="botsv2" kutekitten mkraeusen
@@ -405,9 +403,13 @@ index="botsv2" kutekitten mkraeusen
 index="botsv2" kutekitten mkraeusen name=file_events
 ```
 
-### Finding
+### Investigation
 
-The file evidence is associated with a **PERL** executable/component.
+The file event reveals the suspicious malware artifact and its MD5. The hash is then checked using VirusTotal.
+
+### Answer / Finding
+
+**PERL**.
 
 ### Evidence
 
@@ -419,19 +421,19 @@ The file evidence is associated with a **PERL** executable/component.
 
 ![300-Q4 — VirusTotal MD5 result](../screenshots/29-300-q04-virus_total_result_md5.png)
 
-> **Filename note:** The original uploaded filenames are preserved even where the numbering/filename sequence does not perfectly match the final question classification.
+> **Filename note:** The original uploaded filenames are preserved even where their embedded question number does not perfectly match the final evidence classification.
 
 ---
 
-## 300-Q5 — Malware first-seen date
+## 300-Q5 — When was the malware first observed in the wild?
 
-### Evidence source
+### Investigation
 
-The malware MD5 is checked in VirusTotal and the Details information is used to identify the earliest observed date.
+The malware hash is examined in VirusTotal's Details information.
 
-### Finding
+### Answer / Finding
 
-The training artifact was first seen on **2017-01-17**.
+**2017-01-17**.
 
 ### Evidence
 
@@ -439,15 +441,15 @@ The training artifact was first seen on **2017-01-17**.
 
 ---
 
-## 300-Q6 — First C2 domain
+## 300-Q6 — What is the alphabetically first FQDN used by the malware to communicate with a C2 server?
 
-### Evidence source
+### Investigation
 
-VirusTotal Relations information is used to identify the simulated dynamic-DNS destinations associated with the malware.
+The VirusTotal Relations information is used to identify the simulated dynamic-DNS destinations associated with the malware.
 
-### Finding
+### Answer / Finding
 
-The first C2 destination is **eidk.duckdns.org**.
+**eidk.duckdns.org**.
 
 ### Evidence
 
@@ -455,23 +457,23 @@ The first C2 destination is **eidk.duckdns.org**.
 
 ---
 
-## 300-Q7 — Second C2 domain
+## 300-Q7 — What is the alphabetically second FQDN used by the malware to communicate with a C2 server?
 
-### Finding
+### Answer / Finding
 
-The second C2 destination is **eidk.hopto.org**.
+**eidk.hopto.org**.
 
 ### Evidence
 
 ![300-Q7 — Second C2 domain](../screenshots/32-300-q05-same_event_relations_tab_2nd_domain_C2_server.png)
 
-> **Filename note:** The uploaded filenames for images 31 and 32 contain `q05`; their evidence labels are based on the investigation content. The original filenames are intentionally preserved.
+> **Filename note:** The uploaded filenames for images 31 and 32 contain `q05`; the labels above are based on their investigation content. The original filenames remain unchanged.
 
 ---
 
 # 7. 400 Series — Taedonggang APT, Malware and Persistence
 
-## 400-Q1 — Spearphishing ZIP attachment
+## 400-Q1 — What ZIP attachment did a malicious Taedonggang actor send to Frothly as part of the simulated spearphishing activity?
 
 ### SPL
 
@@ -479,9 +481,9 @@ The second C2 destination is **eidk.hopto.org**.
 index="botsv2" sourcetype="stream:smtp" .zip
 ```
 
-### Finding
+### Answer / Finding
 
-The training email contains the attachment **invoice.zip**.
+**invoice.zip**.
 
 ### Evidence
 
@@ -489,15 +491,15 @@ The training email contains the attachment **invoice.zip**.
 
 ---
 
-## 400-Q2 — ZIP password
+## 400-Q2 — What password was provided to open the ZIP attachment?
 
-### Evidence source
+### Investigation
 
-The raw text of the same training email event contains the password supplied by the sender.
+The raw content of the same simulated SMTP event is inspected for the plaintext password.
 
-### Finding
+### Answer / Finding
 
-The ZIP password is **912345678**.
+**912345678**.
 
 ### Evidence
 
@@ -505,7 +507,7 @@ The ZIP password is **912345678**.
 
 ---
 
-## 400-Q3 — SSL issuer used by the attacker
+## 400-Q3 — What SSL Issuer value was used for the majority of the simulated Taedonggang traffic?
 
 ### SPL
 
@@ -513,9 +515,9 @@ The ZIP password is **912345678**.
 index="botsv2" dest_ip="45.77.65.211" SSL
 ```
 
-### Finding
+### Answer / Finding
 
-The relevant issuer value is **C = US**.
+**C = US**.
 
 ### Evidence
 
@@ -523,7 +525,7 @@ The relevant issuer value is **C = US**.
 
 ---
 
-## 400-Q4 — Unusual file downloaded through FTP
+## 400-Q4 — What unusual file was downloaded into the simulated Frothly environment by winsys32.dll?
 
 ### SPL — locate winsys32.dll activity
 
@@ -531,15 +533,15 @@ The relevant issuer value is **C = US**.
 index="botsv2" winsys32.dll
 ```
 
-### SPL — narrow to FTP download activity
+### SPL — narrow to FTP retrieval activity
 
 ```spl
 index="botsv2" sourcetype="stream:ftp" ("get" OR "retr")
 ```
 
-### Finding
+### Answer / Finding
 
-The unusual downloaded file is **나는_데이비드를_사랑한다.hwp**.
+**나는_데이비드를_사랑한다.hwp**.
 
 ### Evidence
 
@@ -549,39 +551,41 @@ The unusual downloaded file is **나는_데이비드를_사랑한다.hwp**.
 
 ---
 
-## 400-Q5 — Person identified in file metadata
+## 400-Q5 — What first and last name appears in the metadata of the file associated with PowerShell Empire execution on the first simulated victim workstation?
 
-### Evidence source
+### Investigation
 
-The supplied malware-analysis result identifies **Ryan Kovar** in the training artifact's metadata.
+The referenced malware-analysis result is used to inspect the file metadata.
 
-### Finding
+### Answer / Finding
 
-The person identified by the training artifact metadata is **Ryan Kovar**.
+**Ryan Kovar**.
 
 ### Evidence
 
 ![400-Q5 — Hybrid Analysis file details](../screenshots/38-400-q05-hybrid_analysis_result_file_details.png)
 
+> **External-analysis note:** This evidence comes from malware-analysis information associated with the training scenario. It should be treated as supporting evidence and not as evidence of activity against a real production system.
+
 ---
 
-## 400-Q6 — Text identified inside the document
+## 400-Q6 — What type of points is mentioned in the document when the relevant text is found?
 
-### Evidence source
+### Investigation
 
-The document-analysis result identifies the text **CyberEastEgg**.
+The document is examined in the referenced sandbox-analysis workflow.
 
-### Finding
+### Answer / Finding
 
-The requested text is **CyberEastEgg**.
+**CyberEastEgg**.
 
 ### Evidence
 
-![400-Q6 — Document analysis](../screenshots/39-400-q06-analysis_invoice_doc.png)
+![400-Q6 — Invoice/document analysis](../screenshots/39-400-q06-analysis_invoice_doc.png)
 
 ---
 
-## 400-Q7 — Scheduled-task C2 webpage
+## 400-Q7 — What single webpage is most frequently contacted by the scheduled tasks used for simulated C2 persistence?
 
 ### SPL — identify newly created scheduled tasks
 
@@ -589,7 +593,7 @@ The requested text is **CyberEastEgg**.
 index="botsv2" schtasks.exe sourcetype=wineventlog create
 ```
 
-### SPL — locate the registry hive value used by the task
+### SPL — locate the registry data used by the simulated persistence mechanism
 
 ```spl
 index="botsv2" HKLM\\Software\\Microsoft\\Network
@@ -597,11 +601,11 @@ index="botsv2" HKLM\\Software\\Microsoft\\Network
 
 ### Investigation
 
-The scheduled-task events show PowerShell activity that modifies the `HKLM:\Software\Microsoft\Network` registry hive. The relevant data value is encoded and requires decoding to reveal the C2 URL.
+The scheduled-task events are correlated with the registry data. The relevant `data` field is Base64 encoded and is decoded using UTF-16 Little Endian to expose the simulated C2 URL.
 
-### Finding
+### Answer / Finding
 
-The scheduled task references **`process.php`** in the simulated C2 URL path.
+**process.php**. The decoded value resolves to a simulated connection such as `https://45.77.65.211:443/login/process.php`.
 
 ### Evidence
 
@@ -609,104 +613,73 @@ The scheduled task references **`process.php`** in the simulated C2 URL path.
 
 ![400-Q7 — HKLM data field](../screenshots/41-400-q07-spl_result_HKLM_data_field.png)
 
-![400-Q7 — UTF-16 little-endian decoded data](../screenshots/42-400-q07-decoding_to_UTF_16_little_endian.png)
+![400-Q7 — UTF-16 Little Endian decoding](../screenshots/42-400-q07-decoding_to_UTF_16_little_endian.png)
 
 ---
 
-# 8. Consolidated Investigation Findings
+# 8. Consolidated Answer Summary
 
-| Series | Primary investigation themes | Major findings |
-|---|---|---|
-| 100 | User activity, web traffic, SMTP and encoded email content | Simulated competitor reconnaissance, executive contact, attachment and encoded-email evidence |
-| 200 | Web reconnaissance, vulnerability scanning, SQL injection and XSS | Simulated TOR use, Brewertalk infrastructure, scanner source, `/member.php`, `updatexml`, cookie exposure and account creation |
-| 300 | Ransomware, endpoint activity, USB correlation, malware and C2 | Simulated ransomware artifacts, USB vendor, Perl malware, first-seen date and C2 domains |
-| 400 | APT phishing, SSL, FTP, malware/document analysis and persistence | Simulated ZIP phishing, password, SSL issuer, unusual file, document metadata, scheduled-task persistence and C2 URI |
+| Series | Question | Answer / Finding |
+|---|---:|---|
+| 100 | Q1 | `www.berkbeer.com` |
+| 100 | Q2 | `/images/ceoberk.png` |
+| 100 | Q3 | Martin Berk |
+| 100 | Q4 | `mberk@berkbeer.com` |
+| 100 | Q5 | `hbernhard@berkbeer.com` |
+| 100 | Q6 | `Saccharomyces_cerevisiae_patent.docx` |
+| 100 | Q7 | `ambersthebest@yeastiebeastie.com` |
+| 200 | Q1 | `7.0.4` |
+| 200 | Q2 | `52.42.208.228` |
+| 200 | Q3 | `45.77.65.211` |
+| 200 | Q4 | `/member.php` |
+| 200 | Q5 | `updatexml` |
+| 200 | Q6 | `1502408189` |
+| 200 | Q7 | `kIagerfield` |
+| 300 | Q1 | `Frothly_marketing_campaign_Q317.pptx.crypt_` |
+| 300 | Q2 | `S07E02` |
+| 300 | Q3 | Alcor Micro Corp. |
+| 300 | Q4 | PERL |
+| 300 | Q5 | 2017-01-17 |
+| 300 | Q6 | `eidk.duckdns.org` |
+| 300 | Q7 | `eidk.hopto.org` |
+| 400 | Q1 | `invoice.zip` |
+| 400 | Q2 | `912345678` |
+| 400 | Q3 | `C = US` |
+| 400 | Q4 | `나는_데이비드를_사랑한다.hwp` |
+| 400 | Q5 | Ryan Kovar |
+| 400 | Q6 | CyberEastEgg |
+| 400 | Q7 | `process.php` |
 
-# 9. Key Indicators of Compromise
+---
 
-The following indicators are **training-dataset indicators** and should not be interpreted as indicators from a live organization:
+# 9. Evidence and TESDA Relevance
 
-| Type | Indicator |
-|---|---|
-| Internal IP | `10.0.2.101` |
-| Web server public IP | `52.42.208.228` |
-| Web server private IP | `172.31.4.249` |
-| Vulnerability scanner IP | `45.77.65.211` |
-| Target URI | `/member.php` |
-| First C2 domain | `eidk.duckdns.org` |
-| Second C2 domain | `eidk.hopto.org` |
-| C2 IP | `45.77.65.211` |
-| C2 URI | `process.php` |
-| Malware language | Perl |
-| ZIP attachment | `invoice.zip` |
-| Unusual downloaded document | `나는_데이비드를_사랑한다.hwp` |
+The investigation provides strong simulated evidence for log/event analysis, network-traffic analysis, endpoint analysis, malware/IOC analysis, threat intelligence, incident investigation and reporting. The 200 Series provides supporting evidence for vulnerability-related analysis, but it is not by itself a complete TESDA vulnerability-scanning workflow. The investigation also does not demonstrate full containment, eradication, recovery, or vulnerability-management lifecycle activities.
 
-# 10. Attack Techniques Observed
+Those remaining requirements are intentionally reserved for separate **simulated, isolated, controlled supplementary laboratory activities** rather than live-production work.
 
-The simulated investigation provides evidence of:
+## Evidence domains represented
 
-- Reconnaissance and competitor targeting
-- Web browsing and proxy activity
-- Vulnerability-scanning activity
-- SQL injection
-- Cross-site scripting (XSS)
-- Credential/session-data exposure
-- Spearphishing with a malicious attachment
-- Ransomware-style file encryption
-- USB-associated malware transfer
-- Malware execution and C2 communication
-- Dynamic-DNS-based C2
-- Scheduled-task persistence
-- Registry-based C2 configuration
-- Encoded payload/configuration data
+- `01-monitoring-and-alerts`
+- `02-log-event-analysis`
+- `03-network-traffic-analysis`
+- `04-endpoint-analysis`
+- `05-malware-ioc-analysis`
+- `06-vulnerability-scanning` — supporting evidence only
+- `07-incident-investigation`
+- `08-threat-intelligence`
+- `11-reporting`
 
-# 11. Evidence-to-Finding Method
+## Important limitation
 
-```text
-Question
-   ↓
-SPL query / investigation action
-   ↓
-Relevant simulated event
-   ↓
-Field expansion / raw data / external analysis
-   ↓
-Finding
-   ↓
-Correlation
-   ↓
-Security interpretation
-```
+BOTS v2 is an investigation/threat-hunting evidence source. It should not be used to claim that the candidate performed real-world production monitoring, vulnerability scanning, containment, eradication, recovery, or vulnerability management.
 
-Multiple screenshots are retained when they represent different investigation stages or evidence views.
+---
 
-# 12. TESDA Evidence Relevance
+# 10. Reference and Evidence Integrity
 
-The BOTS v2 investigation is particularly useful as controlled-laboratory evidence for:
+The supplied Splunk 2 walkthrough was used to verify the question sequence, investigation approach and SPL commands. The questions in this report are paraphrased rather than reproduced verbatim. The SPL commands are retained where they form part of the documented investigation workflow.
 
-- **02-log-event-analysis** — searching, filtering, correlating and interpreting event data;
-- **03-network-traffic-analysis** — PAN, HTTP, DNS, SMTP and FTP investigation;
-- **04-endpoint-analysis** — host, user, USB and Windows-event investigation;
-- **05-malware-ioc-analysis** — hashes, malware characteristics, C2 domains and malicious files;
-- **06-vulnerability-scanning** — identification and analysis of vulnerability-scanning activity represented in the training dataset;
-- **07-incident-investigation** — correlation of multiple events into simulated attack narratives;
-- **08-threat-intelligence** — VirusTotal and malware/document-analysis pivots;
-- **11-reporting** — documenting evidence, findings, IOCs and investigative conclusions.
+The uploaded screenshots are linked using their actual repository filenames. Reference-derived images must be clearly identified as reference/supporting material if they were not captured by the candidate during an authorized laboratory session.
 
-BOTS v2 is **not by itself sufficient evidence for complete containment, eradication, recovery, or vulnerability-management workflows**. Those gaps remain addressed by controlled supplementary simulations.
-
-# 13. Evidence Limitations
-
-1. Some questions use external-analysis platforms. These results should be clearly labeled as supporting external analysis.
-2. The uploaded screenshots are associated with the investigation steps, but their provenance must be distinguished from independently captured candidate evidence when preparing the final RPL package.
-3. The reference walkthrough includes a separate vendor-ID lookup image for 300-Q3. No separate vendor-lookup screenshot is currently catalogued among the 42 uploaded files.
-4. Images 31 and 32 contain `q05` in their original filenames although their evidence labels correspond to Q6 and Q7. The filenames are preserved intentionally and should be cleaned only during a later controlled repository cleanup if desired.
-5. The final RPL package should use independently captured laboratory evidence wherever possible and should not represent reference material as personally performed activity.
-
-# 14. Conclusion
-
-The BOTS v2 investigation demonstrates a broad simulated SOC workflow: identify suspicious activity, pivot across data sources, extract relevant fields, correlate events, validate indicators through additional evidence, and document the resulting attack narrative.
-
-For the TESDA RPL portfolio, the strongest value of this activity is the demonstrated investigation methodology across **log/event analysis, network traffic analysis, endpoint analysis, malware/IOC analysis, threat intelligence, incident investigation, and reporting**.
-
-Containment, eradication, recovery and formal vulnerability-management processes are intentionally not inferred from BOTS v2. They will be demonstrated separately, if required, through controlled and isolated supplementary simulations.
+**Portfolio rule:** only actual, authorized laboratory results may be represented as candidate-generated evidence.
