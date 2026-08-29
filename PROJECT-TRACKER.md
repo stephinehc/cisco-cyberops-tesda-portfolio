@@ -10,7 +10,7 @@
 | **Phase 2** | Complete CyberOps Associate lab register in original sequence | 🟡 In progress — register populated; evidence verification pending |
 | **Phase 3** | TESDA performance-criterion + master SAG mapping | ✅ Complete — master matrix established; criterion-level evidence verification continues during later phases |
 | **Phase 4** | CyberOps v1.0 Skills Assessment evidence mapping | 🟢 Assessment performed; documentation created; actual artifact collection pending |
-| **Phase 5** | CyberOps v1.1 Skills Assessment evidence mapping | 🟡 Documentation structure refined; actual artifact verification pending |
+| **Phase 5** | Legacy assessment review and repository cleanup | ✅ Complete — obsolete v1.1 materials removed |
 | **Phase 6** | BOTS v2 threat-hunting evidence mapping | ⬜ Pending |
 | **Phase 7** | Supplementary containment/eradication/recovery lab | ⬜ Pending |
 | **Phase 8** | Supplementary vulnerability scanning/management lab | ⬜ Pending |
@@ -23,13 +23,13 @@
 - Four TESDA core competencies established.
 - Fixed 11 evidence domains established.
 - CyberOps labs established as the primary technical evidence source.
-- Skills Assessments, BOTS v2, and supplementary simulations positioned as additional evidence layers.
+- Skills Assessment, BOTS v2, and supplementary simulations positioned as additional evidence layers.
 
 ## Phase 2 — IN PROGRESS
 
 ### Completed
 
-- Verified the current Cisco/NDG CyberOps Associate v1 lab catalog.
+- Verified the current Cisco/NDG CyberOps Associate lab catalog.
 - Registered 36 hands-on labs in original sequence.
 - Assigned primary and related evidence domains.
 - Added preliminary NC I/NC II relevance and coverage ratings.
@@ -91,86 +91,22 @@ assessments/cyberops-v1.0/
 - [ ] Link actual evidence artifacts to the master SAG matrix.
 - [ ] Finalize the v1.0 RPL evidence package.
 
-## Phase 5 — IN PROGRESS: CCNA Cybersecurity Operations v1.1 Skills Assessment
+## Phase 5 — COMPLETE: Legacy Assessment Cleanup
 
-### Assessment basis
+The legacy **CCNA Cybersecurity Operations v1.1** assessment was removed from the portfolio after review of Cisco Networking Academy's current course catalog and the legacy course material.
 
-The v1.1 assessment is the legacy **CCNA Cybersecurity Operations v1.1 Skills Assessment**. It is documented separately from the newer CyberOps Associate assessment because the assessment scenario and task structure are distinct.
+### Actions completed
 
-The assessment is organized into four parts:
+- Removed the entire `assessments/cyberops-v1.1/` evidence package.
+- Removed its Markdown files and placeholder screenshot directory.
+- Removed v1.1 from the assessment index.
+- Removed v1.1 from the main repository evidence architecture.
+- Removed v1.1-specific project tracking and findings.
+- Kept the retained v1.0 Skills Assessment because it represents the assessment already performed for this portfolio.
 
-1. Gathering Basic Information
-2. Learn About the Exploit
-3. Determining the Source of the Malware
-4. Analyze Details of the Exploit
+### Decision
 
-### Documentation structure — REVISED
-
-The earlier v1.1 documentation was too similar to the v1.0 package. It has now been simplified so each file has a distinct purpose:
-
-```text
-assessments/cyberops-v1.1/
-├── assessment-overview.md
-├── assessment-documentation.md
-├── alert-analysis.md
-├── exploit-analysis.md
-├── malware-source-analysis.md
-├── findings-report.md
-└── screenshots/
-```
-
-### Removed as unnecessary duplicates
-
-The following separate files were removed from v1.1 because their content is now handled more appropriately within the assessment parts and findings:
-
-- `incident-timeline.md`
-- `ioc-analysis.md`
-- `threat-intelligence.md`
-
-This is intentional. v1.1 is now organized around the **actual four-part assessment workflow**, rather than copying the v1.0 evidence-file structure.
-
-### Key findings documented
-
-- Exploit kit: **Angler EK**
-- Exploit-related events: **15**
-- Activity window: **2017-09-07 15:31:12–15:31:34**
-- Internal host: `192.168.0.12`
-- MAC address: `00:1b:21:ca:fe:d7`
-- Vulnerable client condition: outdated Flash
-- Landing-page IP: `173.201.198.128`
-- Landing-page domain: `lifeinsidetroit.com`
-- Exploit-delivery IP: `192.99.198.158`
-- Exploit-delivery domain: `qwe.mvdunalterableairreport.net`
-- Recovered object: `3xdz3bcxc8`
-- Recovered object type: SWF
-
-### Primary evidence domains
-
-- 01 Monitoring and Alerts
-- 02 Log/Event Analysis
-- 03 Network Traffic Analysis
-- 04 Endpoint Analysis
-- 05 Malware/IOC Analysis
-- 07 Incident Investigation
-- 08 Threat Intelligence
-- 11 Reporting
-
-### TESDA relevance
-
-The v1.1 assessment provides strong practical evidence for **ICT251312 — Monitor and Report Cyber Threats**, particularly alert evaluation, event investigation, case follow-up, threat identification, intelligence-supported analysis and reporting.
-
-It provides supporting evidence for **ICT251314 — Perform Threat Mitigation**, particularly identification of the threat, affected asset, relevant infrastructure and attack method.
-
-It does not by itself demonstrate complete containment, eradication, recovery, secondary scanning or vulnerability-management processes.
-
-### Remaining Phase 5 tasks
-
-- [ ] Confirm whether the user has performed the v1.1 assessment.
-- [ ] Collect actual v1.1 screenshots/artifacts if performed.
-- [ ] Replace placeholders with actual observed values.
-- [ ] Verify the exact assessment version/environment used.
-- [ ] Create task-level TESDA criterion mapping for v1.1.
-- [ ] Link actual evidence to the master SAG matrix.
+The portfolio will not use the legacy v1.1 assessment as a current course or evidence source. Its former exploit-investigation concepts are already covered by the broader CyberOps lab activities, v1.0 assessment evidence, BOTS v2, and planned supplementary investigations.
 
 ## Phase 6 — BOTS v2
 
@@ -206,4 +142,4 @@ Create the final TESDA evidence index, SAG evidence guide, and integrated capsto
 
 ## Current next task
 
-**Confirm/collect the user's actual v1.1 assessment evidence, then complete the task-level TESDA mapping before proceeding to Phase 6 — BOTS v2.**
+**Finish collecting and validating the user's actual v1.0 assessment evidence, then proceed to Phase 6 — BOTS v2 threat-hunting evidence.**
