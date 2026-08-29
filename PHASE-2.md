@@ -26,16 +26,17 @@ The CyberOps labs are the primary technical evidence foundation. The retained v1
 
 - [x] Lab-register structure created
 - [x] Evidence-domain structure confirmed
-- [ ] Complete CyberOps lab list entered in original sequence
-- [ ] Primary evidence domain assigned to each lab
-- [ ] Related evidence domains assigned
-- [ ] CyberOps skill identified for each lab
-- [ ] TESDA NC I relevance identified
-- [ ] TESDA NC II relevance identified
-- [ ] Direct/Supporting/Gap rating assigned
-- [ ] Evidence artifacts identified
-- [ ] Supplementary activity requirements identified
-- [ ] Final register reviewed
+- [x] CyberOps lab list entered in original sequence
+- [x] Primary evidence domain assigned to each lab
+- [x] Related evidence domains assigned
+- [x] CyberOps skill identified for each lab
+- [x] TESDA NC I relevance identified
+- [x] TESDA NC II relevance identified
+- [x] Preliminary Direct/Supporting/Gap rating assigned
+- [x] Evidence artifacts and standardized screenshot labels identified
+- [x] Supplementary activity requirements identified
+- [ ] Final register reviewed against the exact labs actually completed by the candidate
+- [ ] Candidate-generated evidence attached for completed labs
 
 ## Working classification rule
 
@@ -45,15 +46,23 @@ The CyberOps labs are the primary technical evidence foundation. The retained v1
 
 **TESDA mapping** = performed separately from the domain classification so that the 11 folders are not confused with TESDA's four core competencies.
 
+## Evidence and privacy rule
+
+All laboratory activities must be performed only in **simulated, isolated, controlled and authorized training environments**. The portfolio must not document or imply activity against live organizational production systems.
+
+Expected/reference results are documentation guidance only. Candidate evidence must come from the candidate's own actual laboratory work. Screenshots will be uploaded manually later using the standardized filenames defined in the evidence guide.
+
 ## Phase 2 tracking log
 
 | Date | Progress | Decision / Result |
 |---|---|---|
 | 2026-08-29 | Started Phase 2 | Lab register specification created; 11 evidence domains locked |
+| 2026-08-30 | Documentation expansion | 36-lab evidence guide established with questions/tasks, expected results and standardized screenshot labels |
 
 ## Current repository additions
 
 - `cisco-lab-register/cyberops-associate-lab-register.md`
+- `cisco-lab-register/cyberops-lab-evidence-guide.md`
 - `PHASE-2.md`
 
 ## Remaining project phases
@@ -62,25 +71,25 @@ The CyberOps labs are the primary technical evidence foundation. The retained v1
 Map the selected CyberOps activities to individual TESDA performance criteria and SAG evidence requirements.
 
 ### Phase 4 — CyberOps v1.0 Skills Assessment
-Map every v1.0 task to evidence domains and TESDA criteria. Primary target: NC I monitoring/reporting.
+Finalize candidate-generated evidence and map every v1.0 task to evidence domains and TESDA criteria. Primary target: NC I monitoring/reporting, with supporting NC II investigation evidence.
 
 ### Phase 5 — Legacy assessment cleanup
 Remove obsolete legacy assessment material from the active evidence architecture. **Completed.**
 
 ### Phase 6 — BOTS v2
-Select and map realistic Splunk threat-hunting/investigation scenarios. **Setup now underway.**
+Complete the simulated Splunk threat-hunting/investigation evidence set and final evidence cleanup. **Documentation/evidence cleanup completed; final verification retained as a project check.**
 
 ### Phase 7 — Containment/Eradication/Recovery
-Build the supplementary NC II mitigation simulation.
+Build the supplementary NC II mitigation simulation in an isolated laboratory environment.
 
 ### Phase 8 — Vulnerability Scanning/Management
-Extend Nmap into a complete scan → assess → remediate → rescan → validate workflow.
+Extend authorized laboratory scanning into a complete scan → assess → remediate → rescan → validate workflow.
 
 ### Phase 9 — Evidence implementation
-Build the 11 evidence-domain folders, lab reports, checklists and evidence templates.
+Build the 11 evidence-domain folders, lab reports, checklists and evidence templates around verified candidate-generated artifacts.
 
-### Phase 10 — Integrated capstone
-Create the final NC I/NC II evidence index and integrated practical assessment.
+### Phase 10 — Final TESDA evidence index and SAG review
+Create the final NC I/NC II evidence index and review the complete evidence package against the applicable SAG/performance criteria. **There is no live-production capstone.**
 
 ## Progress rule
 
