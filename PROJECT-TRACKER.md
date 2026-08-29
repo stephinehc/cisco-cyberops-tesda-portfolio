@@ -10,7 +10,7 @@
 | **Phase 2** | Complete CyberOps Associate lab register in original sequence | 🟡 In progress — register populated; evidence verification pending |
 | **Phase 3** | TESDA performance-criterion + master SAG mapping | ✅ Complete — master matrix established; criterion-level evidence verification continues during later phases |
 | **Phase 4** | CyberOps v1.0 Skills Assessment evidence mapping | 🟢 Assessment performed; documentation created; actual artifact collection pending |
-| **Phase 5** | CyberOps v1.1 Skills Assessment evidence mapping | 🟡 In progress — documentation package created; actual artifact verification pending |
+| **Phase 5** | CyberOps v1.1 Skills Assessment evidence mapping | 🟡 Documentation structure refined; actual artifact verification pending |
 | **Phase 6** | BOTS v2 threat-hunting evidence mapping | ⬜ Pending |
 | **Phase 7** | Supplementary containment/eradication/recovery lab | ⬜ Pending |
 | **Phase 8** | Supplementary vulnerability scanning/management lab | ⬜ Pending |
@@ -91,38 +91,58 @@ assessments/cyberops-v1.0/
 - [ ] Link actual evidence artifacts to the master SAG matrix.
 - [ ] Finalize the v1.0 RPL evidence package.
 
-## Phase 5 — IN PROGRESS: CyberOps / CCNA Cybersecurity Operations v1.1 Skills Assessment
+## Phase 5 — IN PROGRESS: CCNA Cybersecurity Operations v1.1 Skills Assessment
 
 ### Assessment basis
 
-The v1.1 assessment is the legacy **CCNA Cybersecurity Operations v1.1 Skills Assessment** and is documented separately from the newer CyberOps Associate assessment. It uses the Security Onion environment and focuses on Sguil/Snort event evaluation, investigation pivots through ELSA, Bro/Zeek and Wireshark, and exploit intelligence research.
+The v1.1 assessment is the legacy **CCNA Cybersecurity Operations v1.1 Skills Assessment**. It is documented separately from the newer CyberOps Associate assessment because the assessment scenario and task structure are distinct.
 
-### Assessment scenario
+The assessment is organized into four parts:
 
-The assessment investigates exploit-related activity associated with the **Angler Exploit Kit**, an affected internal host, an external exploit-delivery infrastructure, and a payload recovered from captured traffic.
+1. Gathering Basic Information
+2. Learn About the Exploit
+3. Determining the Source of the Malware
+4. Analyze Details of the Exploit
 
-### Documentation package created
+### Documentation structure — REVISED
+
+The earlier v1.1 documentation was too similar to the v1.0 package. It has now been simplified so each file has a distinct purpose:
 
 ```text
 assessments/cyberops-v1.1/
 ├── assessment-overview.md
 ├── assessment-documentation.md
 ├── alert-analysis.md
-├── incident-timeline.md
-├── ioc-analysis.md
-├── threat-intelligence.md
+├── exploit-analysis.md
+├── malware-source-analysis.md
 ├── findings-report.md
 └── screenshots/
 ```
 
-### Key assessment findings documented
+### Removed as unnecessary duplicates
+
+The following separate files were removed from v1.1 because their content is now handled more appropriately within the assessment parts and findings:
+
+- `incident-timeline.md`
+- `ioc-analysis.md`
+- `threat-intelligence.md`
+
+This is intentional. v1.1 is now organized around the **actual four-part assessment workflow**, rather than copying the v1.0 evidence-file structure.
+
+### Key findings documented
 
 - Exploit kit: **Angler EK**
-- Affected host: `192.168.0.12`
+- Exploit-related events: **15**
+- Activity window: **2017-09-07 15:31:12–15:31:34**
+- Internal host: `192.168.0.12`
+- MAC address: `00:1b:21:ca:fe:d7`
+- Vulnerable client condition: outdated Flash
+- Landing-page IP: `173.201.198.128`
+- Landing-page domain: `lifeinsidetroit.com`
 - Exploit-delivery IP: `192.99.198.158`
 - Exploit-delivery domain: `qwe.mvdunalterableairreport.net`
-- Extracted object: `3xdz3bcxc8`
-- Vulnerable client condition: outdated Flash component
+- Recovered object: `3xdz3bcxc8`
+- Recovered object type: SWF
 
 ### Primary evidence domains
 
@@ -137,9 +157,9 @@ assessments/cyberops-v1.1/
 
 ### TESDA relevance
 
-The v1.1 assessment provides strong practical evidence for **ICT251312 — Monitor and Report Cyber Threats**, especially alert evaluation, event investigation, case follow-up, threat identification and reporting.
+The v1.1 assessment provides strong practical evidence for **ICT251312 — Monitor and Report Cyber Threats**, particularly alert evaluation, event investigation, case follow-up, threat identification, intelligence-supported analysis and reporting.
 
-It provides supporting evidence for **ICT251314 — Perform Threat Mitigation**, especially incident evaluation, IOC identification, intelligence use and affected-system analysis.
+It provides supporting evidence for **ICT251314 — Perform Threat Mitigation**, particularly identification of the threat, affected asset, relevant infrastructure and attack method.
 
 It does not by itself demonstrate complete containment, eradication, recovery, secondary scanning or vulnerability-management processes.
 
@@ -147,7 +167,7 @@ It does not by itself demonstrate complete containment, eradication, recovery, s
 
 - [ ] Confirm whether the user has performed the v1.1 assessment.
 - [ ] Collect actual v1.1 screenshots/artifacts if performed.
-- [ ] Replace documentation placeholders with actual observed values.
+- [ ] Replace placeholders with actual observed values.
 - [ ] Verify the exact assessment version/environment used.
 - [ ] Create task-level TESDA criterion mapping for v1.1.
 - [ ] Link actual evidence to the master SAG matrix.
