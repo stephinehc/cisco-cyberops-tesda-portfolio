@@ -2,6 +2,12 @@
 
 This directory contains integrated assessment evidence from the Cisco CyberOps Associate v1.0 Skills Assessment and BOTS v2.
 
+## Controlled-environment and data-privacy statement
+
+All assessment activities documented here are performed exclusively in **simulated, isolated, and controlled laboratory environments** using authorized training datasets, virtual machines, simulated network traffic, and training systems.
+
+No production systems, live organizational networks, confidential company information, personally identifiable information, credentials, private keys, or real organizational security events are intentionally accessed, monitored, scanned, modified, contained, or recovered.
+
 ## Purpose
 
 The assessment folders are separate from the 11 evidence domains because one assessment can demonstrate multiple domains at the same time.
@@ -21,12 +27,10 @@ assessments/
 - `tesda-mapping/` explains the relationship to TESDA competencies and performance criteria.
 - Do not duplicate large evidence files unnecessarily; use cross-references where practical.
 
-### Legacy assessment note
+### Evidence standards
 
-The legacy CCNA Cybersecurity Operations v1.1 assessment materials have been removed from this portfolio. The current evidence architecture focuses on the active CyberOps Associate course/lab pathway, the retained v1.0 Skills Assessment evidence, BOTS v2, and supplementary simulations.
+Only actual assessment results and artifacts produced by the candidate in the authorized laboratory environment should be treated as evidence. Reference websites may be used for preparation or cross-checking, but they are not substitutes for the candidate's own evidence.
 
-## Assessment evidence standards
+Remove or exclude credentials, private information, confidential organizational data, and any production-derived information before committing evidence.
 
-Only actual assessment results and artifacts produced by the candidate should be treated as evidence. Reference websites may be used for preparation or cross-checking, but they are not substitutes for the candidate's own evidence.
-
-Remove credentials, private information, and confidential organizational data before committing evidence.
+The portfolio does **not** require or document a live-production capstone. The retained v1.0 Skills Assessment, BOTS v2 investigations, CyberOps Associate laboratory activities, and controlled supplementary simulations form the assessment/evidence structure.
