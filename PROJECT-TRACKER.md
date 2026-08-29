@@ -7,14 +7,14 @@
 | Phase | Deliverable | Status |
 |---|---|---|
 | **Phase 1** | Portfolio architecture and evidence strategy | ✅ Complete |
-| **Phase 2** | Complete CyberOps Associate lab register, question/answer guide and evidence-image standard | 🟢 Lab framework complete; individual lab evidence still pending |
+| **Phase 2** | Complete CyberOps Associate lab register, question/answer guide and individual lab evidence framework | 🟢 Framework complete; candidate evidence collection pending |
 | **Phase 3** | TESDA performance-criterion + master SAG mapping | ✅ Complete — master matrix established; criterion-level evidence verification continues during later phases |
 | **Phase 4** | CyberOps v1.0 Skills Assessment evidence mapping | 🟢 Assessment performed; documentation created; artifact verification pending |
 | **Phase 5** | Legacy assessment review and repository cleanup | ✅ Complete |
 | **Phase 6** | BOTS v2 threat-hunting evidence mapping, evidence cross-check and cleanup | ✅ Complete |
 | **Phase 7** | Controlled containment/eradication/recovery simulation | ⬜ Pending |
 | **Phase 8** | Controlled vulnerability scanning/management simulation | ⬜ Pending |
-| **Phase 9** | Evidence templates and individual lab evidence folders | ⬜ Pending |
+| **Phase 9** | Evidence-domain implementation and consolidation | ⬜ Pending |
 | **Phase 10** | Final TESDA evidence index and SAG review | ⬜ Pending |
 
 > **No live-production capstone:** The portfolio does not require or document cybersecurity activities against a company's live production environment. The v1.0 Skills Assessment, BOTS v2 investigations, CyberOps laboratory activities, and controlled supplementary simulations collectively provide the evidence package.
@@ -34,7 +34,7 @@ No production systems, live organizational networks, confidential company inform
 - Skills Assessment, BOTS v2, and controlled supplementary simulations positioned as additional evidence layers.
 - Live-production capstone removed.
 
-## Phase 2 — LAB FRAMEWORK COMPLETE
+## Phase 2 — LAB EVIDENCE FRAMEWORK COMPLETE
 
 ### Completed
 
@@ -42,9 +42,10 @@ No production systems, live organizational networks, confidential company inform
 - Primary and related evidence domains assigned.
 - Preliminary TESDA NC I/NC II relevance recorded.
 - Evidence gaps identified.
-- `cisco-lab-register/cyberops-lab-evidence-guide.md` created.
-- Lab questions/tasks paraphrased from the ITExamAnswers reference material.
-- Expected answer/result guidance added.
+- `cisco-lab-register/cyberops-lab-evidence-guide.md` maintained as the master documentation guide.
+- Questions/tasks paraphrased and organized for each selected lab.
+- Expected answer/result and observation guidance added.
+- 36 individual lab-work folders created under `cyberops-labs/`.
 - Standardized screenshot filename convention established:
 
 ```text
@@ -52,13 +53,16 @@ LAB-XX-01-short-description.png
 LAB-XX-02-short-description.png
 ```
 
+- Screenshot attachment locations placed in every individual lab record.
+- `cyberops-labs/README.md` created to define the evidence workflow.
+
 ### Remaining
 
 - Confirm which of the 36 labs have actually been completed.
 - Capture actual laboratory screenshots/outputs for completed labs.
-- Place screenshots in the appropriate evidence-domain folders when Phase 9 begins.
-- Replace any generic evidence guidance with the candidate's actual observations/results.
-- Complete final evidence-to-criterion verification.
+- Replace generic evidence guidance with the candidate's actual observations/results where necessary.
+- Mark each lab Completed / Partially Completed / Not Performed.
+- Complete final evidence-to-criterion verification after candidate evidence is available.
 
 ## Phase 3 — COMPLETE
 
@@ -75,7 +79,7 @@ LAB-XX-02-short-description.png
 - User performed the v1.0 Skills Assessment in the CyberOps laboratory environment.
 - Assessment documentation created.
 - Alert-driven investigation and evidence-domain mapping established.
-- Published answer material is treated only as a cross-check, not as candidate evidence.
+- Reference answer material is treated only as a cross-check, not as candidate evidence.
 
 ### Remaining
 
@@ -122,9 +126,9 @@ Create an **isolated authorized training scenario only** covering:
 
 All targets must be explicitly designated laboratory assets.
 
-## Phase 9 — Evidence implementation
+## Phase 9 — Evidence-domain implementation
 
-Populate the 11 evidence domains with verified laboratory artifacts and reusable evidence templates. This includes the actual screenshots from completed CyberOps labs, v1.0 assessment evidence, BOTS v2 evidence and controlled supplementary simulations.
+Populate the 11 evidence domains with verified laboratory artifacts and reusable evidence indexes/templates. This includes selected evidence from the individual CyberOps lab folders, v1.0 assessment, BOTS v2 and controlled supplementary simulations.
 
 ## Phase 10 — Final TESDA evidence review
 
@@ -142,6 +146,7 @@ There will be **no live-production capstone**.
 - Do not claim that completing a Cisco lab automatically equals a TESDA competency.
 - Keep the 11 evidence domains separate from the four TESDA core competencies.
 - Treat reference walkthroughs as preparation/cross-checking material, not as substitutes for candidate evidence.
+- Do not identify external answer sources in portfolio documentation.
 - Update this tracker at the end of each phase.
 
 ## Current next task
