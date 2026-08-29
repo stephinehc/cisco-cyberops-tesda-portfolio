@@ -4,7 +4,25 @@
 
 This document maps the **Cisco CyberOps Associate v1.0 Skills Assessment** to the portfolio's 11 evidence domains and the TESDA Cyber Threat Monitoring NC I / Cyber Threat Mitigation NC II core competencies.
 
-The assessment uses a Security Onion environment and an alert-driven Pushdo Trojan investigation. Its stated assessed skills include evaluating event alerts using Sguil/Kibana, obtaining intelligence on a potential exploit using web search, and using VirusTotal to verify a threat. citeturn0search0turn0search3
+The assessment uses a Security Onion environment and an alert-driven Pushdo Trojan investigation. Its stated assessed skills include evaluating event alerts using Sguil/Kibana, obtaining intelligence on a potential exploit using web search, and using VirusTotal to verify a threat.
+
+## Assessment completion status
+
+**User-reported status: COMPLETED.**
+
+The user has already performed the v1.0 Skills Assessment in the CyberOps VM and reports that the observed results/answers match the published answer reference used as a cross-check.
+
+Reference used for answer cross-check:
+
+urlCyberOps Associate Skills Assessment Answers — CA v1.0 Skills Examhttps://itexamanswers.net/cyberops-associate-skills-assessment-answers-ca-v1-0-skills-exam.html
+
+The reference confirms the same assessment structure: Security Onion service verification, Sguil/Kibana alert review, Pushdo incident timeframe, affected host identification, exploit/infection analysis, downloaded-file and hash analysis, VirusTotal verification, related-alert review, and final findings. citeturn1search0
+
+### Evidence-integrity rule
+
+The published answer reference is **not treated as portfolio evidence**. It is only a cross-check against the user's independently performed assessment.
+
+The portfolio evidence must still come from the user's own CyberOps VM run, such as screenshots, command output, alert records, investigation notes, hashes, VirusTotal results, and the completed report.
 
 ## Assessment role in the portfolio
 
@@ -17,7 +35,7 @@ The assessment uses a Security Onion environment and an alert-driven Pushdo Troj
 - **ICT251313 — Conduct Vulnerability Scanning of Assets:** not a direct assessment activity
 - **ICT251315 — Perform Vulnerability Management/Control:** not a direct assessment activity
 
-The assessment begins with verification of Security Onion services and access to Sguil/Kibana, followed by review of alerts in the relevant time window. It then investigates the infected host, exploit, downloaded files/hashes, VirusTotal results, related alerts, and concludes with a findings report. citeturn0search0turn0search11
+The assessment begins with verification of Security Onion services and access to Sguil/Kibana, followed by review of alerts in the relevant time window. It then investigates the infected host, exploit, downloaded files/hashes, VirusTotal results, related alerts, and concludes with a findings report. citeturn1search0
 
 ## Task-level evidence mapping
 
@@ -34,12 +52,12 @@ The assessment begins with verification of Security Onion services and access to
 | Research how the malware/exploit infected the PC | **08 Threat Intelligence** | 05 Malware/IOC Analysis, 07 Incident Investigation | ICT251314: threat intelligence / attack analysis | 🟢 Direct | Research notes; cited sources; TTP/attack explanation |
 | Identify downloaded files associated with malicious domains | **05 Malware/IOC Analysis** | 03 Network Traffic Analysis, 07 Incident Investigation | ICT251314: IOC/malware analysis | 🟢 Direct | Filename, path, domain, related alert evidence |
 | Calculate SHA-256 hashes of downloaded files | **05 Malware/IOC Analysis** | 04 Endpoint Analysis | ICT251314: IOC identification / file verification | 🟢 Direct | Hash command/output; hash table |
-| Submit/search hashes in VirusTotal | **08 Threat Intelligence** | 05 Malware/IOC Analysis | ICT251314: IOC counter-check/threat intelligence | 🟢 Direct | VirusTotal result screenshot; hash; verdict; date accessed |
+| Submit/search hashes in VirusTotal | **08 Threat Intelligence** | 05 Malware/IOC Analysis | ICT251314: IOC counter-check/threat intelligence | 🟢 Direct | VirusTotal result screenshot; hash; date accessed |
 | Record file type, size, aliases, target machine and community intelligence | **05 Malware/IOC Analysis** | 08 Threat Intelligence, 04 Endpoint Analysis | ICT251314: enrich and document IOC evidence | 🟢 Direct | IOC enrichment table |
 | Examine other alerts associated with infected host | **07 Incident Investigation** | 01 Monitoring and Alerts, 02 Log/Event Analysis | ICT251312: case follow-up; ICT251314: incident analysis | 🟢 Direct | Correlated-alert table; screenshots |
 | Summarize findings | **11 Reporting** | 07 Incident Investigation, 08 Threat Intelligence | ICT251312 reporting; ICT251314 incident documentation | 🟢 Direct | Final investigation report |
 
-The task sequence and required outputs are based on the published v1.0 assessment document. citeturn0search0turn0search1
+The task sequence and required outputs are based on the published v1.0 assessment document. citeturn1search0
 
 ## 11-domain classification
 
@@ -47,13 +65,11 @@ The task sequence and required outputs are based on the published v1.0 assessmen
 
 **Primary evidence:** Sguil/Kibana alert review.
 
-The assessment is particularly strong here because it begins from an existing detection alert rather than requiring the analyst to discover the incident from an entirely unknown dataset. citeturn0search0
+The assessment is particularly strong here because it begins from an existing detection alert rather than requiring the analyst to discover the incident from an entirely unknown dataset. citeturn1search0
 
 ### 02 — Log/Event Analysis
 
 **Supporting evidence:** event and alert review/correlation.
-
-This should be strengthened in the portfolio with screenshots showing the relevant event fields and analyst interpretation rather than screenshots alone.
 
 ### 03 — Network Traffic Analysis
 
@@ -77,7 +93,7 @@ This should be strengthened in the portfolio with screenshots showing the releva
 
 ### 08 — Threat Intelligence
 
-**Strong evidence:** web research and VirusTotal enrichment/verification. The assessment explicitly identifies these as assessed skills. citeturn0search0
+**Strong evidence:** web research and VirusTotal enrichment/verification. The assessment explicitly identifies these as assessed skills. citeturn1search0
 
 ### 09 — Containment
 
@@ -89,7 +105,7 @@ This should be strengthened in the portfolio with screenshots showing the releva
 
 ### 11 — Reporting
 
-**Direct evidence:** final summary of findings is an explicit assessment task. citeturn0search1
+**Direct evidence:** final summary of findings is an explicit assessment task. citeturn1search0
 
 ## TESDA coverage summary
 
@@ -117,7 +133,7 @@ These will be handled through supplementary evidence and later phases.
 
 ## Recommended evidence package
 
-When the assessment is actually performed, create:
+Because the user has already completed the assessment, the next evidence-implementation task is to collect the user's actual artifacts into the following structure:
 
 ```text
 v1.0-pushdo/
@@ -142,7 +158,7 @@ Do not create placeholder screenshots as if they were completed evidence. The sc
 
 ## RPL/SAG use
 
-For an eventual SAG response, v1.0 should be presented as **supporting practical evidence for the specific monitoring, investigation, IOC/CTI and reporting criteria it actually demonstrates**, not as a blanket claim of competency.
+For an eventual SAG response, v1.0 should be presented as **practical evidence for the specific monitoring, investigation, IOC/CTI and reporting criteria it actually demonstrates**, not as a blanket claim of competency.
 
 The strongest evidence chain is:
 
@@ -170,18 +186,18 @@ Incident Findings Report
 
 ## Relationship to CyberOps labs
 
-The v1.0 assessment should be treated as a **capstone built from previously practiced CyberOps labs**, especially the assessment hints that reference CyberOps labs 27.2.12, 27.2.14 and 27.2.15. citeturn0search4
+The v1.0 assessment should be treated as a **capstone built from previously practiced CyberOps labs**, especially the assessment's use of Security Onion, Sguil/Kibana, NetworkMiner, file/hash analysis and threat-intelligence verification. citeturn1search0
 
 Therefore, the portfolio should retain the individual lab evidence and use the Skills Assessment as an integrated demonstration rather than replacing the lab evidence.
 
 ## Phase 4 status
 
-**Status: 🟢 Mapping complete; practical evidence capture pending.**
+**Status: 🟢 Assessment performed; results cross-checked; evidence artifact collection pending.**
 
 Next tasks:
 
-1. Perform the v1.0 Skills Assessment in the user's CyberOps VM.
-2. Capture the evidence listed above.
-3. Produce the formal investigation report.
-4. Link the completed evidence to the exact TESDA performance-criterion matrix.
-5. Update the master SAG matrix with actual evidence locations.
+1. Add the user's actual v1.0 screenshots/evidence artifacts to the repository.
+2. Produce the formal investigation report from the user's own results.
+3. Link the completed evidence to the exact TESDA performance-criterion matrix.
+4. Update the master SAG matrix with actual evidence locations.
+5. Proceed to Phase 5 — CyberOps v1.1 Skills Assessment mapping.
