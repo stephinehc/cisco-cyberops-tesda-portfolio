@@ -11,7 +11,7 @@
 | **Phase 3** | TESDA performance-criterion + master SAG mapping | ✅ Complete — master matrix established; criterion-level evidence verification continues during later phases |
 | **Phase 4** | CyberOps v1.0 Skills Assessment evidence mapping | 🟢 Assessment performed; documentation created; artifact verification pending |
 | **Phase 5** | Legacy assessment review and repository cleanup | ✅ Complete — obsolete legacy materials removed |
-| **Phase 6** | BOTS v2 threat-hunting evidence mapping and setup | 🟢 Evidence set established; final artifact cleanup pending |
+| **Phase 6** | BOTS v2 threat-hunting evidence mapping, evidence cross-check and cleanup | ✅ Complete — 100–400 evidence set catalogued; report and mapping updated |
 | **Phase 7** | Controlled containment/eradication/recovery simulation | ⬜ Pending |
 | **Phase 8** | Controlled vulnerability scanning/management simulation | ⬜ Pending |
 | **Phase 9** | Evidence templates and individual lab evidence folders | ⬜ Pending |
@@ -80,31 +80,23 @@ The portfolio demonstrates technical capability through authorized simulation an
 
 The obsolete legacy assessment package was removed. The portfolio now focuses on the current CyberOps Associate pathway, the retained v1.0 Skills Assessment, BOTS v2, and controlled supplementary simulations.
 
-## Phase 6 — BOTS v2
-
-### Current status
-
-**🟢 Evidence set established; final cleanup pending.**
-
-```text
-assessments/botsv2/
-├── README.md
-├── setup.md
-├── splunk-2-hunting-guide.md
-├── evidence-mapping.md
-├── screenshots/README.md
-└── reports/botsv2-investigation-report.md
-```
+## Phase 6 — COMPLETE: BOTS v2 Evidence Cleanup
 
 ### Completed
 
 - BOTS v2 assessment directory established.
 - Splunk 2 hunting workflow documented.
-- SPL commands retained according to the agreed evidence/reference workflow.
-- Actual uploaded screenshot filenames recorded.
-- 100–400 Series evidence cross-checked.
-- BOTS v2 investigation report created.
-- BOTS v2 → TESDA evidence matrix created.
+- SPL commands retained according to the agreed reference/cross-check workflow.
+- Actual uploaded screenshot filenames recorded and preserved.
+- 100–400 Series questions and evidence images cross-checked.
+- Screenshot index updated with human-readable labels and actual filenames.
+- BOTS v2 investigation report updated with the four-series evidence chain.
+- Controlled-environment and data-privacy language added to the BOTS v2 documentation.
+- Evidence provenance distinction added so reference-derived images are not misrepresented as independently performed evidence.
+- BOTS v2 → TESDA evidence mapping maintained as supporting/direct evidence only where justified.
+- Missing 300-Q3 vendor-lookup image documented as an evidence limitation rather than fabricated.
+- Filename/question-number inconsistencies in 300-Series preserved and documented for later cleanup.
+- 42-image inventory recorded.
 
 ### Current evidence inventory
 
@@ -117,13 +109,11 @@ assessments/botsv2/
 Total      → 42 images
 ```
 
-### Remaining
+### Phase 6 conclusion
 
-- [ ] Final cross-check of image numbering and labels.
-- [ ] Verify every image against its question and evidence purpose.
-- [ ] Replace any reference-derived visual evidence with candidate-generated evidence where necessary.
-- [ ] Finalize the BOTS v2 investigation report using the verified evidence set.
-- [ ] Link BOTS v2 evidence to the master TESDA SAG matrix.
+BOTS v2 is now considered **organized and ready for final TESDA integration**, subject only to later evidence-provenance/filename cleanup if required. The investigation demonstrates simulated log/event analysis, network traffic analysis, endpoint analysis, malware/IOC analysis, threat intelligence, incident investigation and reporting.
+
+BOTS v2 does not by itself establish complete containment, eradication, recovery, or vulnerability-management competency. Those remain separate controlled simulation phases.
 
 ## Phase 7 — Controlled Containment / Eradication / Recovery Simulation
 
@@ -167,4 +157,4 @@ There will be **no live-production capstone**. The final evidence package will b
 
 ## Current next task
 
-**Complete the final BOTS v2 evidence cleanup, then proceed to the controlled containment/eradication/recovery simulation to address the remaining ICT251314 mitigation gaps.**
+**Proceed to Phase 7: design the controlled containment/eradication/recovery simulation that addresses the remaining ICT251314 mitigation gaps.**
