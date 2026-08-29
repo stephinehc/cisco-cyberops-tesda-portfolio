@@ -2,13 +2,17 @@
 
 ## Purpose
 
-This folder documents the BOTS v2 threat-hunting work used as higher-level evidence for the TESDA cybersecurity portfolio.
+This folder documents BOTS v2 threat-hunting activities used as higher-level evidence for the TESDA cybersecurity portfolio.
 
-BOTS v2 is the Splunk Boss of the SOC version 2 dataset. The official dataset is a public security dataset designed for security professionals, researchers, students, and enthusiasts. It contains endpoint, network, firewall/proxy, IDS, and other telemetry and is indexed in Splunk under `botsv2`.
+## Controlled-environment and data-privacy statement
+
+All BOTS v2 activities documented here are performed exclusively in a **simulated, isolated, and controlled laboratory environment** using an authorized training dataset and designated virtual/training systems.
+
+BOTS v2 evidence must not be interpreted as monitoring, scanning, investigating, or responding to a live company's production environment. No production systems, confidential organizational information, personally identifiable information, credentials, private keys, or real organizational security events are intentionally used.
 
 ## Portfolio role
 
-BOTS v2 is positioned after the CyberOps Associate labs and the retained v1.0 Skills Assessment:
+BOTS v2 is positioned after the CyberOps Associate laboratory activities and the retained v1.0 Skills Assessment:
 
 ```text
 CyberOps Associate Labs
@@ -17,7 +21,7 @@ CyberOps v1.0 Skills Assessment
         ↓
 BOTS v2 / Splunk Threat Hunting
         ↓
-Independent Investigation
+Controlled Simulated Investigation
         ↓
 TESDA Evidence Package
 ```
@@ -31,41 +35,41 @@ The activity is especially useful for:
 - Malware/IOC analysis
 - Reporting
 
-It provides supporting evidence for **ICT251312 — Monitor and Report Cyber Threats** and **ICT251314 — Perform Threat Mitigation**. It does not by itself demonstrate the complete containment, eradication, recovery, or vulnerability-management workflows.
+It provides supporting evidence for **ICT251312 — Monitor and Report Cyber Threats** and **ICT251314 — Perform Threat Mitigation**. It does not by itself demonstrate complete containment, eradication, recovery, or vulnerability-management workflows.
 
 ## Dataset setup
 
-The official BOTS v2 repository provides both a full dataset and an attack-only dataset. The attack-only dataset is smaller and is appropriate when the objective is focused threat-hunting practice. Only one of the two should be installed at a time.
+BOTS v2 is a training dataset used in a controlled Splunk environment. The dataset may contain endpoint, network, firewall/proxy, IDS, and other telemetry representing simulated security activity.
 
-The official documentation states that after installation the dataset can be searched with:
+After installation, dataset verification can use:
 
 ```spl
 index=botsv2 earliest=0
 ```
 
-The original dataset was generated from a realistic lab environment containing Windows endpoints, Sysmon and Windows Event Logging, Palo Alto Networks firewall/proxy telemetry, Splunk Stream, and Suricata network IDS data.
+The setup must remain isolated from production infrastructure.
 
 ## Evidence rule
 
-The walkthrough material is a learning guide only. The final portfolio must contain the candidate's own Splunk searches, screenshots, observations, analysis, and conclusions.
+The walkthrough material is used only as a learning and cross-checking resource. Final portfolio evidence must come from the candidate's own authorized laboratory investigation whenever the activity is performed.
 
-Do not present answers from walkthroughs as personal evidence.
+Do not present reference answers or screenshots as candidate-generated evidence.
 
 ## Working guide
 
 See:
 
-- `setup.md` — installation and verification
-- `splunk-2-hunting-guide.md` — paraphrased threat-hunting workflow based on the supplied TryHackMe Splunk 2 reference and the linked walkthrough
+- `setup.md` — controlled-environment installation and verification
+- `splunk-2-hunting-guide.md` — paraphrased threat-hunting workflow based on the supplied reference
 - `evidence-mapping.md` — TESDA/evidence-domain mapping
-- `screenshots/` — candidate-generated screenshots only
+- `screenshots/` — evidence screenshots associated with the BOTS v2 investigation
 
 ## Screenshot policy
 
-The supplied Medium article contains screenshots that belong to its original publication. They should be treated as visual references, not automatically copied into this repository. If the user provides the images or has permission to reuse them, they can be placed in `screenshots/` with attribution. Otherwise, capture equivalent screenshots from the candidate's own Splunk/BOTS v2 session.
+Screenshots used for the portfolio should document the candidate's own controlled BOTS v2/Splunk investigation. Reference screenshots may be used for learning or cross-checking, but they should not be represented as candidate evidence unless reuse is authorized.
+
+Do not upload screenshots containing production data, confidential company information, credentials, private keys, or other restricted information.
 
 ## References
 
-- TryHackMe — Splunk 2: https://tryhackme.com/room/splunk2
-- jniket — TryHackMe Splunk 2 walkthrough: https://medium.com/@johnniketas/tryhackme-splunk-2-e86081dbc7ce
-- Official Splunk BOTS v2 dataset: https://github.com/splunk/botsv2
+Reference materials are used for learning and cross-checking only. The final portfolio emphasizes candidate-generated evidence from the controlled laboratory environment.
