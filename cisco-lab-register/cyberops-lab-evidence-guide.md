@@ -2,19 +2,19 @@
 
 ## Purpose
 
-This guide provides a portfolio-ready evidence template for the **36 Cisco CyberOps Associate v1.0 hands-on labs** in the master register.
+This guide provides a portfolio-ready evidence template for the **36 Cisco CyberOps Associate v1.0 hands-on laboratory activities** in the master register.
 
-The questions/tasks and expected answers below are **paraphrased from the corresponding ITExamAnswers lab-answer material** used as a cross-check. They are not presented as a substitute for the original Cisco lab instructions or as candidate evidence.
+The questions/tasks and expected results are paraphrased from reference material used to cross-check the laboratory activities. They are provided as study and documentation guidance only and are not a substitute for the original Cisco lab instructions or candidate evidence.
 
-## Controlled-environment and privacy statement
+## Controlled-environment and data-privacy statement
 
-All work documented here must be performed only in a **simulated, isolated, and controlled laboratory environment** using authorized training virtual machines, simulated networks, packet captures, training datasets, and intentionally configured systems.
+All activities documented in this portfolio must be performed only in a **simulated, isolated, and controlled laboratory environment** using authorized training virtual machines, simulated networks, packet captures, training datasets, and intentionally configured systems.
 
 Do not use production systems, live organizational networks, confidential company information, personally identifiable information, production credentials, private keys, or real organizational security events.
 
 ## Evidence image naming standard
 
-Use the following standardized naming convention for screenshots:
+Use the following standardized naming convention:
 
 ```text
 LAB-XX-01-short-description.png
@@ -22,16 +22,38 @@ LAB-XX-02-short-description.png
 LAB-XX-03-short-description.png
 ```
 
-Where `XX` is the portfolio lab number in this guide, not the Cisco module number.
+`XX` is the portfolio lab number in this guide, not the Cisco module number.
 
 Example:
 
 ```text
 LAB-16-01-nmap-scan-command.png
-LAB-16-02-nmap-open-ports.png
+LAB-16-02-nmap-scan-results.png
 ```
 
-If no screenshot is necessary, record the result as text/command output instead. Do not create placeholder images.
+Do not create placeholder images. If an activity does not require a screenshot, record the actual command/output or observation as text.
+
+## Evidence workflow
+
+```text
+Controlled laboratory activity
+        ↓
+Lab question / task
+        ↓
+Learner performs the activity
+        ↓
+Actual result / observation
+        ↓
+Screenshot or command output
+        ↓
+Interpretation
+        ↓
+Evidence domain
+        ↓
+TESDA relevance
+```
+
+The expected results below are **reference guidance only**. Final evidence must come from the learner's own controlled laboratory run.
 
 ---
 
@@ -40,17 +62,17 @@ If no screenshot is necessary, record the result as text/command output instead.
 **Primary domain:** 04 Endpoint Analysis
 
 ### Questions / tasks
-1. Identify the processes running on the simulated Windows host.
-2. Identify the process associated with a selected network connection.
-3. Record the relevant process information.
+1. Identify running processes on the simulated Windows host.
+2. Identify a process associated with a selected network connection.
+3. Record the process name, PID and relevant endpoint information.
 
-### Expected answer/result
-Use TCP/UDP Endpoint Viewer or the specified Sysinternals utility to identify active processes and their associated network endpoints. Record the process name/PID and relevant local/remote endpoint information.
+### Expected result
+The process/network-viewing utility should display active processes and associated local/remote endpoints.
 
 ### Evidence labels
 ```markdown
-![LAB-01-01 — Running process view](../evidence-images/LAB-01-01-process-list.png)
-![LAB-01-02 — Process/network endpoint information](../evidence-images/LAB-01-02-process-network-endpoint.png)
+![LAB-01-01 — Running process list](../evidence-images/LAB-01-01-process-list.png)
+![LAB-01-02 — Process and network endpoint](../evidence-images/LAB-01-02-process-network-endpoint.png)
 ```
 
 ---
@@ -61,17 +83,17 @@ Use TCP/UDP Endpoint Viewer or the specified Sysinternals utility to identify ac
 
 ### Questions / tasks
 1. Inspect a process using Process Explorer.
-2. Examine threads and handles associated with the process.
-3. Examine relevant Windows Registry information.
-4. Identify information useful for endpoint investigation.
+2. Examine its threads and handles.
+3. Inspect relevant Registry information.
+4. Identify information useful to endpoint investigation.
 
-### Expected answer/result
-Process Explorer exposes process IDs, parent/child relationships, threads, handles, loaded modules and other process information. Registry inspection provides configuration/persistence-related context where applicable.
+### Expected result
+Process Explorer provides process, thread, handle and module information; Registry inspection provides configuration and persistence-related context where applicable.
 
 ### Evidence labels
 ```markdown
 ![LAB-02-01 — Process Explorer](../evidence-images/LAB-02-01-process-explorer.png)
-![LAB-02-02 — Threads/handles](../evidence-images/LAB-02-02-threads-handles.png)
+![LAB-02-02 — Threads and handles](../evidence-images/LAB-02-02-threads-handles.png)
 ![LAB-02-03 — Registry evidence](../evidence-images/LAB-02-03-registry.png)
 ```
 
@@ -82,12 +104,12 @@ Process Explorer exposes process IDs, parent/child relationships, threads, handl
 **Primary domain:** 04 Endpoint Analysis
 
 ### Questions / tasks
-1. Create a local user account.
-2. Modify account properties/group membership.
-3. Verify the account configuration.
+1. Create the requested local user account.
+2. Configure its properties/group membership.
+3. Verify the resulting account configuration.
 
-### Expected answer/result
-The account should be created successfully with the requested properties and verified through the Windows account-management interface/command output.
+### Expected result
+The requested account is created with the specified properties and can be verified through the Windows account-management interface or command output.
 
 ### Evidence labels
 ```markdown
@@ -103,17 +125,17 @@ The account should be created successfully with the requested properties and ver
 
 ### Questions / tasks
 1. Open PowerShell.
-2. Explore basic PowerShell commands.
+2. Execute basic PowerShell commands.
 3. Use PowerShell to inspect the simulated host.
-4. Record useful command output.
+4. Record useful output.
 
-### Expected answer/result
-PowerShell provides command-line access to Windows administration and investigation functions. Record the commands and outputs actually used in the laboratory.
+### Expected result
+PowerShell provides command-line administration and investigation functions. Record the actual commands and outputs produced in the laboratory.
 
 ### Evidence labels
 ```markdown
 ![LAB-04-01 — PowerShell console](../evidence-images/LAB-04-01-powershell-console.png)
-![LAB-04-02 — PowerShell investigation output](../evidence-images/LAB-04-02-powershell-output.png)
+![LAB-04-02 — PowerShell output](../evidence-images/LAB-04-02-powershell-output.png)
 ```
 
 ---
@@ -123,18 +145,18 @@ PowerShell provides command-line access to Windows administration and investigat
 **Primary domain:** 04 Endpoint Analysis
 
 ### Questions / tasks
-1. Examine the Processes tab.
+1. Examine running processes.
 2. Identify resource-intensive processes.
-3. Inspect process details and resource usage.
-4. Manage a process in the simulated environment as instructed.
+3. Inspect process/resource information.
+4. Perform the instructed laboratory process-management action.
 
-### Expected answer/result
-Task Manager provides process, performance and resource information. Record the process/resource observations required by the lab.
+### Expected result
+Task Manager displays process, performance and resource information needed for the assigned analysis.
 
 ### Evidence labels
 ```markdown
 ![LAB-05-01 — Task Manager processes](../evidence-images/LAB-05-01-task-manager-processes.png)
-![LAB-05-02 — Resource/performance view](../evidence-images/LAB-05-02-task-manager-performance.png)
+![LAB-05-02 — Task Manager performance](../evidence-images/LAB-05-02-task-manager-performance.png)
 ```
 
 ---
@@ -144,13 +166,13 @@ Task Manager provides process, performance and resource information. Record the 
 **Primary domain:** 04 Endpoint Analysis
 
 ### Questions / tasks
-1. Start the specified Windows administrative/resource-monitoring tools.
-2. Observe CPU, memory, disk and/or network resources.
-3. Identify processes consuming resources.
-4. Perform the instructed resource-management action.
+1. Open the specified resource-monitoring tools.
+2. Observe CPU, memory, disk and/or network utilization.
+3. Identify processes associated with resource consumption.
+4. Perform the instructed laboratory management action.
 
-### Expected answer/result
-The resource-monitoring tools display current system utilization and identify processes associated with resource consumption.
+### Expected result
+The Windows resource-monitoring tools display current utilization and process/resource relationships.
 
 ### Evidence labels
 ```markdown
@@ -165,17 +187,17 @@ The resource-monitoring tools display current system utilization and identify pr
 **Primary domain:** 02 Log/Event Analysis
 
 ### Questions / tasks
-1. Use Linux CLI tools to inspect text files.
-2. Use a text editor to create or modify a file.
+1. Inspect text files using Linux CLI tools.
+2. Create or modify a text file as instructed.
 3. Inspect configuration-file content.
-4. Record the commands used.
+4. Record commands and results.
 
-### Expected answer/result
-The lab demonstrates command-line text-file handling and configuration-file inspection. Record the actual file path, command and resulting output.
+### Expected result
+The required text/configuration files can be located and processed from the Linux command line.
 
 ### Evidence labels
 ```markdown
-![LAB-07-01 — Text file command](../evidence-images/LAB-07-01-text-file-command.png)
+![LAB-07-01 — Text-file command](../evidence-images/LAB-07-01-text-file-command.png)
 ![LAB-07-02 — Configuration/text file](../evidence-images/LAB-07-02-config-file.png)
 ```
 
@@ -186,18 +208,18 @@ The lab demonstrates command-line text-file handling and configuration-file insp
 **Primary domain:** 04 Endpoint Analysis
 
 ### Questions / tasks
-1. Navigate directories from the Linux CLI.
+1. Navigate the Linux filesystem.
 2. Create, copy, move and remove files/directories as instructed.
-3. Use basic administrative commands.
-4. Verify command results.
+3. Use basic shell commands.
+4. Verify the resulting state.
 
-### Expected answer/result
-The Linux shell supports file management and administrative operations through commands. Record the commands and resulting directory/file state.
+### Expected result
+The requested filesystem and shell operations complete successfully and the resulting state can be verified.
 
 ### Evidence labels
 ```markdown
 ![LAB-08-01 — Linux shell](../evidence-images/LAB-08-01-linux-shell.png)
-![LAB-08-02 — File management output](../evidence-images/LAB-08-02-file-management.png)
+![LAB-08-02 — File-management output](../evidence-images/LAB-08-02-file-management.png)
 ```
 
 ---
@@ -207,17 +229,17 @@ The Linux shell supports file management and administrative operations through c
 **Primary domain:** 04 Endpoint Analysis
 
 ### Questions / tasks
-1. Identify services/servers running on the simulated Linux host.
+1. Identify services running on the simulated Linux host.
 2. Identify associated listening ports.
-3. Determine what services are available.
+3. Determine available services.
 
-### Expected answer/result
-Use the specified Linux commands to identify listening services and their ports. Record service name, process and port where available.
+### Expected result
+Linux commands identify listening services, processes and ports in the training environment.
 
 ### Evidence labels
 ```markdown
 ![LAB-09-01 — Listening services](../evidence-images/LAB-09-01-listening-services.png)
-![LAB-09-02 — Server/port information](../evidence-images/LAB-09-02-server-ports.png)
+![LAB-09-02 — Server and port information](../evidence-images/LAB-09-02-server-ports.png)
 ```
 
 ---
@@ -228,17 +250,17 @@ Use the specified Linux commands to identify listening services and their ports.
 
 ### Questions / tasks
 1. Locate Linux log files.
-2. Identify application, service and system logs.
-3. Inspect log content.
-4. Determine which logs are useful for investigation.
+2. Identify system, authentication, service and application logs.
+3. Inspect relevant entries.
+4. Determine which logs support investigation.
 
-### Expected answer/result
-Linux maintains different logs for system, authentication, services and applications. The correct log path depends on the event being investigated; record the path and relevant entries found in the lab.
+### Expected result
+The relevant log locations and entries are identified according to the activity being investigated.
 
 ### Evidence labels
 ```markdown
-![LAB-10-01 — Log file locations](../evidence-images/LAB-10-01-log-locations.png)
-![LAB-10-02 — Log entries](../evidence-images/LAB-10-02-log-entries.png)
+![LAB-10-01 — Log-file locations](../evidence-images/LAB-10-01-log-locations.png)
+![LAB-10-02 — Relevant log entries](../evidence-images/LAB-10-02-log-entries.png)
 ```
 
 ---
@@ -248,18 +270,18 @@ Linux maintains different logs for system, authentication, services and applicat
 **Primary domain:** 04 Endpoint Analysis
 
 ### Questions / tasks
-1. Explore mounted filesystems.
-2. Navigate the Linux directory structure.
-3. Examine file ownership and permissions.
-4. Modify permissions as instructed.
+1. Navigate the Linux filesystem.
+2. Inspect ownership and permissions.
+3. Modify permissions as instructed.
+4. Verify the resulting settings.
 
-### Expected answer/result
-Linux uses a hierarchical filesystem and permission model. Record the relevant owner/group/permission values and verify the requested change.
+### Expected result
+The relevant owner, group and permission values are identified and the requested change is verified.
 
 ### Evidence labels
 ```markdown
-![LAB-11-01 — Filesystem](../evidence-images/LAB-11-01-filesystem.png)
-![LAB-11-02 — Permissions](../evidence-images/LAB-11-02-permissions.png)
+![LAB-11-01 — Linux filesystem](../evidence-images/LAB-11-01-filesystem.png)
+![LAB-11-02 — File permissions](../evidence-images/LAB-11-02-permissions.png)
 ```
 
 ---
@@ -269,13 +291,13 @@ Linux uses a hierarchical filesystem and permission model. Record the relevant o
 **Primary domain:** 03 Network Traffic Analysis
 
 ### Questions / tasks
-1. Verify connectivity with ping.
-2. Trace the route to a remote system.
+1. Verify connectivity.
+2. Trace the route to the assigned laboratory destination.
 3. Identify intermediate hops.
 4. Interpret the route output.
 
-### Expected answer/result
-Ping verifies reachability; traceroute/tracert reveals the path through intermediate routers. Record the observed hop sequence and any latency/timeouts.
+### Expected result
+Ping verifies reachability and traceroute/tracert displays the observed path and hop information.
 
 ### Evidence labels
 ```markdown
@@ -290,13 +312,13 @@ Ping verifies reachability; traceroute/tracert reveals the path through intermed
 **Primary domain:** 03 Network Traffic Analysis
 
 ### Questions / tasks
-1. Start the simulated Mininet topology.
-2. Capture traffic in Wireshark.
+1. Start the simulated topology.
+2. Capture traffic with Wireshark.
 3. Identify ICMP request/reply packets.
-4. Inspect packet fields and filtering.
+4. Inspect packet fields and filters.
 
-### Expected answer/result
-Wireshark captures and decodes packets. ICMP request/reply traffic can be identified by protocol and packet fields; record the relevant source/destination and ICMP information.
+### Expected result
+Wireshark captures and decodes the generated traffic, allowing ICMP packets and their relevant fields to be identified.
 
 ### Evidence labels
 ```markdown
@@ -313,16 +335,16 @@ Wireshark captures and decodes packets. ICMP request/reply traffic can be identi
 ### Questions / tasks
 1. Inspect an Ethernet II frame.
 2. Identify source/destination MAC addresses.
-3. Identify EtherType and frame fields.
-4. Capture and inspect generated traffic.
+3. Identify EtherType and other Layer 2 fields.
+4. Interpret the frame.
 
-### Expected answer/result
-The Ethernet frame contains MAC addressing, EtherType and other Layer 2 fields. Record the values visible in the simulated capture.
+### Expected result
+The selected frame exposes the expected MAC addresses, EtherType and Layer 2 fields.
 
 ### Evidence labels
 ```markdown
 ![LAB-14-01 — Ethernet frame](../evidence-images/LAB-14-01-ethernet-frame.png)
-![LAB-14-02 — Ethernet field details](../evidence-images/LAB-14-02-ethernet-fields.png)
+![LAB-14-02 — Ethernet fields](../evidence-images/LAB-14-02-ethernet-fields.png)
 ```
 
 ---
@@ -334,11 +356,11 @@ The Ethernet frame contains MAC addressing, EtherType and other Layer 2 fields. 
 ### Questions / tasks
 1. Capture a TCP session.
 2. Identify SYN, SYN-ACK and ACK packets.
-3. Record source/destination addresses and ports.
+3. Record addresses and ports.
 4. Explain the connection-establishment sequence.
 
-### Expected answer/result
-The TCP three-way handshake consists of SYN → SYN-ACK → ACK. Record the packet numbers, addresses, ports and TCP flags visible in the simulated capture.
+### Expected result
+The simulated TCP session demonstrates the sequence SYN → SYN-ACK → ACK with the associated addresses, ports and flags.
 
 ### Evidence labels
 ```markdown
@@ -355,14 +377,14 @@ The TCP three-way handshake consists of SYN → SYN-ACK → ACK. Record the pack
 
 ### Questions / tasks
 1. Explore Nmap options.
-2. Perform the specified authorized scan against the simulated target.
+2. Scan the authorized simulated target.
 3. Identify open ports/services.
 4. Interpret the scan result.
 
-### Expected answer/result
-Nmap identifies hosts, ports and services according to the scan options used. Record the exact authorized laboratory target, command and observed open ports/services.
+### Expected result
+Nmap reports hosts, ports and services according to the options used against the intentionally configured laboratory target.
 
-**Important:** This is a laboratory scan only. Do not scan production or third-party systems.
+**Laboratory-only requirement:** Never scan production or third-party systems.
 
 ### Evidence labels
 ```markdown
@@ -379,11 +401,11 @@ Nmap identifies hosts, ports and services according to the scan options used. Re
 ### Questions / tasks
 1. Record the simulated host IP configuration.
 2. Capture DNS traffic.
-3. Identify DNS query and response packets.
-4. Inspect UDP and DNS fields.
+3. Identify DNS queries and responses.
+4. Inspect UDP/DNS fields.
 
-### Expected answer/result
-DNS queries and responses can be identified by DNS message type, transaction ID, queried name, response records and UDP ports.
+### Expected result
+The capture exposes the relevant DNS transaction, queried name, response records and UDP information.
 
 ### Evidence labels
 ```markdown
@@ -399,13 +421,13 @@ DNS queries and responses can be identified by DNS message type, transaction ID,
 **Primary domain:** 03 Network Traffic Analysis
 
 ### Questions / tasks
-1. Analyze the provided TCP capture.
-2. Analyze the provided UDP capture.
-3. Identify protocols, ports, addresses and payload/application information.
+1. Analyze the supplied TCP capture.
+2. Analyze the supplied UDP capture.
+3. Identify protocols, addresses, ports and application information.
 4. Compare TCP and UDP behavior.
 
-### Expected answer/result
-TCP provides connection-oriented transport with sequencing/acknowledgment, while UDP is connectionless. Record the protocol-specific observations from the supplied training captures.
+### Expected result
+The captures demonstrate the relevant differences between connection-oriented TCP and connectionless UDP traffic.
 
 ### Evidence labels
 ```markdown
@@ -420,13 +442,13 @@ TCP provides connection-oriented transport with sequencing/acknowledgment, while
 **Primary domain:** 03 Network Traffic Analysis
 
 ### Questions / tasks
-1. Capture/examine HTTP traffic.
-2. Identify HTTP requests and responses.
+1. Examine HTTP traffic.
+2. Identify HTTP requests/responses.
 3. Examine HTTPS/TLS traffic.
-4. Compare what information is visible in HTTP versus HTTPS.
+4. Compare visible information between HTTP and HTTPS.
 
-### Expected answer/result
-HTTP exposes application-layer request/response information in plaintext, while HTTPS protects application content through TLS encryption. Record the visible fields and TLS information from the simulated capture.
+### Expected result
+HTTP exposes application-layer information in the capture, while HTTPS protects application content through TLS. Relevant visible fields and TLS information should be recorded.
 
 ### Evidence labels
 ```markdown
@@ -442,13 +464,13 @@ HTTP exposes application-layer request/response information in plaintext, while 
 **Primary domain:** 03 Network Traffic Analysis
 
 ### Questions / tasks
-1. Capture DNS query traffic.
+1. Capture DNS queries.
 2. Examine query fields.
 3. Examine DNS responses.
-4. Identify suspicious or notable DNS behavior in the supplied training traffic.
+4. Identify notable behavior in the supplied training traffic.
 
-### Expected answer/result
-Record queried domains, query/response types, returned addresses and other relevant DNS fields. Any suspicious finding must be based on the provided training traffic.
+### Expected result
+The investigation records queried domains, query/response types, returned addresses and other relevant DNS fields.
 
 ### Evidence labels
 ```markdown
@@ -464,18 +486,18 @@ Record queried domains, query/response types, returned addresses and other relev
 
 ### Questions / tasks
 1. Perform the assigned database-security exercise against the intentionally vulnerable training database.
-2. Observe the attack behavior.
-3. Identify relevant network/database evidence.
-4. Determine what security weakness was demonstrated.
+2. Observe the simulated attack.
+3. Identify relevant database/network evidence.
+4. Determine the demonstrated security weakness.
 
-### Expected answer/result
-The lab demonstrates how database attacks appear in network/application evidence. Record the simulated attack technique, affected training service and observed evidence.
+### Expected result
+The activity demonstrates how simulated database attacks can appear in network and application evidence.
 
 ### Evidence labels
 ```markdown
 ![LAB-21-01 — Database lab setup](../evidence-images/LAB-21-01-database-lab.png)
 ![LAB-21-02 — Simulated attack evidence](../evidence-images/LAB-21-02-attack-evidence.png)
-![LAB-21-03 — Result/analysis](../evidence-images/LAB-21-03-analysis.png)
+![LAB-21-03 — Result and analysis](../evidence-images/LAB-21-03-analysis.png)
 ```
 
 ---
@@ -486,12 +508,12 @@ The lab demonstrates how database attacks appear in network/application evidence
 
 ### Questions / tasks
 1. Locate the relevant server logs.
-2. Read and interpret log entries.
+2. Read and interpret entries.
 3. Identify notable requests/events.
-4. Use log information to understand the simulated activity.
+4. Use the logs to understand the simulated activity.
 
-### Expected answer/result
-Server logs provide timestamped records of service activity. Record the relevant event, source, destination/request information and interpretation from the supplied training data.
+### Expected result
+The relevant timestamped server events are identified and interpreted in the context of the training scenario.
 
 ### Evidence labels
 ```markdown
@@ -506,12 +528,12 @@ Server logs provide timestamped records of service activity. Record the relevant
 **Primary domain:** 05 Malware/IOC Analysis
 
 ### Questions / tasks
-1. Create/use the assigned cryptographic code examples.
-2. Observe how encoding/encryption changes data.
+1. Perform the assigned cryptographic coding activity.
+2. Observe how the data changes.
 3. Record the resulting values.
 
-### Expected answer/result
-The output depends on the assigned cryptographic operation. Record the actual controlled-lab output and explain the security property demonstrated.
+### Expected result
+The assigned coding/cryptographic operation produces the expected controlled-lab output.
 
 ### Evidence labels
 ```markdown
@@ -526,13 +548,13 @@ The output depends on the assigned cryptographic operation. Record the actual co
 **Primary domain:** 05 Malware/IOC Analysis
 
 ### Questions / tasks
-1. Generate hashes for the supplied training files/data.
+1. Generate hashes for supplied training data.
 2. Compare hash values.
-3. Determine what happens when the input changes.
-4. Explain the use of hashes in security investigations.
+3. Change the input and observe the result.
+4. Explain how hashes support security investigations.
 
-### Expected answer/result
-A cryptographic hash changes substantially when the input changes and can be used to identify/verify a file or other data. Record the algorithm and resulting hash values.
+### Expected result
+A changed input produces a different cryptographic hash, demonstrating how hashes can support file/data identification and verification.
 
 ### Evidence labels
 ```markdown
@@ -549,10 +571,10 @@ A cryptographic hash changes substantially when the input changes and can be use
 ### Questions / tasks
 1. Encrypt the assigned training data using OpenSSL.
 2. Decrypt it using the required parameters.
-3. Verify the decrypted result.
+3. Verify the recovered content.
 
-### Expected answer/result
-Successful decryption should reproduce the original training data when the correct key/parameters are used.
+### Expected result
+Correct decryption reproduces the original training data.
 
 ### Evidence labels
 ```markdown
@@ -568,11 +590,11 @@ Successful decryption should reproduce the original training data when the corre
 
 ### Questions / tasks
 1. Use the assigned training security tool to encrypt data.
-2. Decrypt the data using the required procedure.
-3. Compare the original and recovered data.
+2. Decrypt it using the required procedure.
+3. Compare original and recovered data.
 
-### Expected answer/result
-The recovered training data should match the original when the correct procedure/key is used. Record the controlled-lab output.
+### Expected result
+The recovered training data matches the original when the correct procedure is used.
 
 ### Evidence labels
 ```markdown
@@ -588,12 +610,12 @@ The recovered training data should match the original when the correct procedure
 
 ### Questions / tasks
 1. Capture Telnet traffic.
-2. Identify information visible in the Telnet stream.
+2. Examine information visible in the Telnet stream.
 3. Capture SSH traffic.
-4. Compare visibility between Telnet and SSH.
+4. Compare Telnet and SSH visibility.
 
-### Expected answer/result
-Telnet transmits application content without the protection provided by SSH encryption; SSH encrypts the session. Record the relevant packet/stream evidence.
+### Expected result
+Telnet exposes session content without the protection provided by SSH, while SSH encrypts the session.
 
 ### Evidence labels
 ```markdown
@@ -609,13 +631,13 @@ Telnet transmits application content without the protection provided by SSH encr
 **Primary domain:** 04 Endpoint Analysis
 
 ### Questions / tasks
-1. Examine certificate stores in the simulated environment.
+1. Examine certificate stores.
 2. Identify trusted certificate authorities.
 3. Inspect certificate details.
-4. Explain why trusted CA stores matter to endpoint security.
+4. Explain their endpoint-security relevance.
 
-### Expected answer/result
-Certificate stores contain trusted CA certificates used to validate certificate chains. Record the relevant issuer/subject/validity information visible in the lab.
+### Expected result
+The certificate store contains trusted CA certificates and associated issuer, subject and validity information.
 
 ### Evidence labels
 ```markdown
@@ -633,11 +655,11 @@ Certificate stores contain trusted CA certificates used to validate certificate 
 1. Examine Snort detection rules.
 2. Examine firewall rules.
 3. Generate/observe the assigned simulated traffic.
-4. Identify the resulting alert or filtering behavior.
-5. Explain how detection and firewall controls complement one another.
+4. Identify resulting detection/filtering behavior.
+5. Explain the role of the controls.
 
-### Expected answer/result
-Snort can detect matching traffic using IDS rules; firewall rules can permit/block traffic according to configured conditions. Record the simulated alert and corresponding rule/control.
+### Expected result
+Snort identifies traffic matching configured detection rules while firewall rules enforce configured traffic-control conditions.
 
 ### Evidence labels
 ```markdown
@@ -653,12 +675,12 @@ Snort can detect matching traffic using IDS rules; firewall rules can permit/blo
 **Primary domain:** 02 Log/Event Analysis
 
 ### Questions / tasks
-1. Convert supplied security data into the requested normalized format.
-2. Inspect the converted fields.
-3. Explain why normalized data helps security analysis.
+1. Convert supplied security data into the required normalized format.
+2. Inspect the resulting fields.
+3. Explain the value of normalized data for analysis.
 
-### Expected answer/result
-The converted data should follow the specified universal/normalized format while preserving the required security information.
+### Expected result
+The converted data follows the requested format while preserving the required security information.
 
 ### Evidence labels
 ```markdown
@@ -675,16 +697,16 @@ The converted data should follow the specified universal/normalized format while
 ### Questions / tasks
 1. Build/test regular expressions using the supplied examples.
 2. Match the required security-data patterns.
-3. Extract relevant values from the supplied data.
-4. Explain how regex supports security-data analysis.
+3. Extract relevant values.
+4. Explain the use of regex in security analysis.
 
-### Expected answer/result
-The correct expression matches the requested pattern and extracts the intended field/value from the training data. Record the expression and sample result.
+### Expected result
+The expression matches the intended pattern and extracts the required value from the training data.
 
 ### Evidence labels
 ```markdown
 ![LAB-31-01 — Regex expression](../evidence-images/LAB-31-01-regex.png)
-![LAB-31-02 — Regex match/result](../evidence-images/LAB-31-02-regex-result.png)
+![LAB-31-02 — Regex result](../evidence-images/LAB-31-02-regex-result.png)
 ```
 
 ---
@@ -694,14 +716,13 @@ The correct expression matches the requested pattern and extracts the intended f
 **Primary domain:** 05 Malware/IOC Analysis
 
 ### Questions / tasks
-1. Locate the relevant network session in the training PCAP.
+1. Locate the relevant session in the training PCAP.
 2. Extract the transferred executable.
-3. Identify the extracted file.
+3. Identify the file.
 4. Calculate/record its hash.
-5. Use the artifact for further analysis as instructed.
 
-### Expected answer/result
-The executable should be extracted from the simulated capture and identified by filename/hash. Record the artifact and hash without uploading prohibited or real-world malicious material.
+### Expected result
+The assigned executable is extracted from the simulated capture and can be identified by filename/hash for further controlled analysis.
 
 ### Evidence labels
 ```markdown
@@ -717,13 +738,13 @@ The executable should be extracted from the simulated capture and identified by 
 **Primary domain:** 07 Incident Investigation
 
 ### Questions / tasks
-1. Analyze supplied HTTP and DNS security data.
+1. Analyze supplied HTTP and DNS data.
 2. Identify suspicious domains/requests/communications.
 3. Correlate the network indicators.
 4. Identify the simulated threat actor or relevant attack indicators.
 
-### Expected answer/result
-The answer is derived by correlating the HTTP and DNS indicators in the supplied training data. Record the relevant domain/IP/request evidence and the resulting simulated threat-actor assessment.
+### Expected result
+The relevant HTTP and DNS indicators are correlated to produce an evidence-supported assessment of the simulated threat activity.
 
 ### Evidence labels
 ```markdown
@@ -739,13 +760,15 @@ The answer is derived by correlating the HTTP and DNS indicators in the supplied
 **Primary domain:** 07 Incident Investigation
 
 ### Questions / tasks
-1. Use the supplied network-security data to identify the relevant 5-tuple.
+1. Identify the relevant 5-tuple from the supplied training data.
 2. Identify the simulated compromised host.
-3. Correlate source/destination IPs and ports.
-4. Determine which host should be isolated in the training scenario.
+3. Correlate source/destination addresses and ports.
+4. Determine which host would be isolated in the scenario.
 
-### Expected answer/result
-The compromised host is identified by correlating source IP, source port, destination IP, destination port and protocol. The exercise demonstrates identification for simulated isolation; it is not production containment.
+### Expected result
+The compromised host is identified by correlating source IP, source port, destination IP, destination port and protocol.
+
+**Scope note:** This demonstrates identification for a simulated scenario; it is not evidence of production containment.
 
 ### Evidence labels
 ```markdown
@@ -760,13 +783,13 @@ The compromised host is identified by correlating source IP, source port, destin
 **Primary domain:** 05 Malware/IOC Analysis
 
 ### Questions / tasks
-1. Investigate the simulated malware exploit using the supplied evidence.
-2. Identify the exploited service/host or relevant attack vector.
+1. Investigate the simulated malware exploit.
+2. Identify the exploited service/host or attack vector.
 3. Identify malicious artifacts/indicators.
 4. Correlate the evidence and determine what occurred.
 
-### Expected answer/result
-The answer is obtained by correlating the supplied network/endpoint/security evidence to identify the exploit path, affected simulated system and malware indicators.
+### Expected result
+The evidence identifies the simulated exploit path, affected training system and relevant malware indicators.
 
 ### Evidence labels
 ```markdown
@@ -782,14 +805,14 @@ The answer is obtained by correlating the supplied network/endpoint/security evi
 **Primary domain:** 07 Incident Investigation
 
 ### Questions / tasks
-1. Investigate the simulated Windows-host attack using Sguil and/or the specified analysis tools.
-2. Identify the relevant alerts/events.
-3. Determine the affected host and attack timeframe.
-4. Identify files, hashes, network indicators and other relevant evidence.
+1. Investigate the simulated Windows-host attack using the assigned analysis tools.
+2. Identify relevant alerts/events.
+3. Determine the affected host and timeframe.
+4. Identify files, hashes, network indicators and supporting evidence.
 5. Correlate the evidence and summarize the incident.
 
-### Expected answer/result
-The investigation should establish the simulated incident timeline, affected Windows host, attack indicators, relevant files/hashes and supporting network/security evidence. The final answer is the evidence-supported incident finding.
+### Expected result
+The investigation establishes a simulated incident timeline, affected Windows host, attack indicators, relevant files/hashes and supporting network/security evidence.
 
 ### Evidence labels
 ```markdown
@@ -804,24 +827,20 @@ The investigation should establish the simulated incident timeline, affected Win
 
 # Evidence completion checklist
 
-For each lab that the candidate actually completes:
+For each laboratory activity actually completed:
 
-- [ ] Lab performed in the authorized simulated/isolated environment.
-- [ ] Question/task answered from the actual lab result.
+- [ ] Activity performed in the authorized simulated/isolated environment.
+- [ ] Lab question/task answered from the actual laboratory result.
 - [ ] Actual command/output recorded where applicable.
-- [ ] Screenshot captured only when it provides useful evidence.
-- [ ] Screenshot renamed using the `LAB-XX-NN-description.png` standard.
+- [ ] Useful screenshot(s) captured.
+- [ ] Screenshot renamed using the `LAB-XX-##-description.png` standard.
 - [ ] Screenshot label inserted into the relevant Markdown evidence file.
-- [ ] Observation written in the candidate's own words.
-- [ ] Interpretation written in the candidate's own words.
+- [ ] Observation written in the learner's own words.
+- [ ] Interpretation written in the learner's own words.
 - [ ] Primary evidence domain recorded.
 - [ ] TESDA relevance recorded without overclaiming competency.
 - [ ] No production/confidential/PII evidence included.
 
 ## Evidence principle
 
-The ITExamAnswers material is a **reference/cross-check source**. It must not be represented as the candidate's own completed lab evidence. The candidate's actual laboratory screenshots, commands, outputs and observations are the portfolio evidence.
-
-## Source basis
-
-The activity sequence and answer cross-checks are based on the CyberOps Associate v1.0 lab catalog and the corresponding ITExamAnswers CyberOps lab-answer pages. The catalog identifies the 36 hands-on labs used in this portfolio. citehttps://itexamanswers.net/ccna-cyberops-associate-version-1-0-exam-answers.html
+Reference material is used only to cross-check the laboratory questions and expected results. It must not be represented as the learner's own completed practical evidence. The candidate's actual laboratory screenshots, commands, outputs and observations are the portfolio evidence.
