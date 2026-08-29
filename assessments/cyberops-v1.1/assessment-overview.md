@@ -1,76 +1,59 @@
-# CyberOps / CCNA Cybersecurity Operations v1.1 Skills Assessment — Overview
+# CCNA Cybersecurity Operations v1.1 Skills Assessment — Overview
 
-## Assessment purpose
+## Purpose
 
-This assessment places the learner in the role of a security analyst investigating suspicious activity displayed in the **Sguil** dashboard. The objective is to determine whether the observed events represent malicious activity, investigate the associated exploit, identify the source of the malware delivery, and analyze the delivered payload.
+This folder documents the completed **CCNA Cybersecurity Operations v1.1 Skills Assessment** as practical evidence for the portfolio.
 
-The assessment uses the **Security Onion** virtual machine and its network-security-monitoring tools. Security Onion is the system with Internet access in the assessment environment and is used to access Sguil and related investigation tools.
+The assessment places the analyst in a Security Onion environment and requires investigation of suspicious Sguil/Snort events. The investigation progresses from basic event identification to exploit research, source tracing, and packet-level analysis.
 
-## Skills demonstrated
+## Scenario
 
-The assessment demonstrates the ability to:
+The investigation concerns an **Angler Exploit Kit (Angler EK)** attack against an internal Windows host with an outdated Flash component. The analyst must determine whether the activity is malicious and reconstruct how the exploit and payload reached the victim.
 
-- Evaluate Snort/Sguil security events.
-- Use Sguil as the starting point for investigation pivots.
-- Use ELSA, Bro/Zeek and Wireshark to inspect related evidence.
-- Research a suspected exploit using open-source information.
-- Identify the exploit kit involved in the attack.
-- Determine the source and delivery infrastructure of the exploit.
-- Identify the compromised host and relevant network indicators.
-- Extract a malicious file from captured network traffic.
-- Correlate network-security events to determine the attack sequence.
+## Assessment parts
 
-## Assessment scenario
+| Part | Focus | Main evidence |
+|---|---|---|
+| **1** | Gathering Basic Information | Sguil/Snort alerts, event count, timeframe, host identification |
+| **2** | Learning About the Exploit | Angler EK research and exploit-kit behavior |
+| **3** | Determining the Source of the Malware | Sguil, ELSA, host/IP/domain correlation |
+| **4** | Analyzing Details of the Exploit | ELSA and Wireshark, landing page, exploit delivery, payload extraction |
 
-The analyst observes a collection of events in Sguil associated with an exploit. The investigation focuses on an **Angler exploit kit** activity affecting a host with an outdated Flash component. The exploit infrastructure uses a malicious delivery domain and ultimately provides a malware payload to the victim.
+## Main tools
 
-## Assessment workflow
+- Security Onion
+- Sguil
+- Snort
+- ELSA
+- Bro/Zeek
+- Wireshark
+- Web-based research
 
-```text
-Security Onion
-      ↓
-Verify NSM services
-      ↓
-Sguil alert review
-      ↓
-Identify exploit-related events
-      ↓
-Research exploit kit
-      ↓
-Identify affected host
-      ↓
-Trace exploit-delivery source
-      ↓
-Pivot to ELSA / Bro-Zeek / Wireshark
-      ↓
-Extract payload evidence
-      ↓
-Analyze attack sequence
-      ↓
-Document findings
-```
+## Evidence-domain coverage
 
-## Evidence domains
-
-Primary domains:
+Primary:
 
 - `01-monitoring-and-alerts/`
 - `02-log-event-analysis/`
 - `03-network-traffic-analysis/`
 - `04-endpoint-analysis/`
+- `05-malware-ioc-analysis/`
 - `07-incident-investigation/`
 - `08-threat-intelligence/`
 - `11-reporting/`
 
+Not demonstrated by this assessment:
+
+- `06-vulnerability-scanning/`
+- `09-containment/`
+- `10-recovery/`
+
 ## TESDA relevance
 
-The assessment provides strong supporting evidence for:
+The strongest competency relationship is **ICT251312 — Monitor and Report Cyber Threats**. The assessment also provides supporting evidence for **ICT251314 — Perform Threat Mitigation**, particularly threat identification, investigation, IOC analysis, and attack reconstruction.
 
-- **ICT251312 — Monitor and Report Cyber Threats**
-- **ICT251314 — Perform Threat Mitigation**
+It does not by itself demonstrate the complete containment, eradication, recovery, secondary-scan, or vulnerability-management workflows required for later NC II evidence.
 
-The assessment does not, by itself, demonstrate complete containment, eradication, recovery, secondary scanning, or vulnerability-management processes. Those requirements will be addressed through supplementary practical activities.
+## Evidence rule
 
-## Evidence status
-
-The learner has performed the assessment. Actual screenshots and captured outputs are to be placed in the `screenshots/` directory and referenced by the related documentation files.
+The answer reference used during project preparation is only a **cross-check**. The portfolio evidence must come from the learner's own assessment run. Screenshots will be attached manually under `screenshots/`.
