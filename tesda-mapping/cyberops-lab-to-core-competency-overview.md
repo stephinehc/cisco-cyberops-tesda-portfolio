@@ -2,9 +2,9 @@
 
 ## Purpose
 
-This document establishes the Phase 1 working model for using **Cisco CyberOps Associate laboratory activities** as practical evidence sources for the TESDA Cyber Threat Monitoring NC I and Cyber Threat Mitigation NC II qualifications.
+This document establishes the working model for using **Cisco CyberOps Associate laboratory activities** as practical evidence sources for the TESDA Cyber Threat Monitoring NC I and Cyber Threat Mitigation NC II qualifications.
 
-The portfolio will use the **actual CyberOps lab activities**, not only the Cisco Skills Assessments. The Skills Assessments (v1.0 and v1.1) will be treated as higher-level assessment activities built from the skills developed through the labs.
+The portfolio uses the **actual CyberOps lab activities**, not only the Skills Assessment. The retained v1.0 Skills Assessment is treated as a higher-level alert-driven assessment, while BOTS v2 provides independent SIEM threat-hunting evidence.
 
 > **Evidence rule:** A lab is not automatically equivalent to a TESDA competency. The rating indicates how strongly the activity can contribute evidence toward the competency. Additional TESDA-specific process evidence will be created where required.
 
@@ -19,13 +19,13 @@ The portfolio will use the **actual CyberOps lab activities**, not only the Cisc
 
 ## Evidence ratings
 
-- 🟢 **Direct** — the CyberOps activity can produce strong practical evidence for part or all of the relevant performance requirement.
+- 🟢 **Direct** — the activity can produce strong practical evidence for part or all of the relevant performance requirement.
 - 🟡 **Supporting** — the activity develops or demonstrates a related skill, but additional evidence is needed.
-- 🔴 **Gap** — the CyberOps activity does not adequately demonstrate the requirement; a supplementary practical activity is required.
+- 🔴 **Gap** — the activity does not adequately demonstrate the requirement; a supplementary practical activity is required.
 
 ## CyberOps lab activity groups
 
-The original CyberOps sequence will be preserved in the lab register. The same lab may appear in more than one TESDA evidence domain.
+The original CyberOps sequence is preserved in the lab register. The same lab may contribute to more than one evidence domain.
 
 ### 1. Host and operating-system analysis
 
@@ -100,7 +100,7 @@ Primary contribution:
 - **NC I — ICT251312:** 🟢 Direct/high-value evidence
 - **NC II — ICT251314:** 🟢 Strong detection and initial mitigation evidence
 
-This activity is particularly important because it provides a bridge between CyberOps technical labs and the alert-driven SOC workflow used in the v1.0 Skills Assessment.
+This activity provides a bridge between CyberOps technical labs and the alert-driven workflow used in the retained v1.0 Skills Assessment.
 
 ### 6. Malware and IOC analysis
 
@@ -130,9 +130,9 @@ Primary contribution:
 - **NC I — ICT251312:** 🟢 Strong
 - **NC II — ICT251314:** 🟢 Strong
 
-### 8. CyberOps Skills Assessments
+## Higher-level investigation activities
 
-#### v1.0
+### CyberOps v1.0 Skills Assessment
 
 Primary role:
 
@@ -140,21 +140,21 @@ Primary role:
 
 Target competency:
 
-- **NC I — ICT251312:** 🟢 Primary capstone
+- **NC I — ICT251312:** 🟢 Primary assessment evidence
 - **NC II — ICT251314:** 🟡/🟢 Strong investigation foundation
 
-#### v1.1
+### BOTS v2
 
 Primary role:
 
-> **Advanced security analysis and investigation**
+> **Independent SIEM threat hunting and multi-source investigation**
 
 Target competency:
 
-- **NC I — ICT251312:** 🟢 Advanced supporting evidence
-- **NC II — ICT251314:** 🟢 Advanced investigation evidence
+- **NC I — ICT251312:** 🟢 Strong monitoring, log-analysis and reporting evidence
+- **NC II — ICT251314:** 🟢 Strong investigation, IOC and threat-intelligence evidence
 
-The exact v1.1 activity-to-criterion mapping will be finalized after the actual v1.1 Skills Assessment tasks are documented in the evidence register.
+BOTS v2 does not replace the dedicated containment/eradication/recovery or vulnerability-management simulations.
 
 ## Recommended evidence progression
 
@@ -169,13 +169,9 @@ CyberOps v1.0 Skills Assessment
         ↓
 Alert-driven SOC investigation
         ↓
-CyberOps v1.1 Skills Assessment
-        ↓
-Advanced investigation / analysis
-        ↓
 BOTS v2 threat-hunting activities
         ↓
-Independent investigation
+Independent SIEM investigation
         ↓
 Supplementary containment / eradication / recovery lab
         ↓
@@ -188,16 +184,15 @@ NC I + NC II vulnerability evidence
 
 ## Phase 1 decision
 
-The portfolio will **retain the CyberOps laboratory activities as a major evidence source**. We will not reduce the portfolio to only the v1.0/v1.1 Skills Assessments.
+The portfolio retains the CyberOps laboratory activities as a major evidence source and does not reduce the portfolio to a single assessment.
 
-The final evidence architecture will therefore combine:
+The evidence architecture combines:
 
 1. CyberOps Associate laboratory activities
 2. CyberOps v1.0 Skills Assessment
-3. CyberOps v1.1 Skills Assessment
-4. BOTS v2 CTF/threat-hunting activities
-5. Dedicated containment/eradication/recovery simulation
-6. Dedicated vulnerability-management/remediation simulation
-7. TESDA-format reports, checklists and evidence records
+3. BOTS v2 SIEM threat-hunting activities
+4. Dedicated containment/eradication/recovery simulation
+5. Dedicated vulnerability-management/remediation simulation
+6. TESDA-format reports, checklists and evidence records
 
-This approach provides a progression from **skill practice → guided assessment → independent investigation → mitigation → validation**.
+This provides a progression from **skill practice → guided assessment → independent investigation → mitigation → validation**.
