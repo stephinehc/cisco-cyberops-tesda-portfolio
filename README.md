@@ -4,7 +4,7 @@ A cybersecurity evidence portfolio using **Cisco CyberOps Associate laboratory a
 
 ## Purpose
 
-This repository organizes cybersecurity evidence for TESDA Cyber Threat Monitoring NC I and Cyber Threat Mitigation NC II assessment preparation and Recognition of Prior Learning (RPL).
+This repository organizes cybersecurity evidence for TESDA Cyber Threat Monitoring NC I and Cyber Threat Mitigation NC II assessment preparation on Recognition of Prior Learning (RPL).
 
 ## Controlled-environment and data-privacy statement
 
