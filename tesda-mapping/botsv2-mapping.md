@@ -2,13 +2,15 @@
 
 ## Role in this portfolio
 
-BOTS v2 is treated as an **advanced SIEM investigation and threat-hunting environment**, not as a replacement for the alert-driven CyberOps Skills Assessment.
+BOTS v2 is treated as an **independent SIEM investigation and threat-hunting environment** that complements the alert-driven CyberOps v1.0 Skills Assessment.
 
 ### Simulation distinction
 
-- **CyberOps v1.0:** an analyst receives/opens a security alert and investigates it.
-- **BOTS v2:** an analyst searches and correlates a large security dataset to discover and investigate suspicious activity.
-- **NC II mitigation simulation:** the analyst takes containment, eradication and recovery actions after confirming the incident.
+- **CyberOps v1.0:** an analyst receives/opens a simulated security alert and investigates it in the training environment.
+- **BOTS v2:** an analyst searches and correlates a simulated security dataset to discover and investigate suspicious activity.
+- **Controlled NC II mitigation simulation:** the analyst performs containment, eradication and recovery actions against designated simulated laboratory systems after confirming the simulated incident.
+
+All activities are performed in simulated, isolated, and controlled environments. They do not involve live organizational production infrastructure.
 
 ## Initial mapping
 
@@ -17,12 +19,12 @@ BOTS v2 is treated as an **advanced SIEM investigation and threat-hunting enviro
 | ICT251312 Monitor and report cyber threats | SIEM investigation, event correlation, affected-host/account identification and reporting | 🟢 Strong |
 | ICT251313 Vulnerability scanning | Not the primary purpose of BOTS v2 | 🔴 Gap |
 | ICT251314 Perform threat mitigation | Incident investigation, IOC/TTP identification and CTI enrichment | 🟢 Strong supporting |
-| ICT251315 Vulnerability management/control | Limited/indirect | 🟡/🔴 Supplementary lab required |
+| ICT251315 Vulnerability management/control | Limited/indirect | 🟡/🔴 Controlled supplementary lab required |
 
 ## Recommended BOTS evidence workflow
 
 ```text
-Splunk / BOTS dataset
+Splunk / BOTS training dataset
         ↓
 Initial search
         ↓
@@ -63,18 +65,18 @@ Investigation report
 
 BOTS v2 should not be used as sole evidence of:
 
-- vulnerability scanning
-- vulnerability remediation
-- network/endpoint containment
-- malware eradication
-- system recovery
-- secondary validation scanning
+- vulnerability scanning operations;
+- vulnerability remediation;
+- endpoint/network containment;
+- malware eradication;
+- system recovery/rollback;
+- secondary validation scanning.
 
-Those activities belong in the supplementary practical-lab layer.
+Those activities belong in the controlled supplementary simulation layer.
 
-## Capstone role
+## Relationship to the assessment architecture
 
-Use BOTS v2 **after CyberOps v1.0/v1.1** as an independent investigation exercise. A final NC II simulation can then take the BOTS findings and require the candidate to contain, eradicate, recover, rescan and report.
+BOTS v2 follows the retained CyberOps v1.0 Skills Assessment as an independent investigation evidence source. It is not a live-production exercise and is not a substitute for the controlled mitigation and vulnerability-management simulations required to close identified TESDA evidence gaps.
 
 ## Source
 
