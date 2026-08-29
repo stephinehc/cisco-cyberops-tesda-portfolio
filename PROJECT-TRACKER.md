@@ -7,9 +7,9 @@
 | Phase | Deliverable | Status |
 |---|---|---|
 | **Phase 1** | Portfolio architecture and evidence strategy | ✅ Complete |
-| **Phase 2** | Complete CyberOps Associate lab register in original sequence | 🟡 In progress — register populated |
-| **Phase 3** | TESDA performance-criterion mapping | 🟡 In progress — ICT251315 completed |
-| **Phase 4** | CyberOps v1.0 Skills Assessment evidence mapping | ⬜ Pending |
+| **Phase 2** | Complete CyberOps Associate lab register in original sequence | 🟡 In progress — register populated; evidence verification pending |
+| **Phase 3** | TESDA performance-criterion + master SAG mapping | ✅ Complete — master matrix established; criterion-level evidence verification continues during later phases |
+| **Phase 4** | CyberOps v1.0 Skills Assessment evidence mapping | 🟡 Next |
 | **Phase 5** | CyberOps v1.1 Skills Assessment evidence mapping | ⬜ Pending |
 | **Phase 6** | BOTS v2 threat-hunting evidence mapping | ⬜ Pending |
 | **Phase 7** | Supplementary containment/eradication/recovery lab | ⬜ Pending |
@@ -42,52 +42,59 @@
 - Record exact evidence artifacts for completed labs.
 - Finalize Phase 2 register after evidence verification.
 
-## Phase 3 — IN PROGRESS
+## Phase 3 — COMPLETE
 
 ### Objective
 
-Map CyberOps lab evidence to the **exact TESDA performance criteria and evidence requirements**, not merely to competency titles.
+Map the CyberOps-based portfolio to the **exact TESDA performance areas and evidence requirements**, not merely to competency titles.
 
 ### Source standard
 
-Use the current TESDA Training Regulations for:
+Current TESDA Training Regulations for:
 
 - **Cyber Threat Monitoring NC I — ICT251312 Monitor and report cyber threats**
 - **Cyber Threat Monitoring NC I — ICT251313 Conduct vulnerability scanning of assets**
 - **Cyber Threat Mitigation NC II — ICT251314 Perform threat mitigation**
 - **Cyber Threat Mitigation NC II — ICT251315 Perform vulnerability management/control**
 
+TESDA's current TRs identify ICT251312/ICT251313 as the two NC I core units and ICT251314/ICT251315 as the two NC II core units. citehttps://tesda.gov.ph/Downloadables/TRs/TR-Cyber%20Threat%20Monitoring%20NC%20I.pdfhttps://www.tesda.gov.ph/Downloadables/TRs/TR-Cyber-threat-mitigation%20NC%20II.pdf
+
 ### Completed Phase 3 work
 
 - Retrieved the current TESDA TRs.
 - Confirmed the four core unit codes.
-- Extracted the performance-criteria structure for all four core units.
-- Started the master performance-criteria matrix.
-- Mapped the strongest existing CyberOps labs to individual criteria.
-- Identified criteria requiring SOP, ticketing, stakeholder, CTI, containment/recovery, and vulnerability-management wrappers.
-- Completed the dedicated **ICT251315 vulnerability-management/control matrix**.
+- Built the criterion-level mapping structure for all four units.
+- Mapped the strongest existing CyberOps labs to the relevant performance areas.
+- Identified where Skills Assessments and BOTS v2 strengthen the evidence.
+- Identified criteria requiring SOP, ticketing, stakeholder communication, CTI, containment/recovery, and vulnerability-management wrappers.
+- Completed the dedicated ICT251315 vulnerability-management/control analysis.
+- Created the master SAG evidence matrix.
 
 ### Phase 3 deliverables
 
 - `tesda-mapping/phase-3-performance-criteria-matrix.md`
 - `tesda-mapping/ict251315-vulnerability-management-control-matrix.md`
-
-### ICT251315 findings
-
-CyberOps Nmap and related labs provide useful technical evidence for scanning, asset discovery, configuration review, and reporting. However, the TESDA unit also requires enterprise workflow elements such as asset inventory/control, scheduled scanning, IT/SME coordination, change requests/CAB, remediation testing, rescan, and patch-management reporting. These are not automatically demonstrated by a basic CyberOps lab.
+- `tesda-mapping/master-sag-evidence-matrix.md`
 
 ### Key decisions
 
 1. **Direct evidence is not the same as complete TESDA competency.** A lab can directly demonstrate a technical action while still requiring workplace-process evidence.
-2. **SAG answers must be evidence-backed.** We will recommend “Yes/Partially/No” only after checking whether the portfolio contains evidence for the relevant criterion.
-3. **CyberOps is strongest for technical monitoring/investigation.** SOP, ticket, stakeholder communication, containment/recovery, and vulnerability-management process evidence must be added where missing.
+2. **SAG answers must be evidence-backed.** Final Yes/Partially/No decisions will only be made after the actual evidence artifacts are present.
+3. **CyberOps labs remain the primary technical foundation.** v1.0/v1.1, BOTS v2 and supplementary simulations are additional evidence layers.
 4. **NC II containment/recovery is a confirmed gap** until the dedicated simulation is completed.
 5. **NC II vulnerability management/control is a confirmed gap** until the dedicated VM/remediation workflow is completed.
-6. **The CyberOps Nmap lab remains valuable** as the technical scanning component; the supplementary VM simulation will provide the surrounding management/control workflow.
+6. **Nmap remains valuable** as the technical scanning component, but the surrounding authorization, scheduling, prioritization, change-management and remediation workflow needs supplementary evidence.
 
-## Phase 4 — CyberOps v1.0 Skills Assessment
+## Phase 4 — NEXT: CyberOps v1.0 Skills Assessment
 
-Map every v1.0 task to the 11 evidence domains and exact TESDA criteria. Treat it as high-value alert-driven SOC evidence.
+Map every v1.0 task to:
+
+- the 11 evidence domains
+- the relevant TESDA performance area
+- exact evidence/artifact to capture
+- Direct/Supporting/Gap status
+
+Treat v1.0 as high-value **alert-driven SOC investigation evidence**, especially for ICT251312.
 
 ## Phase 5 — CyberOps v1.1 Skills Assessment
 
@@ -109,8 +116,6 @@ Build the dedicated ICT251315 simulation:
 
 `Asset Inventory → Scope/Authorization → Schedule → Scanner Configuration → Scan → Analyze → Prioritize → Change Request/CAB → Remediate → Rescan → Validate → Report`
 
-The current TESDA TR identifies NIST 800-115/NIST 800-53, ITIL 4, ISO/IEC 19770, and vulnerability-management tooling/processes as relevant to this unit. citeturn4view0
-
 ## Phase 9 — Evidence implementation
 
 Populate the 11 evidence domains with actual artifacts and reusable evidence templates.
@@ -129,4 +134,4 @@ Create the final TESDA evidence index, SAG evidence guide, and integrated capsto
 
 ## Current next task
 
-Continue Phase 3 by consolidating **ICT251312, ICT251313, ICT251314, and ICT251315** into the master SAG evidence matrix. Then proceed to Phase 4: CyberOps v1.0 Skills Assessment mapping.
+**Begin Phase 4 — CyberOps v1.0 Skills Assessment mapping.**
