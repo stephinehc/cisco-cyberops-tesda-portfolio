@@ -4,7 +4,7 @@
 
 This folder documents the BOTS v2 threat-hunting work used as higher-level evidence for the TESDA cybersecurity portfolio.
 
-BOTS v2 is the Splunk Boss of the SOC version 2 dataset. The official dataset is a public security dataset designed for security professionals, researchers, students, and enthusiasts. It contains endpoint, network, firewall/proxy, IDS, and other telemetry and is indexed in Splunk under `botsv2`. citeturn1search0
+BOTS v2 is the Splunk Boss of the SOC version 2 dataset. The official dataset is a public security dataset designed for security professionals, researchers, students, and enthusiasts. It contains endpoint, network, firewall/proxy, IDS, and other telemetry and is indexed in Splunk under `botsv2`.
 
 ## Portfolio role
 
@@ -35,7 +35,7 @@ It provides supporting evidence for **ICT251312 — Monitor and Report Cyber Thr
 
 ## Dataset setup
 
-The official BOTS v2 repository provides both a full dataset and an attack-only dataset. The attack-only dataset is smaller and is appropriate when the objective is focused threat-hunting practice. Only one of the two should be installed at a time. citeturn1search0turn1search1
+The official BOTS v2 repository provides both a full dataset and an attack-only dataset. The attack-only dataset is smaller and is appropriate when the objective is focused threat-hunting practice. Only one of the two should be installed at a time.
 
 The official documentation states that after installation the dataset can be searched with:
 
@@ -43,7 +43,7 @@ The official documentation states that after installation the dataset can be sea
 index=botsv2 earliest=0
 ```
 
-The original dataset was generated from a realistic lab environment containing Windows endpoints, Sysmon and Windows Event Logging, Palo Alto Networks firewall/proxy telemetry, Splunk Stream, and Suricata network IDS data. citeturn0search0turn1search0
+The original dataset was generated from a realistic lab environment containing Windows endpoints, Sysmon and Windows Event Logging, Palo Alto Networks firewall/proxy telemetry, Splunk Stream, and Suricata network IDS data.
 
 ## Evidence rule
 
@@ -64,6 +64,8 @@ See:
 
 The supplied Medium article contains screenshots that belong to its original publication. They should be treated as visual references, not automatically copied into this repository. If the user provides the images or has permission to reuse them, they can be placed in `screenshots/` with attribution. Otherwise, capture equivalent screenshots from the candidate's own Splunk/BOTS v2 session.
 
-Reference: urlTryHackMe Splunk 2 walkthrough by jnikethttps://medium.com/@johnniketas/tryhackme-splunk-2-e86081dbc7ce
+## References
 
-Official dataset: urlSplunk BOTS v2 repositoryhttps://github.com/splunk/botsv2
+- TryHackMe — Splunk 2: https://tryhackme.com/room/splunk2
+- jniket — TryHackMe Splunk 2 walkthrough: https://medium.com/@johnniketas/tryhackme-splunk-2-e86081dbc7ce
+- Official Splunk BOTS v2 dataset: https://github.com/splunk/botsv2
