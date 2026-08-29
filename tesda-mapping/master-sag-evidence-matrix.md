@@ -2,9 +2,15 @@
 
 ## Purpose
 
-This is the master cross-reference between the four TESDA Cyber Threat Monitoring NC I / Cyber Threat Mitigation NC II core competencies, the portfolio's 11 evidence domains, Cisco CyberOps Associate laboratory activities, the completed CyberOps v1.0 Skills Assessment, BOTS v2, and the supplementary activities still required to close evidence gaps.
+This is the master cross-reference between the four TESDA Cyber Threat Monitoring NC I / Cyber Threat Mitigation NC II core competencies, the portfolio's 11 evidence domains, Cisco CyberOps Associate laboratory activities, the completed CyberOps v1.0 Skills Assessment, BOTS v2, and the controlled supplementary simulations still required to close evidence gaps.
 
 **Important:** This matrix is an RPL/evidence-planning document, not a TESDA assessment result. Final competency decisions belong to the authorized TESDA assessment process.
+
+## Controlled-environment and data-privacy statement
+
+All cybersecurity activities represented by this portfolio are performed exclusively in **simulated, isolated, and controlled laboratory environments** using authorized training datasets, virtual machines, simulated network traffic, and designated training systems.
+
+No production systems, live organizational networks, confidential company information, personally identifiable information, credentials, private keys, or real organizational security events are intentionally accessed, monitored, scanned, modified, contained, or recovered.
 
 ## Evidence-domain structure
 
@@ -26,90 +32,82 @@ This is the master cross-reference between the four TESDA Cyber Threat Monitorin
 
 | Rating | Meaning |
 |---|---|
-| 🟢 Direct | Existing activity directly demonstrates the technical action; criterion-specific artifacts still need to be captured where required. |
-| 🟡 Supporting | Activity contributes useful evidence but needs an additional process, artifact, or practical step. |
-| 🔴 Gap | Existing evidence does not adequately demonstrate the requirement; supplementary activity is required. |
+| 🟢 Direct | Existing controlled laboratory activity directly demonstrates the technical action; criterion-specific artifacts may still be required. |
+| 🟡 Supporting | Activity demonstrates a related capability but needs another artifact or controlled simulation step. |
+| 🔴 Gap | Existing evidence does not adequately demonstrate the requirement; a controlled supplementary simulation is required. |
 
 ---
 
 # NC I — ICT251312 Monitor and Report Cyber Threats
 
-TESDA defines this unit around checking alerts, checking third-party security solutions, manual checking/verification, case follow-up, and alert reporting. citeturn4view0turn4view1
-
 | TESDA performance area | Evidence domain(s) | CyberOps / assessment evidence | BOTS v2 contribution | Additional evidence | Coverage |
 |---|---|---|---|---|---|
-| Check and assess detections/alerts | 01, 07 | Snort/Security Onion labs; v1.0 Pushdo assessment | Investigation of suspicious events | SOP/triage record | 🟢/🟡 |
-| Manual checking and verification | 02, 03, 04, 05, 07 | CyberOps log/network/endpoint/malware labs; v1.0 | 100–400 series multi-source investigation | Investigation notes | 🟢 |
-| Conduct case follow-up | 07, 08 | v1.0 investigation | BOTS pivots and IOC enrichment | Case/ticket artifact | 🟢/🟡 |
-| Report threat activity | 11 | v1.0 findings/reporting | BOTS investigation report | TESDA-style stakeholder report | 🟢/🟡 |
-| Notify/escalate confirmed/high-priority threats | 11 | Technical findings | Findings suitable for escalation | Notification/escalation artifact | 🟡 |
+| Check and assess detections/alerts | 01, 07 | Snort/Security Onion labs; v1.0 assessment | Investigation of simulated suspicious events | SOP/triage simulation record | 🟢/🟡 |
+| Manual checking and verification | 02, 03, 04, 05, 07 | CyberOps log/network/endpoint/malware labs; v1.0 | 100–400 series simulated multi-source investigation | Investigation notes | 🟢 |
+| Conduct case follow-up | 07, 08 | v1.0 simulated investigation | BOTS pivots and IOC enrichment | Simulated case/ticket artifact | 🟢/🟡 |
+| Report threat activity | 11 | v1.0 findings/reporting | BOTS investigation report | Simulated TESDA-style report | 🟢/🟡 |
+| Notify/escalate confirmed/high-priority threats | 11 | Technical findings | Findings suitable for simulated escalation | Simulated notification/escalation artifact | 🟡 |
 
 ### Interpretation
 
-CyberOps and BOTS v2 provide strong technical evidence for detection analysis, verification, correlation and reporting. The main remaining evidence is workplace-process evidence such as SOP use, ticketing, escalation and stakeholder notification where required by the criterion. TESDA permits portfolio with interview as an assessment method for ICT251312. citeturn4view1
+CyberOps and BOTS v2 provide strong technical evidence for detection analysis, verification, correlation and reporting within controlled training environments. Workplace-process elements such as SOP use, ticketing, escalation and stakeholder notification will be represented only through controlled simulations or training artifacts.
 
 ---
 
 # NC I — ICT251313 Conduct Vulnerability Scanning of Assets
 
-TESDA requires checking the scan schedule, identifying the assets in scope, signed scope of work, verification with supervisor/change manager, adherence to schedule, scanning using industry standards including NIST SP 800-115, monitoring scan impact, handling scan problems, and providing scan reports. citeturn4view1
-
-| TESDA performance area | Evidence domain(s) | Existing evidence | Additional evidence | Coverage |
+| TESDA performance area | Evidence domain(s) | Existing evidence | Additional controlled evidence | Coverage |
 |---|---|---|---|---|
-| Check schedule and scope | 06, 11 | Limited | Scan calendar, scope and authorization | 🔴 |
-| Identify assets and priorities | 06 | Nmap/asset-discovery foundation; BOTS web-server analysis | Asset list and prioritization | 🟡 |
-| Conduct authorized scanning | 06 | CyberOps Nmap activity; BOTS 200-Series scanning investigation | Complete scanning practical | 🟢/🟡 |
-| Follow NIST 800-115-based procedure | 06 | Technical scanning foundation | Procedure/checklist | 🟡 |
-| Monitor scanning impact / handle failed scans | 06, 11 | Limited | Resource-monitoring and failed-scan record | 🔴 |
-| Provide scan report | 06, 11 | Lab outputs | Formal vulnerability-scan report | 🟡 |
+| Check schedule and scope | 06, 11 | Limited | Simulated scan calendar, scope and authorization | 🔴 |
+| Identify assets and priorities | 06 | Nmap/asset-discovery foundation; BOTS web-server analysis | Simulated asset list and prioritization | 🟡 |
+| Conduct authorized scanning | 06 | CyberOps Nmap activity; BOTS 200-Series scanning investigation | Complete isolated scanning simulation | 🟢/🟡 |
+| Follow NIST 800-115-based procedure | 06 | Technical scanning foundation | Controlled procedure/checklist | 🟡 |
+| Monitor scanning impact / handle failed scans | 06, 11 | Limited | Simulated resource-monitoring and failed-scan record | 🔴 |
+| Provide scan report | 06, 11 | Lab outputs | Formal simulated vulnerability-scan report | 🟡 |
+
+**Boundary:** All scanning activities in this portfolio must target only explicitly authorized laboratory assets. No live organizational or third-party production systems are to be scanned.
 
 ---
 
 # NC II — ICT251314 Perform Threat Mitigation
 
-TESDA defines this unit around incident evaluation, CTI/TTP analysis, affected-system analysis, and containment/recovery strategy. citeturn4view2
-
-| TESDA performance area | Evidence domain(s) | Existing evidence | Required supplementary evidence | Coverage |
+| TESDA performance area | Evidence domain(s) | Existing evidence | Required controlled supplementary evidence | Coverage |
 |---|---|---|---|---|
-| Validate and classify incidents | 01, 02, 07 | v1.0 Pushdo; CyberOps investigations; BOTS v2 | Incident classification/prioritization record | 🟢/🟡 |
-| Prioritize incident criticality | 07, 11 | Investigation findings | Severity/impact matrix | 🟡 |
-| Use CTI to identify TTPs | 05, 08 | CyberOps malware/IOC labs; v1.0; BOTS v2 | Formal CTI/TTP mapping | 🟢 |
-| Analyze affected processes/configurations | 04, 05, 07 | Endpoint/process/malware labs; BOTS 300/400 | Host-analysis report where required | 🟢 |
+| Validate and classify incidents | 01, 02, 07 | v1.0; CyberOps investigations; BOTS v2 | Simulated incident classification/prioritization record | 🟢/🟡 |
+| Prioritize incident criticality | 07, 11 | Investigation findings | Simulated severity/impact matrix | 🟡 |
+| Use CTI to identify TTPs | 05, 08 | CyberOps malware/IOC labs; v1.0; BOTS v2 | Formal simulated CTI/TTP mapping | 🟢 |
+| Analyze affected processes/configurations | 04, 05, 07 | Endpoint/process/malware labs; BOTS 300/400 | Controlled host-analysis report where required | 🟢 |
 | Enrich/counter-check IOCs | 05, 08 | Hashing, VirusTotal and BOTS evidence | IOC worksheet | 🟢 |
-| Contain threat | 09 | Limited existing evidence | Dedicated containment practical | 🔴 |
-| Eradicate/remove malicious artifacts | 09 | Limited existing evidence | Eradication practical | 🔴 |
-| Recover/rollback system or infrastructure | 10 | No complete existing evidence | Last-known-good image/configuration recovery practical | 🔴 |
-| Remove/verify malicious IOCs | 05, 09, 10 | IOC analysis | Post-eradication validation | 🟡 |
-| Secondary scan | 06, 10 | Nmap/scanning foundation | Post-recovery security scan | 🟡 |
-| Continuous monitoring after mitigation | 01, 10 | Monitoring labs | Recovery monitoring record | 🟡 |
-| Document mitigation/report | 11 | Assessment and lab reporting | Full incident response report | 🟢/🟡 |
-
-TESDA's performance criteria include continuous monitoring, recovery from a last-known-good image/configuration/backup, rollback, removal of malicious IOCs/files/registry entries, and a secondary scan. citeturn4view3
+| Contain threat | 09 | Limited existing evidence | Isolated containment simulation | 🔴 |
+| Eradicate/remove malicious artifacts | 09 | Limited existing evidence | Isolated eradication simulation | 🔴 |
+| Recover/rollback system or infrastructure | 10 | No complete existing evidence | Last-known-good image/configuration recovery simulation | 🔴 |
+| Remove/verify malicious IOCs | 05, 09, 10 | IOC analysis | Post-eradication validation in isolated lab | 🟡 |
+| Secondary scan | 06, 10 | Nmap/scanning foundation | Post-recovery isolated security scan | 🟡 |
+| Continuous monitoring after mitigation | 01, 10 | Monitoring labs | Controlled recovery-monitoring record | 🟡 |
+| Document mitigation/report | 11 | Assessment and lab reporting | Simulated incident-response report | 🟢/🟡 |
 
 ### Interpretation
 
-The strongest existing evidence is **investigation + IOC/CTI + affected-system analysis**. BOTS v2 substantially strengthens this portion but does not perform containment, eradication, recovery or secondary validation. Those remain dedicated supplementary practicals.
+The strongest existing evidence is **investigation + IOC/CTI + affected-system analysis**. BOTS v2 strengthens this portion but does not itself perform containment, eradication, recovery or secondary validation. Those will be demonstrated only through controlled supplementary simulations.
 
 ---
 
 # NC II — ICT251315 Perform Vulnerability Management/Control
 
-TESDA covers vulnerability-management software/agent installation, asset inventory/control, scanning schedules, audits, change/configuration management, and patch/remediation testing and reporting. citeturn4view3
-
-| TESDA performance area | Evidence domain(s) | Existing evidence | Required supplementary evidence | Coverage |
+| TESDA performance area | Evidence domain(s) | Existing evidence | Required controlled supplementary evidence | Coverage |
 |---|---|---|---|---|
-| Install/configure vulnerability-management product/agent | 06 | Limited | Scanner/agent installation practical | 🔴 |
-| Maintain vulnerability asset inventory | 06, 11 | Nmap discovery | Asset inventory/classification workflow | 🟡 |
-| Set scanning schedule | 06, 11 | Limited | Scheduled-scan plan | 🔴 |
-| Audit servers/endpoints/applications | 04, 06 | Endpoint/network labs | Structured audit checklist | 🟡 |
-| Perform VM change/configuration management | 06, 11 | Limited | Change request/CAB simulation | 🔴 |
-| Perform patch/remediation testing | 06, 10 | Limited | Patch/remediation practical | 🔴 |
-| Rescan and verify remediation | 06, 10 | Nmap foundation | Before/after scan comparison | 🟡 |
-| Report VM results | 11 | Lab reporting | Formal VM report/dashboard | 🟡 |
+| Install/configure vulnerability-management product/agent | 06 | Limited | Scanner/agent installation simulation | 🔴 |
+| Maintain vulnerability asset inventory | 06, 11 | Nmap discovery | Simulated asset inventory/classification workflow | 🟡 |
+| Set scanning schedule | 06, 11 | Limited | Simulated scheduled-scan plan | 🔴 |
+| Audit servers/endpoints/applications | 04, 06 | Endpoint/network labs | Controlled audit checklist | 🟡 |
+| Perform VM change/configuration management | 06, 11 | Limited | Simulated change request/CAB workflow | 🔴 |
+| Perform patch/remediation testing | 06, 10 | Limited | Isolated patch/remediation simulation | 🔴 |
+| Rescan and verify remediation | 06, 10 | Nmap foundation | Before/after isolated scan comparison | 🟡 |
+| Report VM results | 11 | Lab reporting | Formal simulated VM report/dashboard | 🟡 |
 
-### Interpretation
+### Boundary
 
-BOTS v2 contributes useful vulnerability-analysis context through its 200-Series investigation, but it is not a substitute for the complete vulnerability-management lifecycle. A dedicated VM/remediation practical remains necessary.
+The vulnerability-management workflow must use only designated laboratory assets. It must never be performed against a live organizational environment as part of this portfolio.
 
 ---
 
@@ -118,21 +116,31 @@ BOTS v2 contributes useful vulnerability-analysis context through its 200-Series
 | Evidence source | Best role in the portfolio |
 |---|---|
 | **CyberOps Associate labs** | Primary technical foundation across the 11 evidence domains |
-| **CyberOps v1.0 Skills Assessment** | Integrated alert-driven investigation and strong NC I/NC II investigation evidence |
-| **BOTS v2** | Independent SIEM investigation, threat hunting, IOC enrichment and multi-source correlation |
-| **Containment/Recovery simulation** | NC II operational mitigation evidence |
-| **Vulnerability-scanning practical** | NC I scanning workflow evidence |
-| **Vulnerability-management/remediation practical** | NC II VM/control evidence |
+| **CyberOps v1.0 Skills Assessment** | Integrated alert-driven simulated investigation |
+| **BOTS v2** | Independent simulated SIEM investigation, threat hunting, IOC enrichment and multi-source correlation |
+| **Controlled containment/recovery simulation** | NC II operational mitigation evidence |
+| **Controlled vulnerability-scanning simulation** | NC I scanning workflow evidence |
+| **Controlled vulnerability-management simulation** | NC II VM/control evidence |
 
 ---
 
-# BOTS v2 evidence package
+# No live-production capstone
 
-The detailed BOTS v2 mapping is maintained separately in:
+The portfolio intentionally does **not** include a live-production capstone. The evidence package is built from:
 
-`tesda-mapping/botsv2-tesda-evidence-matrix.md`
+```text
+CyberOps Associate laboratory activities
+            +
+CyberOps v1.0 Skills Assessment
+            +
+BOTS v2 simulated investigations
+            +
+Controlled supplementary simulations
+            ↓
+TESDA Evidence Package
+```
 
-It maps the 100–400 Series questions, the 42 uploaded screenshots, SPL-based investigation steps, evidence domains, and TESDA core-competency relevance.
+This structure provides observable evidence without requiring access to, monitoring of, scanning of, or modification of a company's production environment.
 
 ---
 
@@ -145,28 +153,28 @@ TESDA SAG / Performance Criterion
             ↓
 What exactly must be demonstrated?
             ↓
-Existing CyberOps lab evidence
+Existing CyberOps laboratory evidence
             ↓
 CyberOps v1.0 / BOTS v2 evidence
             ↓
-Supplementary evidence if required
+Controlled supplementary simulation if required
             ↓
 Artifact checklist
             ↓
 YES / PARTIALLY / NO
 ```
 
-A **YES** recommendation should only be made when the repository contains observable evidence for the required action, not merely a related course/lab title.
+A **YES** recommendation should only be made when the repository contains observable evidence for the required action. A related course or lab title alone is insufficient.
 
 # Current conclusion
 
-The portfolio now uses three principal practical evidence layers:
+The portfolio uses three principal practical evidence layers:
 
 1. **CyberOps Associate labs** — technical skills foundation;
-2. **CyberOps v1.0 Skills Assessment** — integrated alert-driven investigation;
-3. **BOTS v2** — independent SIEM/threat-hunting and multi-source investigation.
+2. **CyberOps v1.0 Skills Assessment** — integrated simulated alert-driven investigation;
+3. **BOTS v2** — independent simulated SIEM/threat-hunting and multi-source investigation.
 
-The remaining operational gaps are deliberately separated into supplementary practicals rather than being overclaimed from existing activities:
+Controlled supplementary simulations are reserved for the remaining operational gaps:
 
 - containment;
 - eradication;
@@ -175,4 +183,4 @@ The remaining operational gaps are deliberately separated into supplementary pra
 - vulnerability scanning workflow;
 - vulnerability-management/control lifecycle.
 
-This architecture is intended to make the eventual SAG responses evidence-based and auditable.
+This architecture keeps the portfolio evidence-based while maintaining a strict simulated, isolated, controlled, and privacy-conscious environment.
