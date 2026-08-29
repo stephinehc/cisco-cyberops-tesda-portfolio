@@ -14,7 +14,7 @@ The user has already performed the v1.0 Skills Assessment in the CyberOps VM and
 
 Reference used for answer cross-check:
 
-urlCyberOps Associate Skills Assessment Answers — CA v1.0 Skills Examhttps://itexamanswers.net/cyberops-associate-skills-assessment-answers-ca-v1-0-skills-exam.html
+
 
 The reference confirms the same assessment structure: Security Onion service verification, Sguil/Kibana alert review, Pushdo incident timeframe, affected host identification, exploit/infection analysis, downloaded-file and hash analysis, VirusTotal verification, related-alert review, and final findings. citeturn1search0
 
