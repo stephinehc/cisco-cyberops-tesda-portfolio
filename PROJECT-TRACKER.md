@@ -9,8 +9,8 @@
 | **Phase 1** | Portfolio architecture and evidence strategy | ✅ Complete |
 | **Phase 2** | Complete CyberOps Associate lab register in original sequence | 🟡 In progress — register populated; evidence verification pending |
 | **Phase 3** | TESDA performance-criterion + master SAG mapping | ✅ Complete — master matrix established; criterion-level evidence verification continues during later phases |
-| **Phase 4** | CyberOps v1.0 Skills Assessment evidence mapping | 🟢 Assessment performed; mapping complete; actual artifact collection pending |
-| **Phase 5** | CyberOps v1.1 Skills Assessment evidence mapping | ⬜ Next |
+| **Phase 4** | CyberOps v1.0 Skills Assessment evidence mapping | 🟢 Assessment performed; documentation created; actual artifact collection pending |
+| **Phase 5** | CyberOps v1.1 Skills Assessment evidence mapping | 🟡 In progress — documentation package created; actual artifact verification pending |
 | **Phase 6** | BOTS v2 threat-hunting evidence mapping | ⬜ Pending |
 | **Phase 7** | Supplementary containment/eradication/recovery lab | ⬜ Pending |
 | **Phase 8** | Supplementary vulnerability scanning/management lab | ⬜ Pending |
@@ -63,58 +63,94 @@
 ### Completed
 
 - Verified the v1.0 assessment workflow from available copies of the Cisco assessment document.
-- Confirmed the assessment is an **alert-driven Pushdo Trojan investigation** using Security Onion, Sguil/Kibana, web research and VirusTotal.
-- Created task-level mapping to all 11 evidence domains.
+- Confirmed the assessment is an alert-driven Pushdo Trojan investigation using Security Onion, Sguil/Kibana, web research and VirusTotal.
+- Created task-level mapping to the evidence domains.
 - Mapped the assessment to the strongest relevant TESDA competency areas.
-- Identified direct evidence, supporting evidence and gaps.
-- Defined the evidence package that must be captured from the actual assessment run.
-- User has **already performed the actual v1.0 Skills Assessment** in the CyberOps VM.
-- User reports that the observed results/answers match the published answer reference used as a cross-check.
-- The published answer reference is documented as a **cross-check only**, not as portfolio evidence.
+- Created the v1.0 assessment documentation package.
+- User has already performed the actual v1.0 Skills Assessment in the CyberOps VM.
+- Published answers are treated only as a cross-check, not as portfolio evidence.
 
-### Phase 4 deliverable
+### v1.0 assessment documentation
 
-- `tesda-mapping/cyberops-v1.0-skills-assessment-mapping.md`
-
-### Core finding
-
-The v1.0 Skills Assessment is especially strong for **ICT251312 — Monitor and Report Cyber Threats** because the candidate begins with existing Security Onion alerts and performs alert review, investigation, IOC/malware analysis, threat-intelligence verification, related-alert correlation and reporting.
-
-It also provides strong **partial evidence for ICT251314 — Perform Threat Mitigation**, particularly incident analysis, IOC identification, threat intelligence and reporting. It does **not** by itself demonstrate containment, eradication, recovery or secondary scanning.
-
-### v1.0 11-domain mapping status
-
-| Domain | Status |
-|---|---|
-| 01 Monitoring and Alerts | 🟢 Strong |
-| 02 Log/Event Analysis | 🟡 Supporting |
-| 03 Network Traffic Analysis | 🟡 Supporting/Direct for specific indicators |
-| 04 Endpoint Analysis | 🟢 Strong |
-| 05 Malware/IOC Analysis | 🟢 Strong |
-| 06 Vulnerability Scanning | 🔴 Not demonstrated |
-| 07 Incident Investigation | 🟢 Strong |
-| 08 Threat Intelligence | 🟢 Strong |
-| 09 Containment | 🔴 Gap |
-| 10 Recovery | 🔴 Gap |
-| 11 Reporting | 🟢 Strong |
+```text
+assessments/cyberops-v1.0/
+├── assessment-overview.md
+├── assessment-documentation.md
+├── alert-analysis.md
+├── incident-timeline.md
+├── ioc-analysis.md
+├── threat-intelligence.md
+├── findings-report.md
+└── screenshots/
+```
 
 ### Remaining Phase 4 tasks
 
-- [ ] Collect the user's actual v1.0 screenshots/artifacts from the completed assessment.
-- [ ] Record the actual alert/timeframe/IP/host findings.
-- [ ] Record actual malicious-file and SHA-256 evidence.
-- [ ] Record actual VirusTotal enrichment evidence.
-- [ ] Correlate related alerts using the user's evidence.
-- [ ] Produce the final investigation report.
+- [ ] Collect the user's actual v1.0 screenshots/artifacts.
+- [ ] Replace placeholders with actual observed values where required.
 - [ ] Link actual evidence artifacts to the master SAG matrix.
+- [ ] Finalize the v1.0 RPL evidence package.
 
-### Evidence-integrity rule
+## Phase 5 — IN PROGRESS: CyberOps / CCNA Cybersecurity Operations v1.1 Skills Assessment
 
-The published answer reference is **not evidence of competency**. It is only a cross-check. Final portfolio evidence must come from the user's own CyberOps VM run.
+### Assessment basis
 
-## Phase 5 — CyberOps v1.1 Skills Assessment
+The v1.1 assessment is the legacy **CCNA Cybersecurity Operations v1.1 Skills Assessment** and is documented separately from the newer CyberOps Associate assessment. It uses the Security Onion environment and focuses on Sguil/Snort event evaluation, investigation pivots through ELSA, Bro/Zeek and Wireshark, and exploit intelligence research.
 
-Map the actual v1.1 tasks individually. Do not assume equivalence to v1.0.
+### Assessment scenario
+
+The assessment investigates exploit-related activity associated with the **Angler Exploit Kit**, an affected internal host, an external exploit-delivery infrastructure, and a payload recovered from captured traffic.
+
+### Documentation package created
+
+```text
+assessments/cyberops-v1.1/
+├── assessment-overview.md
+├── assessment-documentation.md
+├── alert-analysis.md
+├── incident-timeline.md
+├── ioc-analysis.md
+├── threat-intelligence.md
+├── findings-report.md
+└── screenshots/
+```
+
+### Key assessment findings documented
+
+- Exploit kit: **Angler EK**
+- Affected host: `192.168.0.12`
+- Exploit-delivery IP: `192.99.198.158`
+- Exploit-delivery domain: `qwe.mvdunalterableairreport.net`
+- Extracted object: `3xdz3bcxc8`
+- Vulnerable client condition: outdated Flash component
+
+### Primary evidence domains
+
+- 01 Monitoring and Alerts
+- 02 Log/Event Analysis
+- 03 Network Traffic Analysis
+- 04 Endpoint Analysis
+- 05 Malware/IOC Analysis
+- 07 Incident Investigation
+- 08 Threat Intelligence
+- 11 Reporting
+
+### TESDA relevance
+
+The v1.1 assessment provides strong practical evidence for **ICT251312 — Monitor and Report Cyber Threats**, especially alert evaluation, event investigation, case follow-up, threat identification and reporting.
+
+It provides supporting evidence for **ICT251314 — Perform Threat Mitigation**, especially incident evaluation, IOC identification, intelligence use and affected-system analysis.
+
+It does not by itself demonstrate complete containment, eradication, recovery, secondary scanning or vulnerability-management processes.
+
+### Remaining Phase 5 tasks
+
+- [ ] Confirm whether the user has performed the v1.1 assessment.
+- [ ] Collect actual v1.1 screenshots/artifacts if performed.
+- [ ] Replace documentation placeholders with actual observed values.
+- [ ] Verify the exact assessment version/environment used.
+- [ ] Create task-level TESDA criterion mapping for v1.1.
+- [ ] Link actual evidence to the master SAG matrix.
 
 ## Phase 6 — BOTS v2
 
@@ -150,4 +186,4 @@ Create the final TESDA evidence index, SAG evidence guide, and integrated capsto
 
 ## Current next task
 
-**Collect and organize the user's actual v1.0 evidence artifacts, then proceed to Phase 5 — CyberOps v1.1 Skills Assessment mapping.**
+**Confirm/collect the user's actual v1.1 assessment evidence, then complete the task-level TESDA mapping before proceeding to Phase 6 — BOTS v2.**
