@@ -9,8 +9,8 @@
 | **Phase 1** | Portfolio architecture and evidence strategy | ✅ Complete |
 | **Phase 2** | Complete CyberOps Associate lab register in original sequence | 🟡 In progress — register populated; evidence verification pending |
 | **Phase 3** | TESDA performance-criterion + master SAG mapping | ✅ Complete — master matrix established; criterion-level evidence verification continues during later phases |
-| **Phase 4** | CyberOps v1.0 Skills Assessment evidence mapping | 🟡 In progress — task-level mapping complete; practical evidence capture pending |
-| **Phase 5** | CyberOps v1.1 Skills Assessment evidence mapping | ⬜ Pending |
+| **Phase 4** | CyberOps v1.0 Skills Assessment evidence mapping | 🟢 Assessment performed; mapping complete; actual artifact collection pending |
+| **Phase 5** | CyberOps v1.1 Skills Assessment evidence mapping | ⬜ Next |
 | **Phase 6** | BOTS v2 threat-hunting evidence mapping | ⬜ Pending |
 | **Phase 7** | Supplementary containment/eradication/recovery lab | ⬜ Pending |
 | **Phase 8** | Supplementary vulnerability scanning/management lab | ⬜ Pending |
@@ -63,11 +63,14 @@
 ### Completed
 
 - Verified the v1.0 assessment workflow from available copies of the Cisco assessment document.
-- Confirmed the assessment is an **alert-driven Pushdo Trojan investigation** using Security Onion, Sguil/Kibana, web research and VirusTotal. citeturn0search0turn0search3
+- Confirmed the assessment is an **alert-driven Pushdo Trojan investigation** using Security Onion, Sguil/Kibana, web research and VirusTotal.
 - Created task-level mapping to all 11 evidence domains.
 - Mapped the assessment to the strongest relevant TESDA competency areas.
 - Identified direct evidence, supporting evidence and gaps.
-- Defined the evidence package that must be captured during the user's actual assessment run.
+- Defined the evidence package that must be captured from the actual assessment run.
+- User has **already performed the actual v1.0 Skills Assessment** in the CyberOps VM.
+- User reports that the observed results/answers match the published answer reference used as a cross-check.
+- The published answer reference is documented as a **cross-check only**, not as portfolio evidence.
 
 ### Phase 4 deliverable
 
@@ -75,7 +78,7 @@
 
 ### Core finding
 
-The v1.0 Skills Assessment is especially strong for **ICT251312 — Monitor and Report Cyber Threats** because the candidate begins with existing Security Onion alerts and performs alert review, investigation, IOC/malware analysis, threat-intelligence verification, related-alert correlation and reporting. citeturn0search0turn0search11
+The v1.0 Skills Assessment is especially strong for **ICT251312 — Monitor and Report Cyber Threats** because the candidate begins with existing Security Onion alerts and performs alert review, investigation, IOC/malware analysis, threat-intelligence verification, related-alert correlation and reporting.
 
 It also provides strong **partial evidence for ICT251314 — Perform Threat Mitigation**, particularly incident analysis, IOC identification, threat intelligence and reporting. It does **not** by itself demonstrate containment, eradication, recovery or secondary scanning.
 
@@ -97,16 +100,17 @@ It also provides strong **partial evidence for ICT251314 — Perform Threat Miti
 
 ### Remaining Phase 4 tasks
 
-- [ ] Perform the actual v1.0 Skills Assessment in the user's CyberOps VM.
-- [ ] Capture real screenshots and command outputs.
-- [ ] Record alert/timeframe/IP/host findings.
-- [ ] Record malicious file and SHA-256 evidence.
-- [ ] Record VirusTotal enrichment evidence.
-- [ ] Correlate related alerts.
+- [ ] Collect the user's actual v1.0 screenshots/artifacts from the completed assessment.
+- [ ] Record the actual alert/timeframe/IP/host findings.
+- [ ] Record actual malicious-file and SHA-256 evidence.
+- [ ] Record actual VirusTotal enrichment evidence.
+- [ ] Correlate related alerts using the user's evidence.
 - [ ] Produce the final investigation report.
 - [ ] Link actual evidence artifacts to the master SAG matrix.
 
-**Do not fabricate or pre-fill assessment results.** The repository contains the mapping and evidence checklist now; actual results will be added only after the assessment is performed.
+### Evidence-integrity rule
+
+The published answer reference is **not evidence of competency**. It is only a cross-check. Final portfolio evidence must come from the user's own CyberOps VM run.
 
 ## Phase 5 — CyberOps v1.1 Skills Assessment
 
@@ -146,4 +150,4 @@ Create the final TESDA evidence index, SAG evidence guide, and integrated capsto
 
 ## Current next task
 
-Finish the practical v1.0 evidence capture, then proceed to **Phase 5 — CyberOps v1.1 Skills Assessment mapping**.
+**Collect and organize the user's actual v1.0 evidence artifacts, then proceed to Phase 5 — CyberOps v1.1 Skills Assessment mapping.**
