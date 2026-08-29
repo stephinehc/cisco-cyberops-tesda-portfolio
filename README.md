@@ -1,20 +1,18 @@
 # Cisco CyberOps Associate → TESDA Cybersecurity Evidence Portfolio
 
-A practical evidence portfolio using **Cisco CyberOps Associate laboratory activities** as the primary technical evidence source, supplemented by the Cisco v1.0 Skills Assessment, BOTS v2, and dedicated mitigation/vulnerability-management simulations.
+A cybersecurity evidence portfolio using **Cisco CyberOps Associate laboratory activities** as the primary technical evidence source, supplemented by the Cisco v1.0 Skills Assessment, BOTS v2, and controlled simulation activities for identified competency gaps.
 
 ## Purpose
 
-This repository organizes practical cybersecurity evidence for TESDA Cyber Threat Monitoring NC I and Cyber Threat Mitigation NC II assessment preparation and Recognition of Prior Learning (RPL).
+This repository organizes cybersecurity evidence for TESDA Cyber Threat Monitoring NC I and Cyber Threat Mitigation NC II assessment preparation and Recognition of Prior Learning (RPL).
 
-The portfolio is built around a clear distinction:
+## Controlled-environment and data-privacy statement
 
-- **TESDA core competencies** = the competency requirements being demonstrated.
-- **11 evidence domains** = the categories used to organize laboratory evidence.
-- **CyberOps labs** = the primary technical skills-development and evidence source.
-- **Skills Assessment and BOTS v2** = higher-level assessment/investigation evidence.
-- **Supplementary simulations** = activities that close TESDA competency gaps, particularly containment, recovery, and vulnerability management.
+**All activities documented in this portfolio are performed exclusively in simulated, isolated, and controlled laboratory environments using authorized training datasets, virtual machines, simulated network traffic, and intentionally configured training systems.**
 
-> **Important:** This portfolio is not a TESDA certification or assessment result. It is an organized evidence portfolio intended to support skills demonstration, RPL, and assessment preparation.
+No production systems, live organizational networks, confidential company information, personally identifiable information, credentials, private keys, or real organizational security events are intentionally accessed, monitored, scanned, modified, contained, or recovered as part of this portfolio.
+
+The portfolio demonstrates technical capability through authorized simulation and training environments. It must not be interpreted as documentation of cybersecurity operations performed against a live company's production infrastructure.
 
 ## TESDA target qualifications
 
@@ -30,8 +28,6 @@ The portfolio is built around a clear distinction:
 
 ## 11 Evidence Domains
 
-The following 11 categories are the **fixed evidence-domain structure for this repository**. They are intentionally separate from the TESDA core-competency names to avoid confusion.
-
 ```text
 01-monitoring-and-alerts/
 02-log-event-analysis/
@@ -46,59 +42,39 @@ The following 11 categories are the **fixed evidence-domain structure for this r
 11-reporting/
 ```
 
-Every CyberOps lab, Skills Assessment task, BOTS v2 activity, and supplementary exercise will be assigned a **primary evidence domain**. Related domains will be recorded as cross-references rather than unnecessarily duplicating the entire evidence package.
-
-## Evidence ratings
-
-| Rating | Meaning |
-|---|---|
-| 🟢 Direct | Activity can provide strong practical evidence for the relevant skill or performance requirement. |
-| 🟡 Supporting | Activity demonstrates a related skill, but additional process or artifact evidence is needed. |
-| 🔴 Gap | The activity does not adequately demonstrate the requirement; a supplementary activity is required. |
+The 11 domains organize the type of evidence demonstrated. They are intentionally separate from the four TESDA core competencies.
 
 ## Evidence architecture
 
 ```text
 TESDA CORE COMPETENCIES
-        │
-        ▼
+        ↓
 11 EVIDENCE DOMAINS
-        │
-        ▼
+        ↓
 CYBEROPS ASSOCIATE LAB ACTIVITIES
-        │
-        ├── Guided technical evidence
-        │
-        ▼
+        ↓
 CYBEROPS v1.0 SKILLS ASSESSMENT
-        │
-        ├── Alert-driven investigation
-        │
-        ▼
-BOTS v2
-        │
-        ├── Independent SIEM threat hunting
-        │
-        ▼
-SUPPLEMENTARY MITIGATION / VM LABS
-        │
-        ├── Containment
-        ├── Eradication
-        ├── Recovery
-        ├── Secondary scanning
-        └── Vulnerability management
-        │
-        ▼
+        ↓
+BOTS v2 / SIEM THREAT HUNTING
+        ↓
+CONTROLLED SUPPLEMENTARY SIMULATIONS
+        ├── Containment / Eradication
+        ├── Recovery / Rollback
+        ├── Secondary Validation
+        └── Vulnerability Scanning / Management
+        ↓
 TESDA EVIDENCE PACKAGE
 ```
 
-## Phase 1
+## Evidence ratings
 
-Phase 1 establishes the repository architecture. The portfolio will **retain the complete CyberOps laboratory activities as a major evidence source**. The v1.0 Skills Assessment and BOTS v2 will complement the labs rather than replace them.
+| Rating | Meaning |
+|---|---|
+| 🟢 Direct | The controlled laboratory activity can provide strong observable evidence for the relevant skill or requirement. |
+| 🟡 Supporting | The activity demonstrates a related skill, but an additional artifact or simulation step is needed. |
+| 🔴 Gap | Existing evidence does not adequately demonstrate the requirement; a separate controlled simulation is required. |
 
-The detailed Phase 1 overview is available at [`tesda-mapping/cyberops-lab-to-core-competency-overview.md`](tesda-mapping/cyberops-lab-to-core-competency-overview.md).
-
-## Planned repository structure
+## Repository structure
 
 ```text
 01-monitoring-and-alerts/
@@ -113,33 +89,41 @@ The detailed Phase 1 overview is available at [`tesda-mapping/cyberops-lab-to-co
 10-recovery/
 11-reporting/
 
+assessments/
+├── cyberops-v1.0/
+└── botsv2/
+
 cisco-lab-register/
 tesda-mapping/
 evidence/
 supplementary-labs/
-capstone/
 templates/
 ```
 
-## Evidence integrity
+There is no live-production capstone. The v1.0 Skills Assessment, BOTS v2 investigations, CyberOps laboratory activities, and controlled supplementary simulations collectively provide the evidence architecture.
 
-Only actual results from the lab environment should be uploaded. Never fabricate screenshots, logs, hashes, PCAPs, alerts, findings, or assessment results.
+## Evidence integrity and privacy
 
-Remove credentials, private keys, personal information, and confidential organizational information before committing evidence.
+Only actual results from authorized laboratory environments should be uploaded. Never fabricate screenshots, logs, hashes, PCAPs, alerts, findings, or assessment results.
+
+Do not upload production data, confidential organizational information, personally identifiable information, credentials, private keys, or other restricted information.
+
+If an artifact could contain sensitive information, use sanitized training evidence or omit the artifact rather than exposing real data.
 
 ## Recommended workflow
 
-1. Perform the CyberOps lab.
-2. Capture raw evidence.
-3. Complete the lab report.
-4. Assign the lab to its primary evidence domain.
+1. Perform the CyberOps activity in the controlled laboratory environment.
+2. Capture the relevant laboratory evidence.
+3. Document the activity and observed result.
+4. Assign the activity to its primary evidence domain.
 5. Record related evidence domains.
 6. Map the demonstrated skill to the relevant TESDA competency/performance requirement.
-7. Complete the evidence checklist.
-8. Perform supplementary labs for identified gaps.
-9. Complete the integrated capstone.
-10. Review the TESDA Evidence Index before assessment.
+7. Identify evidence gaps.
+8. Use controlled supplementary simulations only where a required competency is not demonstrated by existing evidence.
+9. Review the final TESDA Evidence Index before assessment.
 
 ## Portfolio philosophy
 
-The repository distinguishes **technical similarity** from **full competency evidence**. A Cisco lab, Skills Assessment, or BOTS v2 exercise is not automatically treated as proof of an entire TESDA competency. Each item will be mapped to the specific skill or performance requirement it actually demonstrates.
+The repository distinguishes **technical similarity** from **full competency evidence**. Completing a course lab, Skills Assessment, or BOTS v2 investigation does not automatically establish an entire TESDA competency. Each item is mapped only to the skill or performance requirement that the available evidence can reasonably demonstrate.
+
+All conclusions in this repository are based on simulated, isolated, and controlled training activities and are not claims about live organizational cybersecurity operations.
