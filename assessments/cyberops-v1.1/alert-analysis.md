@@ -1,82 +1,68 @@
-# Alert Analysis — CyberOps / CCNA Cybersecurity Operations v1.1
+# Alert Analysis — CCNA Cybersecurity Operations v1.1
 
 ## Objective
 
-Determine which Sguil events are associated with the suspected exploit and establish whether the activity represents malicious behavior.
+Analyze the Sguil/Snort events that belong to the multi-stage exploit and determine whether the activity is suspicious.
 
 ## Detection source
 
-The primary detection source is **Snort events displayed in Sguil**.
+The primary detection point is the **Snort event set displayed in Sguil**.
 
-The investigation begins by selecting the events associated with the exploit and using the alert information as pivots into other Security Onion tools.
+The analyst should first establish the relevant event group, then use the alerts as pivots into ELSA, Bro/Zeek and Wireshark.
 
-## Key alert findings
+## Part 1 results
 
-### Exploit identification
-
-The Snort/Sguil evidence identifies the exploit kit as:
-
-**Angler Exploit Kit (Angler EK)**
-
-### Affected host
-
-The event associated with the outdated Flash component identifies the affected internal host as:
-
-`192.168.0.12`
-
-The assessment evidence also identifies the host's MAC address and NIC vendor. Record the value observed during the actual assessment here:
-
-- **MAC address:** `00:1b:21:ca:fe:d7`
-- **NIC vendor:** ______________________________
-
-### Exploit-delivery source
-
-The Sguil investigation identifies the external host that appears to have delivered the exploit:
-
-`192.99.198.158`
-
-### Delivery domain
-
-Supporting network evidence associates the delivery infrastructure with:
-
-`qwe.mvdunalterableairreport.net`
+| Question area | Assessment result |
+|---|---|
+| Exploit-related events | **15 events** |
+| Start time | **2017-09-07 15:31:12** |
+| End time | **2017-09-07 15:31:34** |
+| Duration | **22 seconds** |
+| Internal host | **192.168.0.12** |
+| MAC address | **00:1b:21:ca:fe:d7** |
+| Operating system | **Windows-based** |
+| Exploit kit | **Angler EK** |
 
 ## Alert interpretation
 
-The alert sequence is consistent with an exploit-kit attack rather than an isolated benign event. The activity includes detection of an outdated client component, interaction with exploit-delivery infrastructure, and subsequent delivery of a payload.
+The events should be treated as suspicious because the alert set combines:
+
+- an outdated Flash component;
+- exploit-kit detection;
+- external exploit infrastructure; and
+- subsequent payload-delivery evidence.
+
+The evidence is stronger when the alerts are correlated rather than interpreted individually.
 
 ## Investigation pivots
 
 ```text
-Snort Alert
-    ↓
-Sguil Event
-    ↓
-Affected Host
-    ↓
-External Source
-    ↓
+Sguil / Snort
+      ↓
+Event group
+      ↓
+Victim host
+      ↓
+External infrastructure
+      ↓
 ELSA / Bro-Zeek
-    ↓
+      ↓
 Wireshark
-    ↓
-Payload Extraction
 ```
 
 ## Screenshot placeholders
 
 - `screenshots/01-sguil-overview.png`
-- `screenshots/02-exploit-events.png`
-- `screenshots/03-affected-host.png`
-- `screenshots/04-delivery-source.png`
+- `screenshots/02-exploit-event-group.png`
+- `screenshots/03-host-identification.png`
 
 ## TESDA relevance
 
-**Primary domains:**
+**Primary:**
 
-- 01 Monitoring and Alerts
-- 02 Log/Event Analysis
-- 07 Incident Investigation
+- `01-monitoring-and-alerts/`
+- `02-log-event-analysis/`
+- `07-incident-investigation/`
 
 **Primary competency:** ICT251312 — Monitor and Report Cyber Threats
 
