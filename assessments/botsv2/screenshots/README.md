@@ -1,108 +1,66 @@
 # BOTS v2 Screenshot Evidence Index
 
-This folder is structured to match the investigation evidence shown in the supplied Splunk 2 walkthrough. A single question may contain multiple screenshots, including the SPL query/result, expanded event fields, raw content, decoded content, or external-analysis result. Each distinct image receives its own evidence entry.
+This folder is structured around the investigation evidence used in the BOTS v2 portfolio. A single question may contain multiple screenshots, including the SPL query/result, expanded event fields, raw content, decoded content, or external-analysis result. Each distinct image receives its own evidence entry.
 
-The labels below are portfolio labels and are not copies of source captions.
+The labels below are portfolio labels. The filenames for the 100 Series are the **actual filenames uploaded to the GitHub repository** and must be preserved exactly.
 
-> **Evidence rule:** For the TESDA portfolio, use screenshots captured from the candidate's own BOTS v2/Splunk environment whenever possible. Reference images are used to establish the evidence sequence and expected type of visual proof, not to represent the candidate's own performance.
+> **Evidence rule:** For the TESDA portfolio, screenshots should represent the candidate's own BOTS v2/Splunk investigation whenever possible. Reference material is used only to establish the investigation sequence and evidence type.
 
 ## 100 Series — Amber Turing Investigation
 
-**Reference-matched image count: 11**
+**Uploaded image count: 12**
 
-| # | Question | Image label | Filename |
+| # | Question | Image label | Actual uploaded filename |
 |---:|---|---|---|
-| 01 | 100-Q1 | Amber IP — PAN traffic query/result | `01-100-q01-pan-traffic-result.png` |
-| 02 | 100-Q1 | Amber IP — expanded event fields | `02-100-q01-amber-ip-expanded-fields.png` |
-| 03 | 100-Q1 | Amber HTTP traffic — competitor-domain result | `03-100-q01-http-competitor-result.png` |
-| 04 | 100-Q2 | Competitor website — executive contact image URI | `04-100-q02-executive-contact-image.png` |
-| 05 | 100-Q3 | BerkBeer SMTP query/result — CEO email event | `05-100-q03-smtp-ceo-result.png` |
-| 06 | 100-Q3 | CEO email — raw message content and identity | `06-100-q03-ceo-raw-email.png` |
-| 07 | 100-Q5 | Amber-to-employee SMTP query/result | `07-100-q05-employee-email-result.png` |
-| 08 | 100-Q5 | Employee email — raw message content | `08-100-q05-employee-raw-email.png` |
-| 09 | 100-Q6 | Attachment field — `attach_filename` | `09-100-q06-attachment-filename.png` |
-| 10 | 100-Q7 | Base64-encoded email content | `10-100-q07-base64-email-content.png` |
-| 11 | 100-Q7 | Decoded email content — Amber personal email | `11-100-q07-decoded-personal-email.png` |
+| 01 | 100-Q1 | PAN traffic SPL result — Amber event | `01-100-q01-spl_result_pan_traffic.png` |
+| 02 | 100-Q1 | Expanded SPL result — Amber event fields | `02-100-q01-spl_result_drop_down.png` |
+| 03 | 100-Q1 | HTTP event SPL result — competitor traffic | `03-100-q01-spl_result_http_event.png` |
+| 04 | 100-Q2 | URI image-file SPL result | `04-100-q02-spl_result_URI_image_file.png` |
+| 05 | 100-Q3 | SPL result — CEO name | `05-100-q03-spl_result_ceo_name.png` |
+| 06 | 100-Q3 | Raw event — CEO identity/email evidence | `06-100-q03-spl_result_raw_ceo_name.png` |
+| 07 | 100-Q4 | SPL result — CEO email address | `07-100-q04-spl_result_ceo_email.png` |
+| 08 | 100-Q5 | SPL result — employee email | `08-100-q05-spl_result_employee_email.png` |
+| 09 | 100-Q5 | Raw event — employee email content | `09-100-q05-spl_result_raw_employee_email.png` |
+| 10 | 100-Q6 | Same Q5 event — attachment filename | `10-100-q06-same_event_q05_attach_filename.png` |
+| 11 | 100-Q7 | Same Q5 event — Base64 content | `11-100-q07-same_event_q05_base64_content.png` |
+| 12 | 100-Q7 | Decoded Base64 content | `12-100-q07-same_event_q05_decoded_content.png` |
 
-### 100-Q4 — CEO email address
+### 100-Series evidence notes
 
-**No separate reference image is assigned to Q4.** The answer is derived from the CEO SMTP evidence already displayed for Q3. Therefore, do not create an artificial Q4 screenshot.
+Unlike the earlier reference-matched index, this table reflects the **actual 12 files you uploaded**. The uploaded evidence includes a dedicated Q4 screenshot, so Q4 is now represented as an independent evidence item rather than only as a cross-reference to Q3.
 
-Evidence relationship:
+The evidence chain is:
 
 ```text
-100-Q3 SMTP evidence
-        ↓
-CEO identity + email address
-        ↓
-100-Q4 answer
+100-Q1 → PAN traffic → expanded event → HTTP pivot
+100-Q2 → URI/image-file evidence
+100-Q3 → CEO name → raw event
+100-Q4 → CEO email
+100-Q5 → employee email → raw event
+100-Q6 → attachment filename from the Q5 event
+100-Q7 → Base64 content from the Q5 event → decoded content
 ```
 
-If your own BOTS v2 session produces a separate useful screenshot while answering Q4, it may be captured as **candidate-generated supplementary evidence**, but it should not be counted as a reference-matched image.
+## 200 Series
 
-## 200 Series — Web, Vulnerability Scan and XSS Investigation
+The 200-Series entries will be updated **only after the corresponding images have been uploaded and the filenames are provided/verified**. Do not rename or replace them with the previously generated filenames.
 
-| # | Question | Image label | Filename |
-|---:|---|---|---|
-| 12 | 200-Q1 | TOR installation search result | `12-200-q01-tor-installation-result.png` |
-| 13 | 200-Q2 | DNS result — public server IP | `13-200-q02-dns-public-ip.png` |
-| 14 | 200-Q2 | HTTP result — destination IP | `14-200-q02-http-destination-ip.png` |
-| 15 | 200-Q3 | Source-IP statistics — vulnerability scanner | `15-200-q03-vulnerability-scan-source-ip.png` |
-| 16 | 200-Q4 | URI-path frequency result | `16-200-q04-uri-path-frequency.png` |
-| 17 | 200-Q5 | SQL function evidence | `17-200-q05-sql-function-result.png` |
-| 18 | 200-Q6 | XSS event — stolen browser cookie | `18-200-q06-xss-cookie-event.png` |
-| 19 | 200-Q7 | XSS event — malicious username creation | `19-200-q07-malicious-username-event.png` |
+## 300 Series
 
-## 300 Series — Mallory, Ransomware, USB and Malware Investigation
+The 300-Series entries will be updated **only after the corresponding images have been uploaded and the filenames are provided/verified**. Do not rename or replace them with the previously generated filenames.
 
-| # | Question | Image label | Filename |
-|---:|---|---|---|
-| 20 | 300-Q1 | Mallory MacBook hostname identification | `20-300-q01-mallory-hostname.png` |
-| 21 | 300-Q1 | Encrypted PowerPoint filename | `21-300-q01-encrypted-powerpoint.png` |
-| 22 | 300-Q2 | Encrypted Game of Thrones file | `22-300-q02-encrypted-got-file.png` |
-| 23 | 300-Q3 | USB event — device discovery | `23-300-q03-usb-event.png` |
-| 24 | 300-Q3 | Raw USB details — model/serial/vendor ID | `24-300-q03-usb-raw-details.png` |
-| 25 | 300-Q3 | Vendor-ID lookup — USB manufacturer | `25-300-q03-usb-vendor-lookup.png` |
-| 26 | 300-Q4 | Malware file event — filename and MD5 | `26-300-q04-malware-file-md5.png` |
-| 27 | 300-Q4 | VirusTotal — malware language identification | `27-300-q04-virustotal-perl.png` |
-| 28 | 300-Q5 | VirusTotal — first-seen date | `28-300-q05-virustotal-first-seen.png` |
-| 29 | 300-Q6 | VirusTotal Relations — first C2 domain | `29-300-q06-first-c2-domain.png` |
-| 30 | 300-Q7 | VirusTotal Relations — second C2 domain | `30-300-q07-second-c2-domain.png` |
+## 400 Series
 
-## 400 Series — Taedonggang APT, Malware and Persistence
+The 400-Series entries will be updated **only after the corresponding images have been uploaded and the filenames are provided/verified**. Do not rename or replace them with the previously generated filenames.
 
-| # | Question | Image label | Filename |
-|---:|---|---|---|
-| 31 | 400-Q1 | SMTP event — spearphishing ZIP attachment | `31-400-q01-zip-attachment.png` |
-| 32 | 400-Q2 | Raw email — ZIP password | `32-400-q02-zip-password.png` |
-| 33 | 400-Q4 | FTP event — unusual downloaded file | `33-400-q04-unusual-ftp-file.png` |
-| 34 | 400-Q5 | Supporting external analysis — file metadata evidence | `34-400-q05-file-metadata-analysis.png` |
-| 35 | 400-Q6 | Supporting external analysis — document finding | `35-400-q06-document-analysis.png` |
-| 36 | 400-Q7 | Scheduled-task creation events | `36-400-q07-scheduled-task-events.png` |
-| 37 | 400-Q7 | Decoded registry/C2 URI evidence | `37-400-q07-decoded-c2-uri.png` |
+## Screenshot naming and evidence standard
 
-## Reference image count
+The filename identifies the uploaded artifact; the image label explains its evidentiary purpose. The repository should preserve the actual uploaded filename exactly as stored in GitHub.
 
-**37 separate investigation screenshots are currently represented in this index**, with the 100 Series corrected to **11 images**.
-
-The 100 Series was previously under-counted. It is now explicitly represented as 11 image entries, while Q4 remains a cross-reference to the Q3 SMTP evidence because the walkthrough does not introduce a separate Q4 screenshot.
-
-The same principle applies throughout the remaining series: if a question contains multiple distinct evidence views, each receives a separate filename and label; if a question derives its answer from an already displayed event, no artificial duplicate image is created.
-
-## Screenshot naming and capture standard
-
-Each candidate screenshot should show enough context to establish:
-
-- the SPL query or investigation action;
-- the relevant time range when applicable;
-- the result/event used as evidence;
-- important fields used for the pivot;
-- the information supporting the answer.
-
-For external-analysis screenshots, label them clearly as **supporting external analysis** rather than implying that the result was generated by Splunk/BOTS v2 locally.
-
-Keep the numbering above when replacing the reference sequence with your own screenshots. This provides a traceable chain:
+For every completed series, the final evidence chain should be:
 
 ```text
-Question → SPL/action → Screenshot → Finding → TESDA evidence domain → TESDA criterion
+Question → SPL/action → Uploaded screenshot → Finding → TESDA evidence domain → TESDA criterion
 ```
+
+When a question has multiple uploaded screenshots, all relevant screenshots should be retained rather than reducing the evidence to a single final-answer image.
