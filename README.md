@@ -1,6 +1,6 @@
 # Cisco CyberOps Associate → TESDA Cybersecurity Evidence Portfolio
 
-A practical evidence portfolio using **Cisco CyberOps Associate laboratory activities** as the primary technical evidence source, supplemented by the Cisco v1.0/v1.1 Skills Assessments, BOTS v2, and dedicated mitigation/vulnerability-management simulations.
+A practical evidence portfolio using **Cisco CyberOps Associate laboratory activities** as the primary technical evidence source, supplemented by the Cisco v1.0 Skills Assessment, BOTS v2, and dedicated mitigation/vulnerability-management simulations.
 
 ## Purpose
 
@@ -11,7 +11,7 @@ The portfolio is built around a clear distinction:
 - **TESDA core competencies** = the competency requirements being demonstrated.
 - **11 evidence domains** = the categories used to organize laboratory evidence.
 - **CyberOps labs** = the primary technical skills-development and evidence source.
-- **Skills Assessments and BOTS v2** = higher-level assessment/investigation evidence.
+- **Skills Assessment and BOTS v2** = higher-level assessment/investigation evidence.
 - **Supplementary simulations** = activities that close TESDA competency gaps, particularly containment, recovery, and vulnerability management.
 
 > **Important:** This portfolio is not a TESDA certification or assessment result. It is an organized evidence portfolio intended to support skills demonstration, RPL, and assessment preparation.
@@ -75,11 +75,6 @@ CYBEROPS v1.0 SKILLS ASSESSMENT
         ├── Alert-driven investigation
         │
         ▼
-CYBEROPS v1.1 SKILLS ASSESSMENT
-        │
-        ├── Advanced investigation / analysis
-        │
-        ▼
 BOTS v2
         │
         ├── Independent SIEM threat hunting
@@ -99,7 +94,7 @@ TESDA EVIDENCE PACKAGE
 
 ## Phase 1
 
-Phase 1 establishes the repository architecture. The portfolio will **retain the complete CyberOps laboratory activities as a major evidence source**. The v1.0/v1.1 Skills Assessments and BOTS v2 will complement the labs rather than replace them.
+Phase 1 establishes the repository architecture. The portfolio will **retain the complete CyberOps laboratory activities as a major evidence source**. The v1.0 Skills Assessment and BOTS v2 will complement the labs rather than replace them.
 
 The detailed Phase 1 overview is available at [`tesda-mapping/cyberops-lab-to-core-competency-overview.md`](tesda-mapping/cyberops-lab-to-core-competency-overview.md).
 
