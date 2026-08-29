@@ -1,10 +1,10 @@
-# Phase 2 — Cisco CyberOps Associate Lab Register
+# Phase 2 — Cisco CyberOps Associate Lab Register and Individual Evidence Framework
 
-**Status:** 🟡 In Progress
+**Status:** 🟢 Documentation framework complete; candidate evidence collection pending
 
 ## Objective
 
-Document the **Cisco CyberOps Associate laboratory activities in their original sequence** and classify each activity against the portfolio's fixed 11 evidence domains.
+Document the **36 Cisco CyberOps Associate v1.0 laboratory activities selected in the master register**, classify each against the portfolio's fixed 11 evidence domains, and provide an individual workspace for the candidate's practical work.
 
 The CyberOps labs are the primary technical evidence foundation. The retained v1.0 Skills Assessment and BOTS v2 are mapped separately as higher-level investigation evidence.
 
@@ -22,11 +22,11 @@ The CyberOps labs are the primary technical evidence foundation. The retained v1
 10. Recovery
 11. Reporting
 
-## Deliverables
+## Completed Phase 2 deliverables
 
 - [x] Lab-register structure created
 - [x] Evidence-domain structure confirmed
-- [x] CyberOps lab list entered in original sequence
+- [x] 36 selected CyberOps labs entered in original course sequence
 - [x] Primary evidence domain assigned to each lab
 - [x] Related evidence domains assigned
 - [x] CyberOps skill identified for each lab
@@ -34,41 +34,88 @@ The CyberOps labs are the primary technical evidence foundation. The retained v1
 - [x] TESDA NC II relevance identified
 - [x] Preliminary Direct/Supporting/Gap rating assigned
 - [x] Evidence artifacts and standardized screenshot labels identified
+- [x] Questions/tasks documented for each selected lab
+- [x] Answers/expected results documented for each selected lab
+- [x] Observation guidance documented for each selected lab
+- [x] 36 individual lab-work folders created
+- [x] Standardized `lab-work.md` template applied
+- [x] Standardized screenshot attachment locations defined
+- [x] Candidate screenshot workflow documented
 - [x] Supplementary activity requirements identified
-- [ ] Final register reviewed against the exact labs actually completed by the candidate
-- [ ] Candidate-generated evidence attached for completed labs
 
-## Working classification rule
+## Individual lab evidence structure
 
-**Primary domain** = where the lab's main practical evidence belongs.
+```text
+cyberops-labs/
+├── README.md
+├── 01-identify-running-processes/
+│   └── lab-work.md
+├── 02-processes-threads-handles-registry/
+│   └── lab-work.md
+├── ...
+└── 36-investigating-windows-host-attack/
+    └── lab-work.md
+```
 
-**Related domains** = other evidence areas meaningfully demonstrated by the lab.
+Each lab's Markdown record contains:
 
-**TESDA mapping** = performed separately from the domain classification so that the 11 folders are not confused with TESDA's four core competencies.
+```text
+Lab task/question
+       ↓
+Reference/expected answer
+       ↓
+Observation guidance
+       ↓
+[Attach candidate screenshot here]
+       ↓
+Candidate interpretation
+       ↓
+Evidence-domain classification
+       ↓
+TESDA relevance
+```
+
+The `screenshots/` directories will be populated manually as the candidate performs or verifies each laboratory activity.
+
+## Screenshot naming standard
+
+```text
+LAB-XX-01-short-description.png
+LAB-XX-02-short-description.png
+LAB-XX-03-short-description.png
+```
+
+`XX` is the portfolio lab number, not the Cisco module number.
 
 ## Evidence and privacy rule
 
 All laboratory activities must be performed only in **simulated, isolated, controlled and authorized training environments**. The portfolio must not document or imply activity against live organizational production systems.
 
-Expected/reference results are documentation guidance only. Candidate evidence must come from the candidate's own actual laboratory work. Screenshots will be uploaded manually later using the standardized filenames defined in the evidence guide.
+Expected/reference results are documentation guidance only. Candidate evidence must come from the candidate's own actual laboratory work. Do not fabricate screenshots, logs, hashes, alerts, PCAPs or observations.
 
 ## Phase 2 tracking log
 
 | Date | Progress | Decision / Result |
 |---|---|---|
 | 2026-08-29 | Started Phase 2 | Lab register specification created; 11 evidence domains locked |
-| 2026-08-30 | Documentation expansion | 36-lab evidence guide established with questions/tasks, expected results and standardized screenshot labels |
+| 2026-08-30 | Register completed | 36 selected labs classified and mapped at a preliminary level |
+| 2026-08-30 | Evidence framework completed | 36 individual lab folders and standardized Markdown records created |
 
-## Current repository additions
+## Remaining Phase 2 work
 
-- `cisco-lab-register/cyberops-associate-lab-register.md`
-- `cisco-lab-register/cyberops-lab-evidence-guide.md`
-- `PHASE-2.md`
+The framework is complete, but the following are **evidence-collection tasks**, not missing documentation:
+
+- [ ] Verify which of the 36 labs have actually been performed by the candidate.
+- [ ] Upload candidate-generated screenshots manually.
+- [ ] Replace generic observation guidance with the candidate's actual observations where they differ.
+- [ ] Record actual command output/results where required.
+- [ ] Perform final evidence-domain and TESDA criterion linkage after candidate evidence is available.
+- [ ] Mark each lab as Completed / Partially Completed / Not Performed.
 
 ## Remaining project phases
 
 ### Phase 3 — TESDA performance-criterion mapping
-Map the selected CyberOps activities to individual TESDA performance criteria and SAG evidence requirements.
+Map the selected CyberOps activities and their eventual candidate-generated evidence to individual TESDA performance criteria and SAG evidence requirements.
 
 ### Phase 4 — CyberOps v1.0 Skills Assessment
 Finalize candidate-generated evidence and map every v1.0 task to evidence domains and TESDA criteria. Primary target: NC I monitoring/reporting, with supporting NC II investigation evidence.
@@ -77,7 +124,7 @@ Finalize candidate-generated evidence and map every v1.0 task to evidence domain
 Remove obsolete legacy assessment material from the active evidence architecture. **Completed.**
 
 ### Phase 6 — BOTS v2
-Complete the simulated Splunk threat-hunting/investigation evidence set and final evidence cleanup. **Documentation/evidence cleanup completed; final verification retained as a project check.**
+Complete the simulated Splunk threat-hunting/investigation evidence set and final evidence cleanup. **Documentation/evidence cleanup completed.**
 
 ### Phase 7 — Containment/Eradication/Recovery
 Build the supplementary NC II mitigation simulation in an isolated laboratory environment.
@@ -86,11 +133,11 @@ Build the supplementary NC II mitigation simulation in an isolated laboratory en
 Extend authorized laboratory scanning into a complete scan → assess → remediate → rescan → validate workflow.
 
 ### Phase 9 — Evidence implementation
-Build the 11 evidence-domain folders, lab reports, checklists and evidence templates around verified candidate-generated artifacts.
+Build the 11 evidence-domain indexes/templates around verified candidate-generated artifacts without unnecessary duplication of complete lab reports.
 
 ### Phase 10 — Final TESDA evidence index and SAG review
 Create the final NC I/NC II evidence index and review the complete evidence package against the applicable SAG/performance criteria. **There is no live-production capstone.**
 
 ## Progress rule
 
-At the completion of every phase, update this file with the completed deliverables, remaining work, decisions, gaps and next phase. This file is the project's central progress tracker.
+At the completion of every phase, update this file with completed deliverables, remaining work, decisions, gaps and the next phase. This file is the central Phase 2 progress tracker.
