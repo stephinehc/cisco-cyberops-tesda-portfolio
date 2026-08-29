@@ -6,7 +6,7 @@
 
 Document the **Cisco CyberOps Associate laboratory activities in their original sequence** and classify each activity against the portfolio's fixed 11 evidence domains.
 
-The CyberOps labs are the primary technical evidence foundation. The v1.0/v1.1 Skills Assessments and BOTS v2 will be mapped separately in later phases.
+The CyberOps labs are the primary technical evidence foundation. The retained v1.0 Skills Assessment and BOTS v2 are mapped separately as higher-level investigation evidence.
 
 ## Fixed evidence domains
 
@@ -64,11 +64,11 @@ Map the selected CyberOps activities to individual TESDA performance criteria an
 ### Phase 4 — CyberOps v1.0 Skills Assessment
 Map every v1.0 task to evidence domains and TESDA criteria. Primary target: NC I monitoring/reporting.
 
-### Phase 5 — CyberOps v1.1 Skills Assessment
-Map the actual v1.1 tasks. Do not assume equivalence with v1.0 without evidence.
+### Phase 5 — Legacy assessment cleanup
+Remove obsolete legacy assessment material from the active evidence architecture. **Completed.**
 
 ### Phase 6 — BOTS v2
-Select and map realistic Splunk threat-hunting/investigation scenarios.
+Select and map realistic Splunk threat-hunting/investigation scenarios. **Setup now underway.**
 
 ### Phase 7 — Containment/Eradication/Recovery
 Build the supplementary NC II mitigation simulation.
