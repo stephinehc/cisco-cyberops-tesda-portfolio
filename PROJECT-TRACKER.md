@@ -10,8 +10,8 @@
 | **Phase 2** | Complete CyberOps Associate lab register in original sequence | 🟡 In progress — register populated; evidence verification pending |
 | **Phase 3** | TESDA performance-criterion + master SAG mapping | ✅ Complete — master matrix established; criterion-level evidence verification continues during later phases |
 | **Phase 4** | CyberOps v1.0 Skills Assessment evidence mapping | 🟢 Assessment performed; documentation created; actual artifact collection pending |
-| **Phase 5** | Legacy assessment review and repository cleanup | ✅ Complete — obsolete v1.1 materials removed |
-| **Phase 6** | BOTS v2 threat-hunting evidence mapping | ⬜ Pending |
+| **Phase 5** | Legacy assessment review and repository cleanup | ✅ Complete — obsolete legacy materials removed |
+| **Phase 6** | BOTS v2 threat-hunting evidence mapping and setup | 🟢 Started — repository package created; lab execution/evidence capture pending |
 | **Phase 7** | Supplementary containment/eradication/recovery lab | ⬜ Pending |
 | **Phase 8** | Supplementary vulnerability scanning/management lab | ⬜ Pending |
 | **Phase 9** | Evidence templates and individual lab evidence folders | ⬜ Pending |
@@ -70,20 +70,6 @@
 - User has already performed the actual v1.0 Skills Assessment in the CyberOps VM.
 - Published answers are treated only as a cross-check, not as portfolio evidence.
 
-### v1.0 assessment documentation
-
-```text
-assessments/cyberops-v1.0/
-├── assessment-overview.md
-├── assessment-documentation.md
-├── alert-analysis.md
-├── incident-timeline.md
-├── ioc-analysis.md
-├── threat-intelligence.md
-├── findings-report.md
-└── screenshots/
-```
-
 ### Remaining Phase 4 tasks
 
 - [ ] Collect the user's actual v1.0 screenshots/artifacts.
@@ -93,24 +79,66 @@ assessments/cyberops-v1.0/
 
 ## Phase 5 — COMPLETE: Legacy Assessment Cleanup
 
-The legacy **CCNA Cybersecurity Operations v1.1** assessment was removed from the portfolio after review of Cisco Networking Academy's current course catalog and the legacy course material.
+The obsolete legacy assessment package was removed from the portfolio. The repository now retains the current CyberOps Associate lab pathway and the v1.0 assessment that the candidate actually performed.
 
 ### Actions completed
 
-- Removed the entire `assessments/cyberops-v1.1/` evidence package.
+- Removed the legacy assessment evidence package.
 - Removed its Markdown files and placeholder screenshot directory.
-- Removed v1.1 from the assessment index.
-- Removed v1.1 from the main repository evidence architecture.
-- Removed v1.1-specific project tracking and findings.
+- Removed it from the assessment index and evidence architecture.
+- Removed legacy-specific project tracking and findings.
 - Kept the retained v1.0 Skills Assessment because it represents the assessment already performed for this portfolio.
-
-### Decision
-
-The portfolio will not use the legacy v1.1 assessment as a current course or evidence source. Its former exploit-investigation concepts are already covered by the broader CyberOps lab activities, v1.0 assessment evidence, BOTS v2, and planned supplementary investigations.
 
 ## Phase 6 — BOTS v2
 
-Map selected BOTS v2 investigations to log analysis, threat intelligence, incident investigation and reporting criteria.
+### Current status
+
+**🟢 Setup started.**
+
+The BOTS v2 evidence package now contains:
+
+```text
+assessments/botsv2/
+├── README.md
+├── setup.md
+├── splunk-2-hunting-guide.md
+├── evidence-mapping.md
+├── screenshots/README.md
+└── reports/botsv2-investigation-report.md
+```
+
+### Reference basis
+
+The hunting guide is based on the supplied TryHackMe Splunk 2 reference and the linked jniket walkthrough. Explanatory material is paraphrased. SPL commands requested by the user are retained as written in the source material, including placeholder tokens and legacy typos.
+
+The official BOTS v2 dataset documentation is the authoritative source for dataset installation and environment requirements.
+
+### Completed
+
+- Created BOTS v2 assessment directory.
+- Created dataset/setup guide.
+- Created paraphrased Splunk 2 hunting guide.
+- Preserved source SPL commands without silently correcting them.
+- Created TESDA/evidence-domain mapping.
+- Created screenshot evidence standards.
+- Created investigation-report template.
+
+### Remaining
+
+- [ ] Obtain/install the BOTS v2 dataset in the chosen controlled Splunk environment.
+- [ ] Verify `index=botsv2 earliest=0` returns data.
+- [ ] Run the sourcetype inventory query.
+- [ ] Complete selected 100-series investigations.
+- [ ] Complete selected 200-series investigations.
+- [ ] Complete selected 300-series investigations.
+- [ ] Complete selected 400-series investigations.
+- [ ] Capture candidate-generated screenshots.
+- [ ] Write investigation reports from actual results.
+- [ ] Link the evidence to the master TESDA SAG matrix.
+
+### Screenshot decision
+
+The screenshots from the supplied Medium article are retained as **visual references only**. For RPL evidence, screenshots captured from the candidate's own BOTS v2 session are preferred and should be used unless the candidate has permission to reuse the original images.
 
 ## Phase 7 — Containment / Eradication / Recovery
 
@@ -142,4 +170,4 @@ Create the final TESDA evidence index, SAG evidence guide, and integrated capsto
 
 ## Current next task
 
-**Finish collecting and validating the user's actual v1.0 assessment evidence, then proceed to Phase 6 — BOTS v2 threat-hunting evidence.**
+**Set up the controlled BOTS v2 Splunk environment, verify the dataset, then begin the 100-series threat-hunting investigations and capture the candidate's own evidence.**
