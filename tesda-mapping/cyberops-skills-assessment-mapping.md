@@ -2,24 +2,30 @@
 
 ## Purpose
 
-This document establishes the portfolio's initial mapping for the **Cisco CyberOps Associate v1.0 and v1.1 Skills Assessments**.
+This document maps the **Cisco CyberOps Associate v1.0 Skills Assessment** to the TESDA Cyber Threat Monitoring NC I and Cyber Threat Mitigation NC II competencies represented in this portfolio.
 
-The assessments are treated as practical evidence sources, not as automatic TESDA-equivalency claims.
+The assessment is treated as a source of practical evidence from an authorized **simulated, isolated, and controlled laboratory environment**. Completion of the assessment does not automatically establish TESDA competency; the evidence must be evaluated against the applicable performance criteria.
 
-## v1.0 — primary NC I practical evidence
+## Controlled-environment and data-privacy statement
+
+The assessment documented here is performed exclusively in a simulated Cisco CyberOps training environment using designated virtual machines and training data.
+
+No live organizational network, production system, confidential company information, personally identifiable information, production credentials, private keys, or real organizational security incident is intentionally accessed or investigated.
+
+## v1.0 — primary integrated assessment evidence
 
 The v1.0 Pushdo investigation is an alert-driven SOC exercise. Its strongest evidence sequence is:
 
 ```text
-Security alert
+Simulated security alert
    ↓
 Alert review / triage
    ↓
-Affected-host identification
+Affected training endpoint identification
    ↓
-Event and traffic investigation
+Event and network-traffic investigation
    ↓
-Malicious file / IOC identification
+Malicious training file / IOC identification
    ↓
 Hash and threat-intelligence verification
    ↓
@@ -27,66 +33,80 @@ Related-alert correlation
    ↓
 Investigation findings
    ↓
-Report
+Simulated incident report
 ```
 
-### Mapping
+## TESDA mapping
 
 | TESDA competency | v1.0 evidence | Rating |
 |---|---|---:|
-| ICT251312 Monitor and report cyber threats | Alert review and investigation | 🟢 Direct |
-| ICT251312 — manual verification | Alert, host, network and file analysis | 🟢 Direct |
-| ICT251312 — case follow-up | Related-alert/event correlation | 🟢 Direct |
-| ICT251312 — alert reporting | Investigation report | 🟡 Supporting until TESDA-format report/ticket is added |
-| ICT251313 Vulnerability scanning | Not the focus of v1.0 | 🔴 Gap |
-| ICT251314 Threat mitigation | Incident analysis and IOC identification | 🟡 Supporting |
-| ICT251315 Vulnerability management/control | Not the focus of v1.0 | 🔴 Gap |
+| ICT251312 — Monitor and Report Cyber Threats | Simulated alert review and investigation | 🟢 Direct |
+| ICT251312 — manual verification | Simulated alert, host, network and file analysis | 🟢 Direct |
+| ICT251312 — case follow-up | Related simulated alert/event correlation | 🟢 Direct |
+| ICT251312 — reporting | Investigation findings/report | 🟡 Supporting until all required reporting artifacts are verified |
+| ICT251313 — Conduct Vulnerability Scanning of Assets | Vulnerability scanning is not the focus of v1.0 | 🔴 Gap |
+| ICT251314 — Perform Threat Mitigation | Simulated incident analysis and IOC identification | 🟡 Supporting |
+| ICT251315 — Perform Vulnerability Management/Control | Vulnerability management is not the focus of v1.0 | 🔴 Gap |
 
-## v1.1 — advanced investigation evidence
+## Evidence-domain alignment
 
-Use the v1.1 Skills Assessment as an advanced practical layer after v1.0. Map only the tasks actually performed in the version of the assessment used by the learner.
+The assessment contributes evidence primarily to:
 
-### Intended evidence areas
+- `01-monitoring-and-alerts/` — simulated alert review and triage
+- `02-log-event-analysis/` — simulated event correlation
+- `03-network-traffic-analysis/` — simulated network investigation
+- `04-endpoint-analysis/` — simulated affected-host analysis
+- `05-malware-ioc-analysis/` — simulated malicious-file and IOC analysis
+- `07-incident-investigation/` — integrated simulated investigation
+- `08-threat-intelligence/` — threat-intelligence verification
+- `11-reporting/` — investigation findings and reporting
 
-- security monitoring
-- host-based analysis
-- network intrusion analysis
-- threat intelligence
-- malware analysis
-- threat hunting
-- SIEM/SOAR-related analysis where present
+## What v1.0 does not demonstrate by itself
 
-### Mapping approach
+The assessment should **not** be used as evidence that the following complete activities were performed:
 
-| TESDA competency | Expected v1.1 contribution | Rating |
-|---|---|---:|
-| ICT251312 Monitor and report cyber threats | Advanced monitoring, investigation and reporting | 🟢/🟡 Verify against actual assessment tasks |
-| ICT251313 Vulnerability scanning | Not assumed | 🔴 Unless an actual scanning task is performed |
-| ICT251314 Threat mitigation | Advanced investigation, IOC/TTP/CTI analysis | 🟢/🟡 Strong supporting evidence |
-| ICT251315 Vulnerability management/control | Not assumed | 🔴 Unless actual VM activities are performed |
+- containment of a live or production endpoint;
+- eradication of malware from a production system;
+- recovery or rollback of a production system;
+- secondary validation scanning after recovery;
+- vulnerability-management lifecycle activities;
+- vulnerability scanning of live organizational assets.
 
-## Important evidence rule
+Where TESDA performance criteria require these activities, the portfolio will use separate **controlled and isolated simulations**.
 
-The portfolio must document the **exact v1.1 assessment tasks actually completed** before assigning a Direct rating. Do not infer competency coverage from Cisco course objectives alone.
+## Evidence requirements for final RPL package
 
-## Recommended assessment progression
+Before final submission, verify that the repository contains the candidate's own assessment artifacts for the activities claimed, such as:
+
+1. Simulated alert evidence.
+2. Simulated event/timeframe evidence.
+3. Source and destination information.
+4. Simulated affected-endpoint evidence.
+5. Infection-method evidence.
+6. Simulated malicious-file evidence.
+7. Hash calculation/result evidence.
+8. Threat-intelligence verification evidence.
+9. Related-alert correlation evidence.
+10. Investigation findings/report.
+
+Reference answer material may be used for preparation and cross-checking but must not be represented as candidate-generated evidence.
+
+## Assessment progression
 
 ```text
-CyberOps laboratory practice
+CyberOps Associate laboratory practice
         ↓
 CyberOps v1.0 Skills Assessment
         ↓
-Alert-driven SOC investigation
+Integrated simulated SOC investigation
         ↓
-CyberOps v1.1 Skills Assessment
+Controlled containment / eradication / recovery simulation
         ↓
-Advanced investigation / threat hunting
+Controlled vulnerability scanning / management simulation
         ↓
-Containment + eradication + recovery simulation
-        ↓
-NC II mitigation evidence
+Final TESDA evidence package
 ```
 
 ## Sources
 
-Cisco CyberOps Associate v1.1 exam objectives/release material should be retained in the portfolio's reference notes when used for mapping. TESDA competency definitions should be sourced from the applicable Training Regulations. citehttps://www.tesda.gov.ph/Downloadables/TRs/TR-Cyber%20Threat%20Monitoring%20NC%20I.pdf citehttps://www.tesda.gov.ph/Downloadables/TRs/TR-Cyber-threat-mitigation%20NC%20II.pdf
+TESDA competency definitions should be based on the applicable Training Regulations. Cisco course/assessment material is used only to describe the assessment activities represented by the candidate's controlled laboratory evidence.
