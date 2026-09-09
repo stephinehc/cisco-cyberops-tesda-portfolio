@@ -30,6 +30,7 @@ Use the assigned laboratory process-management action and observe the resulting 
 
 **Figure 2 — Task Manager performance view**  
 <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/26a20d80-f56d-466e-9524-17657c1ae26c" />
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/c6476634-151c-4b87-aa2c-77fba0317678" />
 
 
 ## Interpretation
