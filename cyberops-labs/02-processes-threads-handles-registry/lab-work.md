@@ -27,19 +27,26 @@ Use Process Explorer to inspect a running process.
 ## Evidence
 
 **Figure 1 — Process Explorer**  
-`LAB-02-01-process-explorer.png`
 
-> **Attach screenshot here:** `screenshots/LAB-02-01-process-explorer.png`
+<img width="1920" height="1080" alt="LAB-02-01-process-explorer png" src="https://github.com/user-attachments/assets/401e3522-839f-4732-b99f-1b4304baae5c" />
+
 
 **Figure 2 — Threads and handles**  
-`LAB-02-02-threads-handles.png`
 
-> **Attach screenshot here:** `screenshots/LAB-02-02-threads-handles.png`
+Threads
+<img width="1920" height="1080" alt="LAB-02-02-threads png" src="https://github.com/user-attachments/assets/7d05e183-7e11-4cab-866c-a3ab95ee5142" />
+
+Handles
+<img width="1920" height="1080" alt="LAB-02-02-handles png" src="https://github.com/user-attachments/assets/a4842dcc-23ec-4135-b28d-e48bcaaf4641" />
+
 
 **Figure 3 — Registry inspection**  
-`LAB-02-03-registry.png`
+<img width="1920" height="1080" alt="Screenshot 2026-09-09 212927" src="https://github.com/user-attachments/assets/69cfd068-5209-45ed-94b6-059312f9cff6" />
+<img width="1920" height="1080" alt="Screenshot 2026-09-09 212941" src="https://github.com/user-attachments/assets/cedb1f76-9395-4df6-9e14-e3025acd2af6" />
+<img width="1920" height="1080" alt="Screenshot 2026-09-09 213020" src="https://github.com/user-attachments/assets/6449896c-1013-4971-bd30-8f9a5fdb205c" />
+<img width="1407" height="742" alt="Screenshot 2026-09-09 213147" src="https://github.com/user-attachments/assets/603a6864-bec1-43d8-ab4e-0f90b7d186fa" />
+<img width="1920" height="1020" alt="Screenshot 2026-09-09 213217" src="https://github.com/user-attachments/assets/90f60c81-1cef-4f60-94f5-8e8c5bffc8c2" />
 
-> **Attach screenshot here:** `screenshots/LAB-02-03-registry.png`
 
 ## Interpretation
 Process, thread, handle and Registry visibility provides useful endpoint-investigation context, including potential persistence or configuration evidence.
