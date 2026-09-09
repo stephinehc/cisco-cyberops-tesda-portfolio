@@ -25,14 +25,13 @@ The PowerShell procedure clears the simulated user's Recycle Bin as instructed.
 ## Evidence
 
 **Figure 1 — PowerShell console**  
-`LAB-04-01-powershell-console.png`
+<img width="1102" height="638" alt="Screenshot 2026-09-09 215948" src="https://github.com/user-attachments/assets/1228acfd-caaf-4cad-b518-a697f27b2e2e" />
 
-> **Attach screenshot here:** `screenshots/LAB-04-01-powershell-console.png`
 
 **Figure 2 — PowerShell investigation output**  
-`LAB-04-02-powershell-output.png`
+<img width="1102" height="638" alt="image" src="https://github.com/user-attachments/assets/014a6435-7a67-4cd5-957e-43e85cea6b58" />
+<img width="1102" height="638" alt="image" src="https://github.com/user-attachments/assets/d6f5362c-6c23-4a1a-bab4-f83609948af9" />
 
-> **Attach screenshot here:** `screenshots/LAB-04-02-powershell-output.png`
 
 ## Interpretation
 PowerShell provides command-line visibility and automation capabilities useful for endpoint investigation and administration.
