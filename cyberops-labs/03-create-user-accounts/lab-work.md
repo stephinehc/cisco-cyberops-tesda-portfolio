@@ -29,14 +29,14 @@ Changing the account type to Administrator adds the `Administrators` group. Remo
 ## Evidence
 
 **Figure 1 — User account creation**  
-`LAB-03-01-user-account.png`
+<img width="1352" height="1000" alt="Screenshot 2026-09-09 213637" src="https://github.com/user-attachments/assets/6f31dc99-0a2b-430e-bd2d-56784d5a2389" />
 
-> **Attach screenshot here:** `screenshots/LAB-03-01-user-account.png`
 
 **Figure 2 — Account properties and group membership**  
-`LAB-03-02-account-properties.png`
+<img width="527" height="665" alt="Screenshot 2026-09-09 215359" src="https://github.com/user-attachments/assets/4005089e-79df-4f17-a40f-e429147de5bb" />
+<img width="597" height="670" alt="Screenshot 2026-09-09 215450" src="https://github.com/user-attachments/assets/b33aec41-461f-409b-ab30-0506abc06196" />
+<img width="527" height="665" alt="Screenshot 2026-09-09 215521" src="https://github.com/user-attachments/assets/282cbd68-f0bf-46b8-85a1-043f5f2a5fd8" />
 
-> **Attach screenshot here:** `screenshots/LAB-03-02-account-properties.png`
 
 ## Interpretation
 Account configuration and least-privilege verification are useful endpoint-security evidence.
