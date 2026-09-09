@@ -36,9 +36,21 @@ Use the assigned Windows service in the laboratory and observe its state before 
 
 **Figure 3 - Administrative Tools**
 <img width="1232" height="885" alt="image" src="https://github.com/user-attachments/assets/403397e9-3a05-4945-a847-eb02ec906e22" />
-<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/d6597eb5-0e64-4803-89b0-de8573633ba7" />
-<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/a76e2530-d653-4c1c-9735-e27e03064ddb" />
-<img width="1711" height="951" alt="image" src="https://github.com/user-attachments/assets/9975f72b-367b-4964-b6de-bfb9276e196f" />
+<img width="1233" height="893" alt="Screenshot 2026-09-09 223421" src="https://github.com/user-attachments/assets/656764f9-eede-4f87-8868-76ab884bffe4" />
+<img width="1231" height="891" alt="Screenshot 2026-09-09 223434" src="https://github.com/user-attachments/assets/3dbbd6ae-aa40-48bc-9680-134023eeb4bd" />
+<img width="1235" height="887" alt="Screenshot 2026-09-09 223520" src="https://github.com/user-attachments/assets/68b2cd56-d7e2-4ee3-91b0-8adf9469ba79" />
+<img width="1232" height="887" alt="Screenshot 2026-09-09 223557" src="https://github.com/user-attachments/assets/8095d5fc-d158-4ca8-bf8a-5527c4462df4" />
+<img width="1237" height="887" alt="Screenshot 2026-09-09 223606" src="https://github.com/user-attachments/assets/e1690d1f-69c2-47e5-bcd5-06b72a9c7e1b" />
+<img width="1237" height="887" alt="Screenshot 2026-09-09 223606" src="https://github.com/user-attachments/assets/00afca6f-69b7-4cd5-9a28-c17c64f8206f" />
+<img width="1235" height="887" alt="Screenshot 2026-09-09 223615" src="https://github.com/user-attachments/assets/6ba37159-0fea-4a67-af49-49030d23850c" />
+<img width="1232" height="885" alt="image" src="https://github.com/user-attachments/assets/1cab6dee-d347-4c0b-8245-bcd713f73718" />
+<img width="1232" height="885" alt="image" src="https://github.com/user-attachments/assets/d13a0fec-12e4-489a-b730-03b814dccda7" />
+<img width="500" height="606" alt="image" src="https://github.com/user-attachments/assets/7a69832a-c82a-4e7f-8428-d95d233a5858" />
+<img width="1232" height="885" alt="image" src="https://github.com/user-attachments/assets/dc3abf5c-92c7-4846-bf21-35e80f8338d0" />
+<img width="1232" height="885" alt="image" src="https://github.com/user-attachments/assets/e6936755-9e14-4cab-b604-0d58f7c14b0a" />
+<img width="1407" height="742" alt="image" src="https://github.com/user-attachments/assets/76799422-80a6-4a21-8198-a60a7f6f61ec" />
+<img width="1407" height="742" alt="image" src="https://github.com/user-attachments/assets/32dd9f1e-cd11-4387-99f2-9804641e3ef3" />
+<img width="1920" height="1021" alt="image" src="https://github.com/user-attachments/assets/8bba550c-5168-4602-8281-7647c412869f" />
 
 
 ## Interpretation
