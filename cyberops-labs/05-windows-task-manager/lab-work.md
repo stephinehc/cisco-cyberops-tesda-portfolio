@@ -25,14 +25,12 @@ Use the assigned laboratory process-management action and observe the resulting 
 ## Evidence
 
 **Figure 1 — Task Manager process view**  
-`LAB-05-01-task-manager-processes.png`
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/82d34e70-3e65-4936-8cc8-d46bcce94ece" />
 
-> **Attach screenshot here:** `screenshots/LAB-05-01-task-manager-processes.png`
 
 **Figure 2 — Task Manager performance view**  
-`LAB-05-02-task-manager-performance.png`
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/26a20d80-f56d-466e-9524-17657c1ae26c" />
 
-> **Attach screenshot here:** `screenshots/LAB-05-02-task-manager-performance.png`
 
 ## Interpretation
 Task Manager provides basic endpoint-monitoring evidence for processes, services and resource consumption.
