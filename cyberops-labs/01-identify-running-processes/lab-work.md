@@ -23,13 +23,12 @@ Use the process/network viewer to inspect active processes and endpoints.
 
 **Figure 1 — Running-process view**  
 `LAB-01-01-process-list.png`
+<img width="1920" height="1024" alt="LAB-01-01-process-list" src="https://github.com/user-attachments/assets/63b78787-bc26-4ce5-94f6-c44fd45fd7d7" />
 
-> **Attach screenshot here:** `screenshots/LAB-01-01-process-list.png`
 
 **Figure 2 — Process properties / endpoint information**  
 `LAB-01-02-process-network-endpoint.png`
-
-> **Attach screenshot here:** `screenshots/LAB-01-02-process-network-endpoint.png`
+<img width="1920" height="1022" alt="LAB-01-02-process-network-endpoint" src="https://github.com/user-attachments/assets/a01dea23-8aba-4870-8330-d7f5831a605b" />
 
 ## Interpretation
 Process and endpoint visibility supports endpoint monitoring and investigation by associating applications with network activity.
